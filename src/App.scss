@@ -1,11 +1,5 @@
 @use "./styles/partials/variables" as *;
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  @include reset-margin-padding;
-}
+@use "./styles/partials/global";
 
 body {
   font-family: "Inter", sans-serif;
