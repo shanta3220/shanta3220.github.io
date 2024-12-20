@@ -1,0 +1,23 @@
+@use "../../styles/partials/variables" as *;
+
+.about {
+  padding: calc(4 * $spacing-unit) calc(2 * $spacing-unit);
+  background-color: $color-background-light;
+  text-align: center;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  &__text {
+    margin-top: calc(1.5 * $spacing-unit);
+    font-size: 1rem;
+    color: $color-secondary;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
