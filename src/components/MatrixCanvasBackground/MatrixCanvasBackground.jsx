@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./MatrixCanvasBackground.scss";
 
 function MatrixCanvasBackground() {
@@ -8,11 +8,11 @@ function MatrixCanvasBackground() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
 
-    const boxSize = 100; // Size of each box
+    const boxSize = 100;
 
     function getGridColor() {
       const currentTheme = document.documentElement.getAttribute("data-theme");
-      return currentTheme === "dark"
+      return currentTheme === "dark" || currentTheme == null
         ? "rgba(245, 245, 245, 1)"
         : "rgb(224, 224, 224), 1)";
     }
@@ -28,7 +28,7 @@ function MatrixCanvasBackground() {
 
       const gridColor = getGridColor();
       ctx.strokeStyle = gridColor;
-      ctx.lineWidth = 0.04;
+      ctx.lineWidth = 0.05;
 
       for (let i = 0; i < rows; i++) {
         for (let j = 0; j < cols; j++) {
