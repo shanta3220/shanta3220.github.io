@@ -3,7 +3,7 @@ import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import "./Header.scss";
 
 function Header() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   const changeTheme = (newTheme) => {
     document.documentElement.setAttribute("data-theme", newTheme);
