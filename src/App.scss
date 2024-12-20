@@ -59,28 +59,26 @@ li {
   height: 100vh;
   background: linear-gradient(
     120deg,
-    var(--gradient-start),
-    var(--gradient-mid),
-    var(--gradient-end),
-    var(--gradient-start)
-  );
+    var(--gradient-start) 0%,
+    var(--gradient-mid) 50%,
+    var(--gradient-end) 100%
+  ); /* Defined explicit stops for smoother blending */
   background-size: 300% 300%;
   z-index: -2;
-  animation: gradient-animation 40s ease infinite;
+  animation: gradient-animation 60s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 @keyframes gradient-animation {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 50%; /* Start at the left */
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 50%; /* Move to the right */
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 50%; /* Return to the start */
   }
 }
-
 /* Content Wrapper */
 .content {
   position: relative;
