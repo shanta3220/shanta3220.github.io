@@ -1,7 +1,9 @@
+@use "../../styles/partials/variables" as *;
+
 .header {
-  background-color: #fff;
-  padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: $color-background-light;
+  padding: $spacing-unit;
+  box-shadow: $shadow-light;
   position: fixed;
   width: 100%;
   z-index: 100;
@@ -15,18 +17,17 @@
   &__list {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    align-items: center;
+    gap: calc(2 * $spacing-unit);
 
-    &__item {
-      a {
-        text-decoration: none;
-        font-weight: 500;
-        color: #333;
-        transition: color 0.3s;
+    &__item a {
+      text-decoration: none;
+      font-weight: 500;
+      color: $color-text;
+      transition: color $transition-default;
 
-        &:hover {
-          color: #007bff;
-        }
+      &:hover {
+        color: $color-primary;
       }
     }
   }
