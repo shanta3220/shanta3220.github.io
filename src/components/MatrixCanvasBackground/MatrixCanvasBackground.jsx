@@ -12,12 +12,9 @@ function MatrixCanvasBackground() {
 
     function getGridColor() {
       const currentTheme = document.documentElement.getAttribute("data-theme");
-
-      if (currentTheme === "dark") {
-        return "rgba(245, 245, 245, 1)";
-      } else {
-        return "rgb(224, 224, 224), 1)";
-      }
+      return currentTheme === "dark"
+        ? "rgba(245, 245, 245, 1)"
+        : "rgb(224, 224, 224), 1)";
     }
 
     function drawMatrix() {
