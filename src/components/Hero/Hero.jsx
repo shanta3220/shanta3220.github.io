@@ -1,17 +1,24 @@
+import { motion } from "framer-motion";
 import "./Hero.scss";
+import { getTransition } from "../../scripts/utils";
 
-function Hero() {
+const Hero = () => {
   return (
-    <section className="hero" id="home">
-      <div className="hero__content">
-        <h1 className="hero__title">Hi, I'm Nusrat Jahan Shanta</h1>
-        <p className="hero__subtitle">Full-Stack Developer | Game Programmer</p>
-        <a href="#contact" className="hero__contact">
-          Contact Me
-        </a>
-      </div>
+    <section className="hero-section">
+      <motion.h1 className="hero-section__header" {...getTransition(0.3)}>
+        Hi, I'm Nusrat Jahan Shanta
+      </motion.h1>
+      <motion.p className="hero-section__paragraph" {...getTransition(0.5)}>
+        A passionate software engineer and game developer with a deep curiosity
+        for how technology can shape our lives.
+      </motion.p>
+      <motion.p className="hero-section__paragraph" {...getTransition(0.7)}>
+        With a background in both game development and web technologies, I
+        specialize in building dynamic applications, tackling complex
+        challenges, and collaborating across teams.
+      </motion.p>
     </section>
   );
-}
+};
 
 export default Hero;
