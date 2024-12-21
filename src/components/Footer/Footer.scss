@@ -1,0 +1,31 @@
+@use "../../styles/partials/variables" as *;
+
+.footer {
+  background-color: $color-background-dark;
+  color: $color-text-light;
+  padding: calc(2 * $spacing-unit);
+  text-align: center;
+
+  &__text {
+    margin-bottom: calc(1 * $spacing-unit);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: calc(1 * $spacing-unit);
+
+    &__link {
+      color: $color-text-light;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color $transition-default;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

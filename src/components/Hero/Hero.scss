@@ -1,0 +1,43 @@
+@use "../../styles/partials/variables" as *;
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: $color-background-light;
+
+  &__content {
+    max-width: 800px;
+
+    &__title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $color-text;
+    }
+
+    &__subtitle {
+      font-size: 1.2rem;
+      color: $color-secondary;
+      margin-top: $spacing-unit;
+    }
+
+    &__contact {
+      display: inline-block;
+      margin-top: calc(2 * $spacing-unit);
+      padding: calc(0.75 * $spacing-unit) calc(1.5 * $spacing-unit);
+      font-size: 1rem;
+      font-weight: 600;
+      color: $color-text-light;
+      background-color: $color-primary;
+      border-radius: $border-radius;
+      text-decoration: none;
+      transition: background-color $transition-default;
+
+      &:hover {
+        background-color: $color-hover;
+      }
+    }
+  }
+}

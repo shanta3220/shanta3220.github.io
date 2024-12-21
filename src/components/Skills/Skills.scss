@@ -1,0 +1,30 @@
+@use "../../styles/partials/variables" as *;
+
+.skills {
+  padding: calc(4 * $spacing-unit) calc(2 * $spacing-unit);
+  background-color: $color-background-light;
+  text-align: center;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-unit;
+    flex-wrap: wrap;
+    margin-top: calc(2 * $spacing-unit);
+  }
+
+  &__item {
+    background-color: $color-primary;
+    color: $color-text-light;
+    padding: calc(0.5 * $spacing-unit) calc(1 * $spacing-unit);
+    border-radius: $border-radius;
+    font-weight: 500;
+    box-shadow: $shadow-light;
+  }
+}
