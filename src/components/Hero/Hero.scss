@@ -1,43 +1,54 @@
+@use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.hero {
+.hero-section {
+  @include sectionPadding;
+  text-align: justify;
+  width: 50%;
   height: 100vh;
+  margin: auto;
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-color: $color-background-light;
 
-  &__content {
-    max-width: 800px;
+  &__header {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 900;
+    padding-bottom: 1rem;
+    color: transparent;
+    background: linear-gradient(90deg, #ff7eb3, #29b5ec, #b3405e, #eed5df);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300% 300%;
+    animation: gradientShift 5s linear infinite;
+  }
 
-    &__title {
-      font-size: 2.5rem;
-      font-weight: 700;
+  &__paragraph {
+    @include bodyCopy;
+
+    & {
       color: $color-text;
-    }
 
-    &__subtitle {
-      font-size: 1.2rem;
-      color: $color-secondary;
-      margin-top: $spacing-unit;
-    }
-
-    &__contact {
-      display: inline-block;
-      margin-top: calc(2 * $spacing-unit);
-      padding: calc(0.75 * $spacing-unit) calc(1.5 * $spacing-unit);
-      font-size: 1rem;
-      font-weight: 600;
-      color: $color-text-light;
-      background-color: $color-primary;
-      border-radius: $border-radius;
-      text-decoration: none;
-      transition: background-color $transition-default;
-
-      &:hover {
-        background-color: $color-hover;
+      &:nth-of-type(1) {
+        animation-delay: 0.5s;
       }
+      &:nth-of-type(2) {
+        animation-delay: 1s;
+      }
+    }
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
     }
   }
 }
