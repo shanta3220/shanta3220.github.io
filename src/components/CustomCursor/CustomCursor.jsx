@@ -16,15 +16,38 @@ function CustomCursor() {
     window.addEventListener("mousemove", handleMouseMove);
 
     const animateCursor = () => {
-      dotPosition.current.x +=
-        (mousePosition.current.x - dotPosition.current.x - 3) * 0.2;
-      dotPosition.current.y +=
-        (mousePosition.current.y - dotPosition.current.y - 3) * 0.2;
+      // Adjust the dot size dynamically
+      let dotSize = 0;
+      let circleSize = 1;
 
+      if (dotRef.current) {
+        const computedStyle = window.getComputedStyle(dotRef.current);
+        dotSize = parseInt(computedStyle.width, 10) / 2;
+      }
+      if (circleRef.current) {
+        const computedStyle = window.getComputedStyle(circleRef.current);
+        circleSize = parseInt(computedStyle.width, 10) / 2;
+      }
+
+      // Smoothly update dot position
+      dotPosition.current.x +=
+        (mousePosition.current.x - dotPosition.current.x - dotSize) * 0.2;
+      dotPosition.current.y +=
+        (mousePosition.current.y - dotPosition.current.y - dotSize) * 0.2;
+
+      // Smoothly update circle position
       circlePosition.current.x +=
-        (mousePosition.current.x - circlePosition.current.x - 40) * 0.08;
+        (dotPosition.current.x -
+          circlePosition.current.x -
+          circleSize +
+          dotSize) *
+        0.2;
       circlePosition.current.y +=
-        (mousePosition.current.y - circlePosition.current.y - 37) * 0.08;
+        (dotPosition.current.y -
+          circlePosition.current.y -
+          circleSize +
+          dotSize) *
+        0.2;
 
       // Apply transformations
       if (dotRef.current) {
@@ -34,7 +57,7 @@ function CustomCursor() {
         circleRef.current.style.transform = `translate(${circlePosition.current.x}px, ${circlePosition.current.y}px)`;
       }
 
-      requestAnimationFrame(animateCursor); // Smooth animation loop
+      requestAnimationFrame(animateCursor);
     };
 
     animateCursor();
@@ -47,9 +70,12 @@ function CustomCursor() {
   useEffect(() => {
     const handleMouseEnter = () => {
       if (circleRef.current) circleRef.current.classList.add("hovering");
+      if (dotRef.current) dotRef.current.classList.add("hovering");
     };
+
     const handleMouseLeave = () => {
       if (circleRef.current) circleRef.current.classList.remove("hovering");
+      if (dotRef.current) dotRef.current.classList.remove("hovering");
     };
 
     const interactiveElements = document.querySelectorAll("a, button");
