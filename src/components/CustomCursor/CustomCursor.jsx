@@ -16,7 +16,6 @@ function CustomCursor() {
     window.addEventListener("mousemove", handleMouseMove);
 
     const animateCursor = () => {
-      // Adjust the dot size dynamically
       let dotSize = 0;
       let circleSize = 1;
 
@@ -29,13 +28,11 @@ function CustomCursor() {
         circleSize = parseInt(computedStyle.width, 10) / 2;
       }
 
-      // Smoothly update dot position
       dotPosition.current.x +=
         (mousePosition.current.x - dotPosition.current.x - dotSize) * 0.2;
       dotPosition.current.y +=
         (mousePosition.current.y - dotPosition.current.y - dotSize) * 0.2;
 
-      // Smoothly update circle position
       circlePosition.current.x +=
         (dotPosition.current.x -
           circlePosition.current.x -
@@ -49,7 +46,6 @@ function CustomCursor() {
           dotSize) *
         0.2;
 
-      // Apply transformations
       if (dotRef.current) {
         dotRef.current.style.transform = `translate(${dotPosition.current.x}px, ${dotPosition.current.y}px)`;
       }
