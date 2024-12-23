@@ -15,7 +15,7 @@
   &__header {
     @include mainHeader;
     margin-bottom: 1.5rem;
-    color: $color-text-light;
+    color: $color-text;
     background: linear-gradient(90deg, #ff7eb3, #29b5ec, #b3405e, #eed5df);
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -28,15 +28,15 @@
     @include bodyCopy;
     & {
       font-weight: 400;
-      color: $color-primary-medium;
+      color: $color-text;
     }
   }
 
   &__see-more {
     @include bodyCopy;
     & {
-      margin-top: 2rem;
-      color: $color-primary-medium;
+      margin-top: 1.5rem;
+      color: $color-text;
       transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
       display: inline-flex;
       align-items: center;
@@ -66,7 +66,7 @@
       gap: 8px;
       font-size: 0.875rem;
       text-decoration: none;
-      color: $color-primary-medium;
+      color: $color-text;
       transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 
       svg {
