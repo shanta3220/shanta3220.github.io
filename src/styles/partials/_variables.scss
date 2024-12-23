@@ -6,10 +6,9 @@
   --gradient-end: rgba(28, 28, 40, 1);
 
   --color-primary: #a09e9e;
-  --color-primary-medium: #c2c2c2;
   --color-secondary: #a09e9e;
   --color-background-light: rgba(26, 26, 26, 0.4);
-  --color-text: #e6e6e6;
+  --color-text: #c2c2c2;
   --color-text-light: #ffffff;
   --color-hover: #ffffff;
 
@@ -29,7 +28,6 @@
   --gradient-end: rgba(255, 60, 131, 0.3);
 
   --color-primary: #6b73ff;
-  --color-primary-medium: #847eff; /* Newly added */
   --color-secondary: #ff3c83;
   --color-background-light: rgba(249, 249, 249, 0.5);
   --color-text: #333333;
@@ -46,7 +44,6 @@
   --gradient-end: rgba(255, 228, 181, 0.3);
 
   --color-primary: #ff5722;
-  --color-primary-medium: #ff7844; /* Newly added */
   --color-secondary: #ff9800;
   --color-background-light: rgba(255, 243, 224, 0.5);
   --color-text: #212121;
@@ -62,7 +59,6 @@ $gradient-mid: rgb(34, 16, 63);
 $gradient-end: rgba(28, 28, 40, 1);
 
 $color-primary: var(--color-primary);
-$color-primary-medium: var(--color-primary-medium); /* Use in SCSS */
 $color-secondary: var(--color-secondary);
 $color-background-light: var(--color-background-light);
 $color-background-dark: var(--color-background-dark, #333);
