@@ -1,37 +1,37 @@
-import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CustomCursor from "./components/CustomCursor/CustomCursor";
 import AnimatedBackground from "./components/AnimatedBackground/AnimatedBackground";
 import MatrixCanvasBackground from "./components/MatrixCanvasBackground/MatrixCanvasBackground";
 import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
-import Experience from "./components/Experience/Experience";
-import Projects from "./components/Projects/Projects";
-import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import Hero from "./components/Hero/Hero";
+import About from "./pages/About/About";
+import Projects from "./pages/Projects/Projects";
+import Contact from "./pages/Contact/Contact";
 
 import "./app.scss";
 
 function App() {
   return (
-    <div>
-      <CustomCursor />
-      <AnimatedBackground />
-      <MatrixCanvasBackground />
-      <div className="content">
-        <Header />
-        <main>
-          <Hero />
-          <About />
-          <Skills />
-          <Experience />
-          <Projects />
-          <Contact />
-        </main>
-        <Footer />
+    <Router>
+      <div>
+        <AnimatedBackground />
+        <MatrixCanvasBackground />
+        <CustomCursor />
+        <div className="content">
+          <Header />
+          <main>
+            <Routes>
+              <Route path="/" element={<Hero />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

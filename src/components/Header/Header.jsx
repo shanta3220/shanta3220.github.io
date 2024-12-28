@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useLocation, Link } from "react-router-dom";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import "./Header.scss";
 
 function Header() {
+  const location = useLocation();
   const [theme, setTheme] = useState("dark");
 
   const changeTheme = (newTheme) => {
@@ -10,25 +12,26 @@ function Header() {
     setTheme(newTheme);
   };
 
+  const pages = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Projects", path: "/projects" },
+    { name: "Contact", path: "/contact" },
+  ];
+
+  const currentPage = location.pathname;
+
+  const navLinks = pages.filter((page) => page.path !== currentPage);
+
   return (
     <header className="header">
       <nav className="header__nav">
         <ul className="header__list">
-          <li className="header__item">
-            <a href="#about">About</a>
-          </li>
-          <li className="header__item">
-            <a href="#skills">Skills</a>
-          </li>
-          <li className="header__item">
-            <a href="#experience">Experience</a>
-          </li>
-          <li className="header__item">
-            <a href="#projects">Projects</a>
-          </li>
-          <li className="header__item">
-            <a href="#contact">Contact</a>
-          </li>
+          {navLinks.map((link) => (
+            <li key={link.path} className="header__item">
+              <Link to={link.path}>{link.name}</Link>
+            </li>
+          ))}
           <li className="header__item">
             <ThemeToggle currentTheme={theme} onChangeTheme={changeTheme} />
           </li>
