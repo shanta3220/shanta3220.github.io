@@ -30,7 +30,7 @@ function Hero() {
         insightful articles, and staying inspired by data-driven innovation.
       </motion.p>
 
-      <a href="#about-me" className="hero-section__see-more">
+      <a href="#about-me" className="hero-section__see-more  delayed-visible">
         See more about me
         <svg
           className="hero-section__arrow-icon"
