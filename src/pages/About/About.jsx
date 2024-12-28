@@ -1,7 +1,9 @@
 import "./About.scss";
+import { motion } from "framer-motion";
 import profileImage from "../../assets/images/Nusrat_Jahan_Shanta.jpg";
 import profileImage2 from "../../assets/images/pic01.jpg";
 import CustomCursor from "../../components/CustomCursor/CustomCursor";
+import { getTransition } from "../../scripts/utils";
 function About() {
   const experienceTimeline = [
     {
@@ -37,39 +39,43 @@ function About() {
   ];
 
   return (
-    <section className="about">
+    <motion.section className="about" {...getTransition(0, 1)}>
       <h1 className="about__title">About Me</h1>
       <div className="about__intro">
         <div className="about__intro-content">
-          <img
-            className="about__intro-content__photo"
-            src={profileImage}
-            alt="Profile placeholder"
-          />
-          <p className="about__intro-content__text">
-            I’m Nusrat Jahan Shanta, a full-stack software engineer and game
-            programmer with over four years of experience in game development,
-            primarily using Unity3D. Originally from Bangladesh and now residing
-            in Canada, I have a Bachelor of Science in Computer Science and
-            Engineering and a Master of Science in Management Information
-            Systems. <br />
-            <br />
-            My journey began as a child gamer, which led me to pursue a career
-            in game development where I tackled complex challenges, optimized
-            performance, and collaborated with teams to deliver engaging
-            experiences. Over time, my curiosity for technology grew, leading me
-            to explore web development. <br />
-            <br />
-            Today, I bring expertise in both backend and frontend technologies,
-            combining my game development background with web technologies to
-            build scalable, interactive applications. Throughout my career, I’ve
-            participated in project showcasing competitions during my academic
-            years, which further strengthened my problem-solving skills and
-            technical knowledge. Whether developing games or building
-            applications, I thrive on finding creative solutions and delivering
-            impactful results.
-          </p>
-          <section className="about-gallery">
+          <div className="about__intro-photo-and-texts">
+            <div>
+              <img
+                className="about__intro-content__photo"
+                src={profileImage}
+                alt="Profile placeholder"
+              />
+            </div>
+            <p className="about__intro-content__text">
+              Hello, this is Nusrat Jahan Shanta, and I believe in the potential
+              of technology to create solutions that inspire and connect people.
+              My passion for building applications drives me to focus on
+              functionality, scalability, and delivering meaningful user
+              experiences. <br />
+              <br />
+              My journey began in game development, where I tackled complex
+              challenges and collaborated with teams to create engaging
+              applications. Now, as I transition into full-stack web
+              development, I’m applying my experiences to craft dynamic web
+              solutions. My approach combines backend and frontend expertise
+              with a focus on problem-solving and collaboration.
+              <br />
+              <br />
+              Throughout my academic and professional journey, I’ve participated
+              in project showcasing competitions, presenting innovative ideas
+              and demonstrating technical solutions. These experiences have been
+              pivotal in shaping my perspective on teamwork and creativity.
+              Today, I strive to create applications that not only meet user
+              needs but also reflect my passion for quality and impactful
+              design.
+            </p>{" "}
+          </div>
+          <div className="about-gallery">
             <h2 className="section-header">Photo Gallery</h2>
             <div className="about-gallery__photos">
               <img
@@ -102,23 +108,8 @@ function About() {
                 src={profileImage2}
                 alt="Band members performing an acoustic set in an intimate venue, engaging with the audience."
               />
-              <img
-                className="about-gallery__photo"
-                src={profileImage2}
-                alt="Wide-angle view of a lively crowd at a concert, illuminated by colorful stage lights."
-              />
-              <img
-                className="about-gallery__photo"
-                src={profileImage2}
-                alt="Close-up shot of a band member focused on playing their instrument during a rehearsal."
-              />
-              <img
-                className="about-gallery__photo"
-                src={profileImage2}
-                alt="The main singer passionately singing the chorus into the microphone."
-              />
             </div>
-          </section>
+          </div>
         </div>
       </div>
 
@@ -148,7 +139,7 @@ function About() {
           ))}
         </ul>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
