@@ -1,24 +1,150 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .about {
-  padding: calc(6 * $spacing-unit) calc(2 * $spacing-unit);
-  background-color: $color-background-light;
-  text-align: center;
+  h1 {
+    @include mainHeader;
+    padding: 0;
+    margin: 0;
+  }
+  padding: calc(7 * $spacing-unit) calc(22 * $spacing-unit);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
 
-  &__title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: $color-text;
+  &__photo {
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    background-color: $color-secondary;
+    border-radius: 50%;
+    box-shadow: $shadow-light;
   }
 
-  &__text {
-    margin-top: calc(1.5 * $spacing-unit);
-    margin-bottom: calc(1.5 * $spacing-unit);
-    font-size: 1rem;
-    color: $color-secondary;
-    line-height: 1.6;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+  &__intro {
+    margin-bottom: calc(4 * $spacing-unit);
+
+    width: 100%;
+    &-content {
+      background-color: $color-background-light;
+      position: relative;
+      font-size: 1.1rem;
+      color: $color-secondary;
+      line-height: 1.8;
+      padding: 1.4rem;
+      margin: 0 auto;
+      text-align: justify;
+
+      &__photo {
+        float: left;
+        margin: 0 calc(1.5 * $spacing-unit) calc(1.5 * $spacing-unit) 0;
+        width: 400px;
+
+        height: auto;
+        border-radius: $border-radius;
+        border-radius: 50%;
+        box-shadow: $shadow-light;
+      }
+
+      &__text {
+        margin: 0;
+        font-size: 1.1rem;
+        color: $color-secondary;
+        line-height: 1.6;
+      }
+    }
+  }
+  &__timeline {
+    position: relative;
+    margin: calc(4 * $spacing-unit) 0;
+    justify-items: center;
+    align-items: center;
+    &-item {
+      display: flex;
+      margin-bottom: calc(3 * $spacing-unit);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-marker {
+      position: absolute;
+      margin-top: 20px;
+      transform: translateX(-50%);
+      width: 14px;
+      height: 14px;
+      background-color: $color-primary;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    &-content {
+      padding: 1rem 1.5rem;
+      border-radius: $border-radius;
+      background-color: $color-background-light;
+      box-shadow: $shadow-light;
+      margin-left: calc(2 * $spacing-unit);
+      width: 50vw;
+      &-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: $color-text;
+      }
+
+      &-date {
+        font-size: 0.9rem;
+        color: $color-secondary;
+      }
+
+      &-description {
+        font-size: 1rem;
+        color: $color-text;
+        margin-top: calc(1 * $spacing-unit);
+      }
+    }
+  }
+
+  &__skills {
+    margin-top: calc(4 * $spacing-unit);
+    text-align: center;
+
+    &-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $color-text;
+      margin-bottom: calc(2 * $spacing-unit);
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: calc(1.5 * $spacing-unit);
+      list-style: none;
+      padding: 0;
+    }
+
+    &-item {
+      font-size: 1rem;
+      color: $color-secondary;
+      background-color: $color-background-light;
+      padding: calc(0.5 * $spacing-unit) calc(1 * $spacing-unit);
+      border-radius: $border-radius;
+      box-shadow: $shadow-light;
+    }
+  }
+}
+
+.about-gallery {
+  &__photos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    img {
+      width: 30%;
+    }
   }
 }

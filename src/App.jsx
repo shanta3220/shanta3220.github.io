@@ -8,7 +8,6 @@ import Hero from "./components/Hero/Hero";
 import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
-
 import "./app.scss";
 
 function App() {
@@ -17,8 +16,9 @@ function App() {
       <div>
         <AnimatedBackground />
         <MatrixCanvasBackground />
-        <CustomCursor />
+
         <div className="content">
+          <CustomCursor />
           <Header />
           <main>
             <Routes>
