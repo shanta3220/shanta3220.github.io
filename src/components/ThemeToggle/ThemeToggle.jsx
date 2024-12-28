@@ -12,7 +12,7 @@ function ThemeToggle({ currentTheme, onChangeTheme }) {
       (theme) => theme.name === currentTheme
     );
     const nextTheme = themes[(currentIndex + 1) % themes.length];
-    onChangeTheme(nextTheme.name);
+    if (onChangeTheme) onChangeTheme(nextTheme.name);
   };
 
   const currentThemeColor = themes.find(
@@ -23,10 +23,10 @@ function ThemeToggle({ currentTheme, onChangeTheme }) {
     <button
       className="theme-toggle"
       onClick={handleClick}
-      style={{ backgroundColor: currentThemeColor }}
+      style={{ backgroundColor: currentThemeColor || "#ccc" }}
       title="Switch to next theme"
     >
-      {currentTheme.toUpperCase()}
+      {currentTheme?.toUpperCase() || "THEME"}
     </button>
   );
 }
