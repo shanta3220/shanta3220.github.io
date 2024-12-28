@@ -14,14 +14,16 @@
 
   &__header {
     @include mainHeader;
-    margin-bottom: 1.5rem;
-    color: $color-text;
-    background: linear-gradient(90deg, #ff7eb3, #29b5ec, #b3405e, #eed5df);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 300% 300%;
-    animation: gradientShift 5s linear infinite,
-      subtleFloat 2s ease-in-out infinite alternate;
+    & {
+      margin-bottom: 1.5rem;
+      color: $color-text;
+      background: linear-gradient(90deg, #ff7eb3, #29b5ec, #b3405e, #eed5df);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-size: 300% 300%;
+      animation: gradientShift 5s linear infinite,
+        subtleFloat 2s ease-in-out infinite alternate;
+    }
   }
 
   &__paragraph {
