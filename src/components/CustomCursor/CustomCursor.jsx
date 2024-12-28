@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom"; // Import React Router hook
 import "./CustomCursor.scss";
 
 function CustomCursor() {
@@ -7,6 +8,7 @@ function CustomCursor() {
   const mousePosition = useRef({ x: 0, y: 0 });
   const dotPosition = useRef({ x: 0, y: 0 });
   const circlePosition = useRef({ x: 0, y: 0 });
+  const location = useLocation();
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -74,19 +76,25 @@ function CustomCursor() {
       if (dotRef.current) dotRef.current.classList.remove("hovering");
     };
 
-    const interactiveElements = document.querySelectorAll("a, button");
-    interactiveElements.forEach((el) => {
-      el.addEventListener("mouseenter", handleMouseEnter);
-      el.addEventListener("mouseleave", handleMouseLeave);
-    });
+    const addEventListeners = () => {
+      const interactiveElements = document.querySelectorAll("a, button");
+      interactiveElements.forEach((el) => {
+        el.addEventListener("mouseenter", handleMouseEnter);
+        el.addEventListener("mouseleave", handleMouseLeave);
+      });
+    };
 
-    return () => {
+    const removeEventListeners = () => {
+      const interactiveElements = document.querySelectorAll("a, button");
       interactiveElements.forEach((el) => {
         el.removeEventListener("mouseenter", handleMouseEnter);
         el.removeEventListener("mouseleave", handleMouseLeave);
       });
     };
-  }, []);
+
+    addEventListeners();
+    return () => removeEventListeners();
+  }, [location]);
 
   return (
     <>
