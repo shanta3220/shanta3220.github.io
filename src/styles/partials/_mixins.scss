@@ -1,0 +1,131 @@
+@use "./variables" as *;
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    & {
+      @content;
+    }
+  }
+}
+
+@mixin text-style($font-size, $line-height, $font-weight) {
+  & {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+  }
+}
+
+@mixin mainHeader {
+  @include text-style(2rem, 1.2, 700);
+
+  @include tablet {
+    @include text-style(2.5rem, 1.4, 700);
+  }
+
+  @include desktop {
+    @include text-style(3rem, 1.2, 900);
+  }
+}
+
+@mixin subHeader {
+  @include text-style(1.5rem, 1.4, 600);
+
+  @include tablet {
+    @include text-style(1.75rem, 1.4, 600);
+  }
+
+  @include desktop {
+    @include text-style(2rem, 1.4, 600);
+  }
+}
+
+@mixin bodyCopy {
+  @include text-style(1rem, 1.5, 400);
+
+  @include tablet {
+    @include text-style(1.125rem, 1.5, 400);
+  }
+
+  @include desktop {
+    @include text-style(1.2rem, 1.5, 400);
+  }
+}
+
+@mixin button {
+  @include text-style(0.875rem, 1.25, 600);
+
+  & {
+    height: 2.5rem;
+    background-color: $primary-medium;
+    border-radius: 1.25rem;
+    color: $primary-bright;
+    border: none;
+    text-transform: uppercase;
+    text-align: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $primary-bright;
+      color: $primary-medium;
+      transition: background-color 0.2s ease;
+    }
+  }
+}
+
+@mixin formInput {
+  @include bodyCopy;
+
+  & {
+    padding: 0.75rem;
+    background-color: $primary-medium;
+    border-radius: 0.25rem;
+    height: 2.25rem;
+    width: 90%;
+    color: $primary-bright;
+    outline: 1px solid $primary-medium;
+    border: none;
+
+    &:focus {
+      outline: 2px solid $primary-bright;
+
+      &:invalid {
+        outline: 1px solid $primary-invalid;
+      }
+    }
+
+    &::placeholder {
+      color: $primary-bright;
+    }
+  }
+
+  @include tablet {
+    padding: 0 2rem;
+    height: 2.5rem;
+  }
+}
+
+@mixin reset-margin-padding {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin sectionPadding {
+  padding: $padding-large $padding-medium;
+
+  @include tablet {
+    padding: $padding-large;
+  }
+
+  @include desktop {
+    padding: $padding-xlarge;
+  }
+}

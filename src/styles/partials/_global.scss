@@ -1,0 +1,9 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  @include reset-margin-padding;
+}

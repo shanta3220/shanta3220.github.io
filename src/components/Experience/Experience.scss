@@ -1,0 +1,55 @@
+@use "../../styles/partials/variables" as *;
+
+.experience {
+  padding: calc(4 * $spacing-unit) calc(2 * $spacing-unit);
+  background-color: $color-background-light;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: $color-text;
+    text-align: center;
+    margin-bottom: calc(2 * $spacing-unit);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: calc(2 * $spacing-unit);
+  }
+
+  &__item {
+    background-color: $color-primary;
+    color: $color-text-light;
+    padding: calc(1 * $spacing-unit);
+    border-radius: $border-radius;
+    box-shadow: $shadow-light;
+
+    &__company {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    &__role {
+      font-size: 1.2rem;
+      margin: calc(0.5 * $spacing-unit) 0;
+    }
+
+    &__duration {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: $color-secondary;
+      margin-bottom: calc(1 * $spacing-unit);
+    }
+
+    &__description {
+      list-style: disc;
+      margin-left: calc(1 * $spacing-unit);
+      color: $color-text-light;
+
+      li {
+        margin-bottom: calc(0.5 * $spacing-unit);
+      }
+    }
+  }
+}
