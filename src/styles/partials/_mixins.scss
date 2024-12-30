@@ -42,17 +42,27 @@
   @include tablet {
     @include text-style(1.75rem, 1.4, 600);
   }
+}
 
-  @include desktop {
-    @include text-style(2rem, 1.4, 600);
+@mixin subHeaderSmall {
+  @include text-style(1.25rem, 1, 600);
+
+  @include tablet {
+    @include text-style(1.5rem, 1.25, 600);
   }
 }
 
 @mixin bodyCopy {
-  @include text-style(1rem, 1.5, 400);
-
+  @include text-style(0.875rem, 1.25, 400);
   @include tablet {
-    @include text-style(1.125rem, 1.5, 400);
+    @include text-style(1rem, 1.45, 400);
+  }
+}
+
+@mixin bodyCopySmall {
+  @include text-style(0.875rem, 1.25, 400);
+  @include tablet {
+    @include text-style(0.9rem, 1.45, 400);
   }
 }
 

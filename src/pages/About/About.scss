@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
   }
 
   &__title {
@@ -18,13 +19,14 @@
       text-align: center;
       margin-bottom: $padding-medium;
       color: $color-text;
+      width: 100%;
     }
   }
 
   &__sub-title {
     @include subHeader;
     & {
-      text-align: center;
+      text-align: left;
       margin-bottom: $padding-medium;
       color: $color-text;
     }
@@ -43,22 +45,26 @@
     }
 
     &-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: $color-background-light;
-      padding: $padding-medium;
-      border-radius: $border-radius;
-      box-shadow: $shadow-light;
+      & {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $color-background-light;
+        padding: $padding-medium;
+        border-radius: $border-radius;
+        box-shadow: $shadow-light;
+      }
 
       &__photo {
-        width: 50%;
-        height: 50%;
-        max-width: 300px;
-        max-height: 300px;
-        border-radius: 50%;
-        box-shadow: $shadow-medium;
-        margin-bottom: $padding-medium;
+        & {
+          width: 50%;
+          height: 50%;
+          max-width: 300px;
+          max-height: 300px;
+          border-radius: 50%;
+          box-shadow: $shadow-medium;
+          margin-bottom: $padding-medium;
+        }
       }
 
       &__text {
@@ -73,95 +79,136 @@
   }
 
   &__section {
-    margin-top: $padding-large;
-    width: 100%;
+    & {
+      margin-top: $padding-large;
+      width: 100%;
+    }
+
     &-cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: $spacing-unit;
-      justify-content: center;
+      & {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacing-unit;
+        justify-content: center;
+      }
     }
   }
 
   &__timeline {
-    position: relative;
-    margin-top: calc(2 * $spacing-unit);
+    & {
+      position: relative;
+      margin-top: calc(2 * $spacing-unit);
+      justify-items: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
 
-    justify-items: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    width: 90%;
+    &::before {
+      & {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background-color: $color-primary;
+        transform: translateX(-50%);
+        z-index: 0;
+      }
+    }
 
     &-item {
-      width: 100%;
-      display: flex;
-      align-items: flex-start;
-      position: relative;
-      margin-bottom: calc(3 * $spacing-unit);
+      & {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+        margin-bottom: calc(3 * $spacing-unit);
+        gap: 1rem;
 
-      &:last-child {
-        margin-bottom: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
 
     &-marker {
-      position: absolute;
-      left: 0;
-      margin-top: calc(1.5 * $spacing-unit);
-
-      transform: translateX(-50%);
-      width: 14px;
-      height: 14px;
-      background-color: $color-primary;
-      border-radius: 50%;
-      z-index: 1;
+      & {
+        position: absolute;
+        left: 0;
+        margin-top: calc(1.5 * $spacing-unit);
+        transform: translateX(-50%);
+        width: 14px;
+        height: 14px;
+        background-color: $color-primary;
+        border-radius: 50%;
+        z-index: 1;
+      }
     }
 
     &-content {
-      padding: $padding-medium;
-      border-radius: $border-radius;
-      background-color: $color-background-light;
-      box-shadow: $shadow-light;
-      margin-left: calc(3 * $spacing-unit);
-      width: 100%;
-
-      @include tablet {
+      & {
         width: 100%;
+        padding: $padding-medium;
+        border-radius: $border-radius;
+        background-color: $color-background-light;
+        box-shadow: $shadow-light;
+        margin-left: calc(3 * $spacing-unit);
       }
 
-      h3 {
-        @include subHeader;
+      &-title {
+        @include bodyCopy;
         & {
+          font-weight: 900;
           color: $color-text;
-          margin-bottom: $padding-small;
         }
       }
 
-      .about__timeline-date {
-        font-size: 0.9rem;
-        color: $color-secondary;
+      a {
+        @include bodyCopySmall;
       }
 
       .about__timeline-description {
-        @include bodyCopy;
+        @include bodyCopySmall;
         & {
           color: $color-text;
-          margin-top: $padding-small;
+          margin-top: $padding-medium;
         }
       }
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 4px;
-      height: 100%;
-      background-color: $color-primary;
-      transform: translateX(-50%);
-      z-index: 0;
+    &-side {
+      & {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding-left: $spacing-unit;
+        padding-top: $padding-medium;
+        min-width: 160px;
+      }
+
+      .about__timeline-date {
+        @include bodyCopySmall;
+        & {
+          color: $color-secondary;
+          margin-bottom: $spacing-unit;
+        }
+      }
+
+      .about__timeline-website {
+        @include bodyCopySmall;
+        & {
+          color: $color-secondary;
+          text-decoration: underline;
+        }
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
     }
   }
 }
@@ -170,21 +217,25 @@
   margin-top: $padding-medium;
 
   &__photo {
-    width: calc(33% - $spacing-unit);
-    border-radius: $border-radius;
-    box-shadow: $shadow-light;
-    transition: transform $transition-default;
-    align-items: start;
+    & {
+      width: calc(33% - $spacing-unit);
+      border-radius: $border-radius;
+      box-shadow: $shadow-light;
+      transition: transform $transition-default;
+      align-items: start;
 
-    &:hover {
-      transform: scale(1.05);
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 
   &__photos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: $spacing-unit;
+    & {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: $spacing-unit;
+    }
   }
 }
