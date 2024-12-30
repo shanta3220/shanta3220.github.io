@@ -1,62 +1,82 @@
-import "./About.scss";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import profileImage from "../../assets/images/Nusrat_Jahan_Shanta.jpg";
 import profileImage2 from "../../assets/images/pic01.jpg";
-import CustomCursor from "../../components/CustomCursor/CustomCursor";
+import ImageCard from "../../components/ImageCard/ImageCard";
+import ImageModal from "../../components/ImageModal/ImageModal";
 import { getTransition } from "../../scripts/utils";
+import "./About.scss";
+
 function About() {
-  const experienceTimeline = [
+  const [modalContent, setModalContent] = useState(null);
+
+  const handleCardClick = (content) => {
+    setModalContent(content);
+  };
+
+  const handleCloseModal = () => {
+    setModalContent(null);
+  };
+
+  const educationData = [
     {
-      title: "Software Engineer",
-      date: "2021 - Present",
-      description:
-        "Worked on interactive, scalable web applications and games, collaborating across teams to deliver engaging projects.",
-    },
-    {
-      title: "Game Developer",
-      date: "2018 - 2021",
-      description:
-        "Designed and developed immersive gaming experiences using Unity and C#, focusing on user engagement and optimization.",
-    },
-    {
+      media: {
+        type: "image",
+        src: "src/assets/images/Nusrat_Jahan_Shanta.jpg",
+      },
       title: "B.Sc. in Computer Science",
-      date: "2014 - 2018",
-      description:
-        "Graduated with honors, specializing in software engineering and game development.",
+      year: "2014 - 2018",
+      technologies: ["C++", "Java"],
+      description: "Graduated with honors in software engineering.",
+    },
+    {
+      media: {
+        type: "image",
+        src: "src/assets/images/Nusrat_Jahan_Shanta.jpg",
+      },
+      title: "M.Sc. in Management Information Systems",
+      year: "2019 - 2021",
+      technologies: ["Python", "Data Analysis"],
+      description: "Focused on data management and analytics.",
     },
   ];
 
-  const skills = [
-    "JavaScript",
-    "React",
-    "Node.js",
-    "Python",
-    "Unity",
-    "C#",
-    "SQL",
-    "HTML/CSS",
-    "Git/GitHub",
+  const experienceData = [
+    {
+      media: { type: "image", src: "path/to/experience-image.jpg" },
+      title: "Software Engineer",
+      year: "2021 - Present",
+      technologies: ["React", "Node.js"],
+      description: "Worked on interactive web applications.",
+    },
+    {
+      media: { type: "image", src: "path/to/experience-image-2.jpg" },
+      title: "Game Developer",
+      year: "2018 - 2021",
+      technologies: ["Unity3D", "C#"],
+      description: "Developed immersive gaming experiences.",
+    },
   ];
 
   return (
     <motion.section className="about" {...getTransition(0, 1)}>
+      {/* About Me Section */}
       <h1 className="about__title">About Me</h1>
       <div className="about__intro">
         <div className="about__intro-content">
           <div className="about__intro-photo-and-texts">
-            <div>
-              <img
-                className="about__intro-content__photo"
-                src={profileImage}
-                alt="Profile placeholder"
-              />
-            </div>
+            <img
+              className="about__intro-content__photo"
+              src={profileImage}
+              alt="Profile placeholder"
+            />
             <p className="about__intro-content__text">
               Hello, this is Nusrat Jahan Shanta, and I believe in the potential
               of technology to create solutions that inspire and connect people.
               My passion for building applications drives me to focus on
               functionality, scalability, and delivering meaningful user
-              experiences. <br />
+              experiences.
+              <br />
               <br />
               My journey began in game development, where I tackled complex
               challenges and collaborated with teams to create engaging
@@ -73,7 +93,7 @@ function About() {
               Today, I strive to create applications that not only meet user
               needs but also reflect my passion for quality and impactful
               design.
-            </p>{" "}
+            </p>
           </div>
           <div className="about-gallery">
             <h2 className="section-header">Photo Gallery</h2>
@@ -81,64 +101,74 @@ function About() {
               <img
                 className="about-gallery__photo"
                 src={profileImage2}
-                alt="Band members interacting with fans after the show, sharing smiles and laughter."
+                alt="Photo 1"
               />
               <img
                 className="about-gallery__photo"
                 src={profileImage2}
-                alt="A fan enjoying the show, capturing the moment with a bright smile."
+                alt="Photo 2"
               />
               <img
                 className="about-gallery__photo"
                 src={profileImage2}
-                alt="Audience members waving their hands in excitement during a live concert."
+                alt="Photo 3"
               />
               <img
                 className="about-gallery__photo"
                 src={profileImage2}
-                alt="A fan waving enthusiastically while enjoying the concert atmosphere."
+                alt="Photo 3"
               />
               <img
                 className="about-gallery__photo"
                 src={profileImage2}
-                alt="The band performing on stage at an outdoor festival at night, surrounded by colorful fireworks lighting up the sky."
+                alt="Photo 3"
               />
               <img
                 className="about-gallery__photo"
                 src={profileImage2}
-                alt="Band members performing an acoustic set in an intimate venue, engaging with the audience."
+                alt="Photo 3"
               />
             </div>
           </div>
         </div>
       </div>
-
-      {/* Experience Section */}
-      <div className="about__timeline">
-        <h2 className="about__title">Experience</h2>
-        {experienceTimeline.map((item, index) => (
-          <div key={index} className="about__timeline-item">
-            <div className="about__timeline-marker" />
-            <div className="about__timeline-content">
-              <h3 className="about__timeline-title">{item.title}</h3>
-              <span className="about__timeline-date">{item.date}</span>
-              <p className="about__timeline-description">{item.description}</p>
+      <div className="about__section">
+        <h3 className="about__sub-title">Education</h3>
+        <div className="about__timeline">
+          {experienceData.map((item, index) => (
+            <div key={index} className="about__timeline-item">
+              <div className="about__timeline-marker" />
+              <div className="about__timeline-content">
+                <h3>{item.title}</h3>
+                <span className="about__timeline-date">{item.year}</span>
+                <p className="about__timeline-description">
+                  {item.description}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      {/* Skills Section */}
-      <div className="about__skills">
-        <h3 className="about__skills-title">Skills</h3>
-        <ul className="about__skills-list">
-          {skills.map((skill, index) => (
-            <li key={index} className="about__skills-item">
-              {skill}
-            </li>
+      <div className="about__section">
+        <h3 className="about__sub-title">Education</h3>
+        <div className="about__section-cards">
+          {educationData.map((item, index) => (
+            <ImageCard
+              key={index}
+              {...item}
+              onClick={() => handleCardClick(item)}
+            />
           ))}
-        </ul>
+        </div>
       </div>
+
+      {/* Image Modal */}
+      <ImageModal
+        isOpen={!!modalContent}
+        content={modalContent}
+        onClose={handleCloseModal}
+      />
     </motion.section>
   );
 }
