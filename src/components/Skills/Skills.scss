@@ -18,6 +18,7 @@
     &-title {
       @include bodyCopy;
       & {
+        font-weight: 600;
         color: $color-text;
         margin-bottom: $spacing-unit;
         text-transform: uppercase;
