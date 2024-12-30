@@ -1,16 +1,15 @@
 import React from "react";
-import * as Icons from "react-icons/fa";
 import "./SkillItem.scss";
-import { getContrastColor } from "../../scripts/utils";
+import { GetSkill } from "../../utils";
 
-function SkillItem({ name, icon, bgColor }) {
-  const IconComponent = Icons[icon];
-  if (!IconComponent) {
-    console.error(`Icon "${icon}" not found in react-icons/fa`);
+function SkillItem({ name }) {
+  const skill = GetSkill(name);
+  if (!skill) {
+    console.error(`Skill "${name}" not found.`);
     return null;
   }
 
-  const textColor = getContrastColor(bgColor);
+  const { icon: IconComponent, bgColor, color: textColor } = skill;
 
   return (
     <div
