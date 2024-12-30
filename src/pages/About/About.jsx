@@ -5,6 +5,7 @@ import profileImage2 from "../../assets/images/pic01.jpg";
 import ImageModal from "../../components/ImageModal/ImageModal";
 import { getTransition } from "../../scripts/utils";
 import "./About.scss";
+import Skills from "../../components/Skills/Skills";
 
 function About() {
   const [modalContent, setModalContent] = useState(null);
@@ -137,19 +138,11 @@ function About() {
         </div>
       </div>
 
-      {/* Skills Section */}
       <div className="about__section">
         <h2 className="about__sub-title">Skills</h2>
-        <ul className="about__skills">
-          {skills.map((skill, index) => (
-            <li key={index} className="about__skills-item">
-              {skill}
-            </li>
-          ))}
-        </ul>
+        <Skills />
       </div>
 
-      {/* Experience Section */}
       <div className="about__section">
         <h2 className="about__sub-title">Experience</h2>
         <div className="about__timeline">
