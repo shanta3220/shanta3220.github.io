@@ -115,7 +115,7 @@
         left: 0;
         width: 4px;
         height: 100%;
-        background-color: $color-primary;
+        background-color: $color-link;
         transform: translateX(-50%);
         z-index: 0;
       }
@@ -144,7 +144,7 @@
         transform: translateX(-50%);
         width: 14px;
         height: 14px;
-        background-color: $color-primary;
+        background-color: $color-link;
         border-radius: 50%;
         z-index: 1;
       }
@@ -195,7 +195,7 @@
       .about__timeline-date {
         @include bodyCopySmall;
         & {
-          color: $color-secondary;
+          color: $color-text;
           margin-bottom: $spacing-unit;
           white-space: nowrap;
         }
@@ -204,12 +204,12 @@
       .about__timeline-website {
         @include bodyCopySmall;
         & {
-          color: $color-secondary;
+          color: $color-text;
           text-decoration: underline;
         }
 
         &:hover {
-          color: $color-primary;
+          color: $color-link;
         }
       }
     }

@@ -1,11 +1,11 @@
 @use "./_typography" as *;
+
 :root {
   --gradient-start: rgba(32, 40, 92, 1);
   --gradient-mid: rgb(34, 16, 63);
   --gradient-end: rgba(28, 28, 40, 1);
 
-  --color-primary: #a09e9e;
-  --color-secondary: #a09e9e;
+  --color-link: #a09e9e;
   --color-background-light: rgba(26, 26, 26, 0.4);
   --color-text: #c2c2c2;
   --color-text-light: #ffffff;
@@ -26,12 +26,11 @@
   --gradient-mid: rgba(198, 80, 255, 0.3);
   --gradient-end: rgba(255, 60, 131, 0.3);
 
-  --color-primary: #6b73ff;
-  --color-secondary: #ff3c83;
+  --color-link: #6b73ff; /* Vibrant blue for links */
+  --color-hover: #212121; /* Dark contrasting hover color */
   --color-background-light: rgba(249, 249, 249, 0.5);
   --color-text: #333333;
   --color-text-light: #ffffff;
-  --color-hover: #5946d2;
 
   --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.1);
   --shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -42,12 +41,11 @@
   --gradient-mid: rgba(255, 165, 0, 0.3);
   --gradient-end: rgba(255, 228, 181, 0.3);
 
-  --color-primary: #ff5722;
-  --color-secondary: #ff9800;
+  --color-link: #ff5722;
+  --color-hover: #212121;
   --color-background-light: rgba(255, 243, 224, 0.5);
   --color-text: #212121;
   --color-text-light: #ffffff;
-  --color-hover: #e64a19;
 
   --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.1);
   --shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -57,8 +55,7 @@ $gradient-start: rgba(32, 40, 92, 1);
 $gradient-mid: rgb(34, 16, 63);
 $gradient-end: rgba(28, 28, 40, 1);
 
-$color-primary: var(--color-primary);
-$color-secondary: var(--color-secondary);
+$color-link: var(--color-link);
 $color-background-light: var(--color-background-light);
 $color-background-dark: var(--color-background-dark, #333);
 $color-text: var(--color-text);
