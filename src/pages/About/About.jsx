@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import profileImage from "../../assets/images/Nusrat_Jahan_Shanta.jpg";
 import profileImage2 from "../../assets/images/pic01.jpg";
 import ImageModal from "../../components/ImageModal/ImageModal";
 import { getTransition } from "../../scripts/utils";
+import {
+  skillCategories,
+  educationData,
+  experienceData,
+} from "../../scripts/Data";
 import "./About.scss";
 import Skills from "../../components/Skills/Skills";
 
@@ -17,68 +22,6 @@ function About() {
   const handleCloseModal = () => {
     setModalContent(null);
   };
-
-  const skills = [
-    "JavaScript",
-    "React",
-    "Node.js",
-    "Python",
-    "Unity3D",
-    "C#",
-    "SQL",
-    "HTML/CSS",
-    "Git/GitHub",
-  ];
-
-  const educationData = [
-    {
-      media: { type: "image", src: profileImage },
-      title: "B.Sc. in Computer Science",
-      year: "2014 - 2018",
-      technologies: ["C++", "Java"],
-      description: "Graduated with honors in software engineering.",
-      website: "https://university.edu",
-    },
-    {
-      media: { type: "image", src: profileImage },
-      title: "M.Sc. in Management Information Systems",
-      year: "2019 - 2021",
-      technologies: ["Python", "Data Analysis"],
-      description: "Focused on data management and analytics.",
-      website: "https://university.edu",
-    },
-  ];
-
-  const experienceData = [
-    {
-      media: { type: "image", src: profileImage2 },
-      title: "Freelance Game Programmer",
-      company: "Nudge Nudge Games GmbH",
-      location: "Berlin, DE",
-      year: "Feb 2020 - Jun 2024",
-      description: [
-        "Implemented UI into the game, iterating multiple times to enhance usability and visual consistency.",
-        "Completed 949 tasks in Trello—the highest in the team due to long tenure.",
-        "Mentored a junior developer to contribute significantly to key game features.",
-        "Collaborated with a 30-person team on a major project, ensuring design consistency and cohesive execution.",
-        "Resolved 30% of reported bugs, improving game stability, and conducted code reviews to ensure high-quality code.",
-      ],
-      website: "https://nudge-games.com",
-    },
-    {
-      media: { type: "image", src: profileImage2 },
-      title: "Part-Time Software Engineer",
-      company: "Arcade Studios",
-      location: "Dhaka, BD",
-      year: "Jan 2020 - Sep 2020",
-      description: [
-        "Started with a small role in core feature development and quickly progressed to leading a personal project within a month.",
-        "Collaborated with 10 engineers on GitHub, reviewing, testing, and ensuring seamless integration.",
-        "Improved code quality and reduced integration issues by 25%.",
-      ],
-      website: "https://arcadestudios.com",
-    },
-  ];
 
   return (
     <motion.section className="about" {...getTransition(0, 1)}>
@@ -138,11 +81,13 @@ function About() {
         </div>
       </div>
 
+      {/* Skills Section */}
       <div className="about__section">
         <h2 className="about__sub-title">Skills</h2>
-        <Skills />
+        <Skills skillCategories={skillCategories} />
       </div>
 
+      {/* Experience Section */}
       <div className="about__section">
         <h2 className="about__sub-title">Experience</h2>
         <div className="about__timeline">
@@ -159,7 +104,6 @@ function About() {
                 >
                   {` ${item.company}, ${item.location}`}
                 </a>
-
                 <ul className="about__timeline-description">
                   {item.description.map((desc, i) => (
                     <li key={i}>
@@ -192,17 +136,22 @@ function About() {
             <div key={index} className="about__timeline-item">
               <div className="about__timeline-marker" />
               <div className="about__timeline-content">
+                <p className="about__timeline-content-title">{item.title}</p>
                 <a
                   href={item.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="about__timeline-title"
+                  className="about__timeline-company"
                 >
-                  {item.title}
+                  {` ${item.institution}, ${item.location}`}
                 </a>
-                <p className="about__timeline-description">
-                  {item.description}
-                </p>
+                <ul className="about__timeline-description">
+                  {item.description.map((desc, i) => (
+                    <li key={i}>
+                      <span className="about__timeline-dot">•</span> {desc}
+                    </li>
+                  ))}
+                </ul>
               </div>
               <div className="about__timeline-side">
                 <span className="about__timeline-date">{item.year}</span>

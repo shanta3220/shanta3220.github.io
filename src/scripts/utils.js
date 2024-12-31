@@ -1,4 +1,5 @@
 import * as Icons from "react-icons/fa";
+import * as SiIcons from "react-icons/si";
 
 export const getTransition = (delay, duration) => {
   if (!duration) {
@@ -56,7 +57,11 @@ const skillDetails = [
     icon: Icons.FaGoogle,
     bgColor: "rgba(66, 133, 244, 1)",
   },
-  { name: "Photoshop", icon: Icons.FaAdobe, bgColor: "rgba(227, 38, 54, 1)" },
+  {
+    name: "Photoshop",
+    icon: SiIcons.SiAdobephotoshop,
+    bgColor: "rgba(227, 38, 54, 1)",
+  },
   { name: "SourceTree", icon: Icons.FaGitAlt, bgColor: "rgba(240, 80, 51, 1)" },
   {
     name: "Problem-Solving",

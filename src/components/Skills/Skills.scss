@@ -1,9 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-@use "../../styles/partials/variables" as *;
-@use "../../styles/partials/mixins" as *;
-
 .skills {
   text-align: center;
   margin: $padding-xlarge $padding-small 0 0;
@@ -13,18 +10,16 @@
   border-radius: $border-radius;
   box-shadow: $shadow-light;
   display: flex;
-  gap: calc($spacing-unit * 1.5);
+  gap: calc($spacing-unit * 1.6);
   flex-direction: column;
 
   &__category {
     &-title {
       @include bodyCopy;
       & {
-        font-weight: 600;
+        font-weight: 900;
         color: $color-text;
         margin-bottom: $padding-small;
-        text-transform: uppercase;
-        letter-spacing: 1px;
       }
     }
   }
