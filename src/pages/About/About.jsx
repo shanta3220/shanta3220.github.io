@@ -3,14 +3,12 @@ import { motion } from "framer-motion";
 import profileImage from "../../assets/images/Nusrat_Jahan_Shanta.jpg";
 import profileImage2 from "../../assets/images/pic01.jpg";
 import ImageModal from "../../components/ImageModal/ImageModal";
+import ImageCard from "../../components/ImageCard/ImageCard";
 import { getTransition } from "../../scripts/utils";
-import {
-  skillCategories,
-  educationData,
-  experienceData,
-} from "../../scripts/Data";
-import "./About.scss";
+import { skillCategories, educationData } from "../../scripts/Data";
+import { experienceData } from "../../scripts/experience-data";
 import Skills from "../../components/Skills/Skills";
+import "./About.scss";
 
 function About() {
   const [modalContent, setModalContent] = useState(null);
@@ -25,7 +23,6 @@ function About() {
 
   return (
     <motion.section className="about" {...getTransition(0, 1)}>
-      {/* About Me Section */}
       <h1 className="about__title">About Me</h1>
       <div className="about__intro">
         <div className="about__intro-content">
@@ -59,7 +56,7 @@ function About() {
             </p>
           </div>
           <div className="about-gallery">
-            <h2 className="section-header">Photo Gallery</h2>
+            <h2 className="about__sub-title">Photo Gallery</h2>
             <div className="about-gallery__photos">
               <img
                 className="about-gallery__photo"
@@ -81,13 +78,11 @@ function About() {
         </div>
       </div>
 
-      {/* Skills Section */}
       <div className="about__section">
         <h2 className="about__sub-title">Skills</h2>
         <Skills skillCategories={skillCategories} />
       </div>
 
-      {/* Experience Section */}
       <div className="about__section">
         <h2 className="about__sub-title">Experience</h2>
         <div className="about__timeline">
@@ -111,6 +106,17 @@ function About() {
                     </li>
                   ))}
                 </ul>
+
+                <div className="about__timeline-media">
+                  {item.media &&
+                    item.media.map((mediaItem, mediaIndex) => (
+                      <ImageCard
+                        key={`${index}-${mediaIndex}`}
+                        media={mediaItem}
+                        onClick={() => handleCardClick(mediaItem)}
+                      />
+                    ))}
+                </div>
               </div>
               <div className="about__timeline-side">
                 <span className="about__timeline-date">{item.year}</span>
@@ -128,7 +134,6 @@ function About() {
         </div>
       </div>
 
-      {/* Education Section */}
       <div className="about__section">
         <h2 className="about__sub-title">Education</h2>
         <div className="about__timeline">
@@ -169,7 +174,6 @@ function About() {
         </div>
       </div>
 
-      {/* Image Modal */}
       <ImageModal
         isOpen={!!modalContent}
         content={modalContent}

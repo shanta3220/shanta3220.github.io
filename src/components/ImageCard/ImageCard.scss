@@ -2,57 +2,25 @@
 @use "../../styles/partials/mixins" as *;
 
 .image-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: $color-background-light;
-  border-radius: $border-radius;
-  box-shadow: $shadow-light;
-  padding: $spacing-unit;
-  cursor: pointer;
-  transition: transform $transition-default, box-shadow $transition-default;
+  & {
+    cursor: pointer;
+    border-radius: $border-radius;
+    overflow: hidden;
+    transition: transform $transition-default;
+    border: 1px solid $color-text;
+    display: flex;
+    background-color: $color-background-dark;
+    justify-content: center;
+  }
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: $shadow-medium;
   }
 
   &__media {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    border-radius: $border-radius;
-    background-color: $color-secondary;
-    margin-bottom: $spacing-unit;
-
     img,
     video {
-      width: 100%;
       height: 100%;
-      object-fit: cover;
-      border-radius: $border-radius;
-    }
-  }
-
-  &__content {
-    text-align: center;
-
-    h3 {
-      @include subHeader;
-
-      & {
-        color: $color-link;
-        margin-bottom: $padding-small;
-      }
-    }
-
-    p {
-      @include bodyCopy;
-
-      & {
-        color: $color-text;
-        margin-bottom: $padding-small;
-      }
     }
   }
 }

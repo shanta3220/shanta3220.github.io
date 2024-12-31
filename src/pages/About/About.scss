@@ -218,7 +218,10 @@
 
 .about-gallery {
   margin-top: $padding-medium;
-
+  color: $color-text;
+  .about__sub-title {
+    @include subHeaderSmall;
+  }
   &__photo {
     & {
       width: calc(33% - $spacing-unit);
@@ -240,5 +243,16 @@
       justify-content: space-between;
       gap: $spacing-unit;
     }
+  }
+}
+.about__timeline-media {
+  margin-top: $padding-medium;
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-unit;
+
+  .image-card {
+    width: 104px;
+    height: 56px;
   }
 }

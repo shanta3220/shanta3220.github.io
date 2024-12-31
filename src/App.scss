@@ -2,50 +2,48 @@
 @use "./styles/partials/global";
 
 body {
-  font-family: var(--font-primary);
+  font-family: $font-primary;
   margin: 0;
   padding: 0;
-  background-color: var(--color-background-light);
-  color: var(--color-text);
+  background-color: color-background-light;
+  color: color-text;
   height: 100vh;
 }
 
 a {
-  color: var(--color-link);
+  color: $color-link;
   text-decoration: none;
   transition: color 0.3s;
 
   &:hover {
-    color: var(--color-hover);
+    color: $color-hover;
   }
 }
 
 button {
-  font-family: var(--font-primary);
+  font-family: $font-primary;
   cursor: pointer;
   border: none;
   padding: 0.5rem 1rem;
-  border-radius: var(--border-radius);
+  border-radius: $border-radius;
   transition: background-color 0.3s, color 0.3s;
 
   &.active {
-    background-color: var(--color-link); /* Using color-link for active state */
-    color: var(--color-text-light);
+    background-color: $color-link; /* Using color-link for active state */
+    color: $color-text-light;
   }
 
   &:not(.active) {
-    background-color: var(
-      --color-background-light
-    ); /* Adjusted to use background-light */
-    color: var(--color-text-light);
+    background-color: $color-background-light;
+    color: $color-text-light;
   }
 
   &:hover {
-    background-color: var(--color-hover);
+    background-color: $color-hover;
   }
 
   &:focus {
-    outline: 2px solid var(--color-link);
+    outline: 2px solid $color-link;
     outline-offset: 2px;
   }
 }
