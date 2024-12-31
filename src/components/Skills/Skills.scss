@@ -6,21 +6,23 @@
 
 .skills {
   text-align: center;
-  margin: 2rem 0;
+  margin: $padding-xlarge $padding-small 0 0;
   background-color: $color-background-light;
-  padding: $padding-medium;
+  padding: $padding-large;
+  padding-bottom: $padding-xlarge;
   border-radius: $border-radius;
   box-shadow: $shadow-light;
+  display: flex;
+  gap: calc($spacing-unit * 1.5);
+  flex-direction: column;
 
   &__category {
-    margin-bottom: 2rem;
-
     &-title {
       @include bodyCopy;
       & {
         font-weight: 600;
         color: $color-text;
-        margin-bottom: $spacing-unit;
+        margin-bottom: $padding-small;
         text-transform: uppercase;
         letter-spacing: 1px;
       }
@@ -34,7 +36,7 @@
     gap: 0.5rem;
 
     & > * {
-      flex: 0 0 auto; // Prevent items from expanding evenly
+      flex: 0 0 auto;
     }
   }
 }
