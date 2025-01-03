@@ -10,6 +10,8 @@
   --color-text: #c2c2c2;
   --color-text-light: #ffffff;
   --color-hover: #ffffff;
+  --color-button: #797878;
+  --color-button-hover: #535252;
 
   --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.3);
   --shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -26,8 +28,11 @@
   --gradient-mid: rgba(198, 80, 255, 0.3);
   --gradient-end: rgba(255, 60, 131, 0.3);
 
-  --color-link: #6b73ff; /* Vibrant blue for links */
-  --color-hover: #212121; /* Dark contrasting hover color */
+  --color-link: #6b73ff;
+  --color-hover: #212121;
+  --color-button: #6b73ff;
+  --color-button-hover: #5258c4;
+
   --color-background-light: rgba(249, 249, 249, 0.5);
   --color-text: #333333;
   --color-text-light: #ffffff;
@@ -43,6 +48,8 @@
 
   --color-link: #ff5722;
   --color-hover: #212121;
+  --color-button: #ff5722;
+  --color-button-hover: #ca441b;
   --color-background-light: rgba(255, 243, 224, 0.5);
   --color-text: #212121;
   --color-text-light: #ffffff;
@@ -57,10 +64,12 @@ $gradient-end: rgba(28, 28, 40, 1);
 
 $color-link: var(--color-link);
 $color-background-light: var(--color-background-light);
-$color-background-dark: var(--color-background-dark, #333);
+$color-background-dark: var(--color-background-dark);
 $color-text: var(--color-text);
 $color-text-light: var(--color-text-light);
 $color-hover: var(--color-hover);
+$color-button: var(--color-button);
+$color-button-hover: var(--color-button-hover);
 
 $font-primary: var(--font-primary);
 $spacing-unit: var(--spacing-unit);

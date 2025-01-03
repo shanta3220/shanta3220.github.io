@@ -56,32 +56,6 @@
     transition: transform 0.2s ease-in-out;
   }
 
-  &__social-links {
-    display: flex;
-    justify-content: flex-start;
-    gap: 16px;
-    margin-top: 16px;
-
-    .social-icon {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.875rem;
-      text-decoration: none;
-      color: $color-text;
-      transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-
-      svg {
-        font-size: 1.25rem;
-      }
-
-      &:hover {
-        transform: scale(1.1); /* Slight enlargement */
-        color: $color-hover;
-      }
-    }
-  }
-
   .delayed-visible {
     opacity: 0;
     visibility: hidden;

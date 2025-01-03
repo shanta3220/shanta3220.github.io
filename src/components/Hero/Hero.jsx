@@ -6,9 +6,10 @@ import {
   FaTwitter,
   FaInstagram,
   FaEnvelope,
-  FaArrowRight,
 } from "react-icons/fa";
 import { getTransition } from "../../scripts/utils";
+import { Link } from "react-router-dom";
+import SocialIcon from "../SocialIcon/SocialIcon";
 
 function Hero() {
   return (
@@ -30,7 +31,7 @@ function Hero() {
         insightful articles, and staying inspired by data-driven innovation.
       </motion.p>
 
-      <a href="#about-me" className="hero-section__see-more  delayed-visible">
+      <Link to="/about" className="hero-section__see-more  delayed-visible">
         See more about me
         <svg
           className="hero-section__arrow-icon"
@@ -45,8 +46,8 @@ function Hero() {
           <line x1="0" y1="12" x2="19" y2="12" />
           <polyline points="12 5 19 12 12 19" />
         </svg>
-      </a>
-      <div className="hero-section__social-links delayed-visible">
+      </Link>
+      <div className="social-links delayed-visible">
         <SocialIcon
           link="https://github.com/shanta3220"
           icon={<FaGithub />}
@@ -74,19 +75,6 @@ function Hero() {
         />
       </div>
     </section>
-  );
-}
-
-function SocialIcon({ link, icon, label }) {
-  return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="social-icon"
-    >
-      {icon} {label}
-    </a>
   );
 }
 

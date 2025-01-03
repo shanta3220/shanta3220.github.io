@@ -67,22 +67,26 @@
 }
 
 @mixin button {
-  @include text-style(0.875rem, 1.25, 600);
+  @include bodyCopy;
 
   & {
-    height: 2.5rem;
-    background-color: $primary-medium;
-    border-radius: 1.25rem;
-    color: $primary-bright;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $padding-small $padding-medium;
+    background-color: $color-button;
+    color: $color-text-light;
+    border-radius: $border-radius;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
     border: none;
-    text-transform: uppercase;
-    text-align: center;
 
     &:hover {
-      cursor: pointer;
-      background-color: $primary-bright;
-      color: $primary-medium;
-      transition: background-color 0.2s ease;
+      background-color: $color-button-hover;
+    }
+
+    &:focus {
+      background-color: $color-button-hover;
     }
   }
 }

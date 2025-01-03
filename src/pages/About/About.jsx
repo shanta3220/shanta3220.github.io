@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import profileImage from "../../assets/images/Nusrat_Jahan_Shanta.jpg";
 import profileImage2 from "../../assets/images/pic01.jpg";
-import ImageModal from "../../components/ImageModal/ImageModal";
-import ImageCard from "../../components/ImageCard/ImageCard";
+import MediaModal from "../../components/MediaModal/MediaModal";
+import MediaCard from "../../components/MediaCard/MediaCard";
 import { getTransition } from "../../scripts/utils";
 import { skillCategories, educationData } from "../../scripts/Data";
 import { experienceData } from "../../scripts/experience-data";
 import Skills from "../../components/Skills/Skills";
 import "./About.scss";
+import SocialIcon from "../../components/SocialIcon/SocialIcon";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 function About() {
   const [modalContent, setModalContent] = useState(null);
@@ -27,11 +30,34 @@ function About() {
       <div className="about__intro">
         <div className="about__intro-content">
           <div className="about__intro-photo-and-texts">
-            <img
-              className="about__intro-content__photo"
-              src={profileImage}
-              alt="Profile placeholder"
-            />
+            <div className="about__intro-photo-and-social">
+              <img
+                className="about__intro-content__photo"
+                src={profileImage}
+                alt="Profile placeholder"
+              />
+              <div className="social-links delayed-visible">
+                <SocialIcon
+                  link="https://github.com/shanta3220"
+                  icon={<FaGithub />}
+                  label="GitHub"
+                />
+                <SocialIcon
+                  link="https://linkedin.com/in/njshanta"
+                  icon={<FaLinkedin />}
+                  label="LinkedIn"
+                />
+                <SocialIcon
+                  link="mailto:njshanta.ca@gmail.com"
+                  icon={<FaEnvelope />}
+                  label="Email"
+                />
+              </div>
+              <Link to="/projects" className="about__intro-view-projects">
+                View projects
+              </Link>
+            </div>
+
             <p className="about__intro-content__text">
               Hello, this is Nusrat Jahan Shanta, and I believe in the potential
               of technology to create solutions that inspire and connect people.
@@ -110,7 +136,7 @@ function About() {
                 <div className="about__timeline-media">
                   {item.media &&
                     item.media.map((mediaItem, mediaIndex) => (
-                      <ImageCard
+                      <MediaCard
                         key={`${index}-${mediaIndex}`}
                         media={mediaItem}
                         onClick={() => handleCardClick(mediaItem)}
@@ -174,7 +200,7 @@ function About() {
         </div>
       </div>
 
-      <ImageModal
+      <MediaModal
         isOpen={!!modalContent}
         content={modalContent}
         onClose={handleCloseModal}

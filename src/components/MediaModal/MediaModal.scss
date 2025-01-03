@@ -1,0 +1,181 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+//MediaModal
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 5, 5, 0.9);
+    z-index: 999;
+  }
+
+  &__container {
+    & {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background-color: $color-background-light;
+      border-radius: $border-radius;
+      box-shadow: $shadow-medium;
+      z-index: 1000;
+      width: 90%;
+      height: 90%;
+
+      overflow: hidden;
+      color: $color-text;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      width: 60vw;
+      height: 70vh;
+    }
+  }
+
+  &__close-container {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    background-color: $color-background-dark;
+
+    @include desktop {
+      width: 40%;
+      position: absolute;
+      right: 0;
+      border-bottom: 1px solid $color-text;
+    }
+  }
+
+  &__close {
+    & {
+      margin: $padding-large;
+      font-size: 1.75rem;
+      width: 2.5rem;
+      height: 2.5rem;
+      padding-top: 0.75rem;
+      z-index: 1001;
+    }
+  }
+
+  &__columns {
+    & {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    @include desktop {
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__media {
+    & {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      background-color: $color-background-light;
+    }
+
+    @include desktop {
+      background-color: $color-background-dark;
+    }
+    img,
+    video {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__details {
+    & {
+      padding: $padding-large;
+      background-color: $color-background-light;
+      overflow-y: auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-unit;
+    }
+
+    @include desktop {
+      padding-top: 6.875rem;
+      width: 40%;
+    }
+
+    .image-modal__title {
+      @include subHeader;
+
+      & {
+        color: $color-text-light;
+        margin-bottom: -$padding-small;
+      }
+    }
+
+    .image-modal__short-description {
+      @include bodyCopySmall;
+      & {
+        color: $color-text;
+        margin-bottom: $padding-small;
+      }
+    }
+
+    .image-modal__long-description {
+      @include bodyCopySmall;
+      & {
+        margin-bottom: $padding-medium;
+        font-size: 1rem;
+        color: $color-text;
+      }
+    }
+
+    .image-modal__header {
+      margin-bottom: $padding-small;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: $color-text-light;
+    }
+
+    .skills__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $spacing-unit;
+      margin-top: $padding-small;
+    }
+
+    .image-modal__button {
+      @include button;
+
+      .icon {
+        margin-right: 0.5rem;
+      }
+
+      &:hover {
+        text-decoration: none;
+        background-color: $color-button-hover;
+      }
+    }
+  }
+}
