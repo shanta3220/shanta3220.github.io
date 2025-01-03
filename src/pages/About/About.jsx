@@ -12,16 +12,45 @@ import Skills from "../../components/Skills/Skills";
 import "./About.scss";
 import SocialIcon from "../../components/SocialIcon/SocialIcon";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import TimelineSection from "../../components/TimelineSection/TimelineSection";
 
 function About() {
   const [modalContent, setModalContent] = useState(null);
+  const [currentMediaIndex, setCurrentMediaIndex] = useState(null);
+  const [currentMediaSource, setCurrentMediaSource] = useState([]);
 
-  const handleCardClick = (content) => {
+  const handleCardClick = (content, mediaArray, index) => {
     setModalContent(content);
+    setCurrentMediaSource(mediaArray);
+    setCurrentMediaIndex(index);
   };
 
   const handleCloseModal = () => {
     setModalContent(null);
+    setCurrentMediaIndex(null);
+    setCurrentMediaSource([]);
+  };
+
+  const handleNext = () => {
+    if (!currentMediaSource || currentMediaSource.length === 0) {
+      console.warn("No media source available for navigation.");
+      return;
+    }
+    const nextIndex = (currentMediaIndex + 1) % currentMediaSource.length;
+    setCurrentMediaIndex(nextIndex);
+    setModalContent(currentMediaSource[nextIndex]);
+  };
+
+  const handlePrevious = () => {
+    if (!currentMediaSource || currentMediaSource.length === 0) {
+      console.warn("No media source available for navigation.");
+      return;
+    }
+    const prevIndex =
+      (currentMediaIndex - 1 + currentMediaSource.length) %
+      currentMediaSource.length;
+    setCurrentMediaIndex(prevIndex);
+    setModalContent(currentMediaSource[prevIndex]);
   };
 
   return (
@@ -109,101 +138,27 @@ function About() {
         <Skills skillCategories={skillCategories} />
       </div>
 
-      <div className="about__section">
-        <h2 className="about__sub-title">Experience</h2>
-        <div className="about__timeline">
-          {experienceData.map((item, index) => (
-            <div key={index} className="about__timeline-item">
-              <div className="about__timeline-marker" />
-              <div className="about__timeline-content">
-                <p className="about__timeline-content-title">{item.title}</p>
-                <a
-                  href={item.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="about__timeline-company"
-                >
-                  {` ${item.company}, ${item.location}`}
-                </a>
-                <ul className="about__timeline-description">
-                  {item.description.map((desc, i) => (
-                    <li key={i}>
-                      <span className="about__timeline-dot">•</span> {desc}
-                    </li>
-                  ))}
-                </ul>
+      {/* Experience Section */}
+      <TimelineSection
+        title="Experience"
+        data={experienceData}
+        handleCardClick={handleCardClick}
+      />
 
-                <div className="about__timeline-media">
-                  {item.media &&
-                    item.media.map((mediaItem, mediaIndex) => (
-                      <MediaCard
-                        key={`${index}-${mediaIndex}`}
-                        media={mediaItem}
-                        onClick={() => handleCardClick(mediaItem)}
-                      />
-                    ))}
-                </div>
-              </div>
-              <div className="about__timeline-side">
-                <span className="about__timeline-date">{item.year}</span>
-                <a
-                  href={item.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="about__timeline-website"
-                >
-                  View Website
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="about__section">
-        <h2 className="about__sub-title">Education</h2>
-        <div className="about__timeline">
-          {educationData.map((item, index) => (
-            <div key={index} className="about__timeline-item">
-              <div className="about__timeline-marker" />
-              <div className="about__timeline-content">
-                <p className="about__timeline-content-title">{item.title}</p>
-                <a
-                  href={item.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="about__timeline-company"
-                >
-                  {` ${item.institution}, ${item.location}`}
-                </a>
-                <ul className="about__timeline-description">
-                  {item.description.map((desc, i) => (
-                    <li key={i}>
-                      <span className="about__timeline-dot">•</span> {desc}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="about__timeline-side">
-                <span className="about__timeline-date">{item.year}</span>
-                <a
-                  href={item.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="about__timeline-website"
-                >
-                  View Website
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      {/* Education Section */}
+      <TimelineSection
+        title="Education"
+        data={educationData}
+        handleCardClick={handleCardClick}
+      />
 
       <MediaModal
         isOpen={!!modalContent}
         content={modalContent}
         onClose={handleCloseModal}
+        onNext={handleNext}
+        onPrevious={handlePrevious}
+        showNextPreviousButton={currentMediaSource?.length > 0}
       />
     </motion.section>
   );

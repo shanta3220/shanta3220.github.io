@@ -1,0 +1,124 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.timeline {
+  margin-top: $padding-xlarge;
+  width: 100%;
+  margin-bottom: $padding-xlarge;
+
+  &__title {
+    text-align: left;
+    margin-bottom: $padding-medium;
+    color: $color-text;
+    @include subHeader;
+  }
+
+  &__list {
+    position: relative;
+    margin-top: calc(2 * $spacing-unit);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background-color: $color-link;
+      transform: translateX(-50%);
+      z-index: 0;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: calc(3 * $spacing-unit);
+    gap: 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__marker {
+    position: absolute;
+    left: 0;
+    margin-top: calc(1.5 * $spacing-unit);
+    transform: translateX(-50%);
+    width: 14px;
+    height: 14px;
+    background-color: $color-link;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  &__content {
+    width: 100%;
+    padding: $padding-medium;
+    border-radius: $border-radius;
+    background-color: $color-background-light;
+    box-shadow: $shadow-light;
+    margin-left: calc(3 * $spacing-unit);
+
+    &-title {
+      font-weight: 900;
+      color: $color-text;
+      @include bodyCopy;
+    }
+
+    .timeline__company {
+      @include bodyCopySmall;
+    }
+
+    .timeline__description {
+      color: $color-text;
+      margin-top: $padding-medium;
+      @include bodyCopySmall;
+    }
+  }
+
+  &__side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-left: $spacing-unit;
+    padding-top: $padding-medium;
+    min-width: 160px;
+
+    .timeline__date {
+      color: $color-text;
+      margin-bottom: $spacing-unit;
+      white-space: nowrap;
+      @include bodyCopySmall;
+    }
+
+    .timeline__website {
+      color: $color-text;
+      text-decoration: underline;
+      @include bodyCopySmall;
+
+      &:hover {
+        color: $color-link;
+      }
+    }
+  }
+
+  &__media {
+    margin-top: $padding-medium;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-unit;
+
+    .media-card {
+      width: 6.5rem;
+      height: 3.5rem;
+    }
+  }
+}

@@ -1,8 +1,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-//MediaModal
-.image-modal {
+.media-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,6 +12,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
   z-index: 1000;
 
   &__overlay {
@@ -25,45 +25,32 @@
     z-index: 999;
   }
 
-  &__container {
-    & {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      background-color: $color-background-light;
-      border-radius: $border-radius;
-      box-shadow: $shadow-medium;
-      z-index: 1000;
-      width: 90%;
-      height: 90%;
-
-      overflow: hidden;
-      color: $color-text;
-    }
-
-    @include desktop {
-      flex-direction: row;
-      width: 60vw;
-      height: 70vh;
-    }
-  }
-
-  &__close-container {
-    display: flex;
-    justify-content: end;
+  .media-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: $color-background-dark;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    @include desktop {
-      width: 40%;
-      position: absolute;
-      right: 0;
-      border-bottom: 1px solid $color-text;
+    &__close-container {
+      display: flex;
+      justify-content: end;
+      width: 100%;
+      background-color: $color-background-dark;
+
+      @include desktop {
+        width: 40%;
+        position: absolute;
+        right: 0;
+        border-bottom: 1px solid $color-text;
+      }
     }
-  }
 
-  &__close {
-    & {
+    &__close {
       margin: $padding-large;
       font-size: 1.75rem;
       width: 2.5rem;
@@ -71,46 +58,41 @@
       padding-top: 0.75rem;
       z-index: 1001;
     }
-  }
 
-  &__columns {
-    & {
+    &__columns {
       display: flex;
       flex-direction: column;
       height: 100%;
+
+      @include desktop {
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+      }
     }
 
-    @include desktop {
-      flex-direction: row;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  &__media {
-    & {
+    &__media {
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100%;
       background-color: $color-background-light;
+
+      @include desktop {
+        background-color: $color-background-dark;
+      }
+
+      img,
+      video {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: cover;
+      }
     }
 
-    @include desktop {
-      background-color: $color-background-dark;
-    }
-    img,
-    video {
-      width: 100%;
-      height: auto;
-      max-height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  &__details {
-    & {
+    &__info {
       padding: $padding-large;
       background-color: $color-background-light;
       overflow-y: auto;
@@ -118,54 +100,52 @@
       display: flex;
       flex-direction: column;
       gap: $spacing-unit;
+      @include desktop {
+        padding-top: 6.875rem;
+        width: 40%;
+      }
     }
 
-    @include desktop {
-      padding-top: 6.875rem;
-      width: 40%;
-    }
-
-    .image-modal__title {
+    &__title {
+      color: $color-text-light;
+      margin-bottom: -$padding-small;
       @include subHeader;
-
-      & {
-        color: $color-text-light;
-        margin-bottom: -$padding-small;
-      }
     }
 
-    .image-modal__short-description {
+    &__short-desc {
+      color: $color-text;
+      margin-bottom: $padding-small;
       @include bodyCopySmall;
-      & {
-        color: $color-text;
-        margin-bottom: $padding-small;
-      }
     }
 
-    .image-modal__long-description {
-      @include bodyCopySmall;
-      & {
-        margin-bottom: $padding-medium;
-        font-size: 1rem;
-        color: $color-text;
-      }
+    &__long-desc {
+      color: $color-text;
+      @include bodyCopy;
     }
 
-    .image-modal__header {
+    &__header {
       margin-bottom: $padding-small;
       font-size: 1.25rem;
       font-weight: bold;
       color: $color-text-light;
     }
 
-    .skills__list {
+    &__skills {
       display: flex;
       flex-wrap: wrap;
       gap: $spacing-unit;
-      margin-top: $padding-small;
+      margin-bottom: $padding-medium;
     }
 
-    .image-modal__button {
+    &__links {
+      display: flex;
+      width: 100%;
+      gap: $spacing-unit;
+      flex-direction: row;
+    }
+
+    &__button {
+      flex: 1;
       @include button;
 
       .icon {
@@ -175,6 +155,83 @@
       &:hover {
         text-decoration: none;
         background-color: $color-button-hover;
+      }
+    }
+
+    &__container {
+      width: 90%;
+      height: 90%;
+
+      position: relative;
+      @include desktop {
+        width: 60vw;
+        height: 70vh;
+      }
+    }
+
+    &__content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background-color: $color-background-light;
+      border-radius: $border-radius;
+      box-shadow: $shadow-medium;
+      z-index: 1000;
+
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      color: $color-text;
+
+      @include desktop {
+        flex-direction: row;
+      }
+    }
+
+    &__prev,
+    &__next {
+      position: absolute;
+      top: 0%;
+      transform: translateY(55%);
+      background-color: $color-button;
+      color: $color-text-light;
+      border: none;
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: $shadow-medium;
+      z-index: 1001;
+
+      &:hover {
+        background-color: $color-button-hover;
+      }
+
+      @include desktop {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    &__prev {
+      left: 1.5rem;
+      @include desktop {
+        left: -5rem;
+      }
+    }
+
+    &__next {
+      left: 5rem;
+
+      @include desktop {
+        left: auto;
+        right: -5rem;
       }
     }
   }

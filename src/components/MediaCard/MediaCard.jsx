@@ -7,8 +7,8 @@ function MediaCard({ media, onClick }) {
   const { type, src, thumbnail, title } = media;
 
   return (
-    <div className="image-card" onClick={onClick}>
-      <div className="image-card__media">
+    <div className="media-card" onClick={onClick}>
+      <div className="media-card__media">
         {type === "image" && <img src={src} alt={title} />}
         {type === "video" && (
           //to add thumbnail at 3 seconds dynamically,
