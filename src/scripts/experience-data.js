@@ -10,7 +10,7 @@ export const experienceData = [
       "Implemented UI into the game, iterating multiple times to enhance usability and visual consistency.",
       "Completed 949 tasks in Trello—the highest in the team due to long tenure.",
       "Mentored a junior developer to contribute significantly to key game features.",
-      "Collaborated with a 30-person team on a major project, ensuring design consistency and cohesive execution.",
+      "Worked with a team of over 30 contributors, including current and former members, to ensure design consistency and cohesive execution.",
       "Resolved 30% of reported bugs, improving game stability, and conducted code reviews to ensure high-quality code.",
     ],
     website: "https://www.nimoyd.com",
