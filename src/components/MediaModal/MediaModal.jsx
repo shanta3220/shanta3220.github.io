@@ -20,6 +20,7 @@ function MediaModal({
     title,
     shortDescription,
     longDescription,
+    year,
     technologies = [],
     website,
     github,
@@ -50,8 +51,15 @@ function MediaModal({
             <div className="media-modal__info">
               <h3 className="media-modal__title">{title}</h3>
               <p className="media-modal__short-desc">{shortDescription}</p>
-              <p className="media-modal__long-desc">{longDescription}</p>
-
+              <p className="media-modal__long-desc">
+                {longDescription.split("\n").map((line, index) => (
+                  <p key={index}>{line}</p>
+                ))}
+              </p>
+              <div className="media-modal__section">
+                <h4 className="media-modal__header">Year</h4>
+                <div className="media-modal__long-desc">{year}</div>
+              </div>
               <div className="media-modal__section">
                 <h4 className="media-modal__header">Technologies</h4>
                 <div className="media-modal__skills">

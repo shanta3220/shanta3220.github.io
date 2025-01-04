@@ -7,6 +7,7 @@
 
   --color-link: #a09e9e;
   --color-background-light: rgba(26, 26, 26, 0.4);
+  --color-modal-top-bar: rgb(37, 36, 36);
   --color-text: #c2c2c2;
   --color-text-light: #ffffff;
   --color-hover: #ffffff;
@@ -34,6 +35,7 @@
   --color-button-hover: #5258c4;
 
   --color-background-light: rgba(249, 249, 249, 0.5);
+  --color-modal-top-bar: rgb(151, 150, 150);
   --color-text: #333333;
   --color-text-light: #ffffff;
 
@@ -51,6 +53,7 @@
   --color-button: #ff5722;
   --color-button-hover: #ca441b;
   --color-background-light: rgba(255, 243, 224, 0.5);
+  --color-modal-top-bar: rgb(155, 144, 126);
   --color-text: #212121;
   --color-text-light: #ffffff;
 
@@ -65,6 +68,7 @@ $gradient-end: rgba(28, 28, 40, 1);
 $color-link: var(--color-link);
 $color-background-light: var(--color-background-light);
 $color-background-dark: var(--color-background-dark);
+$color-modal-top-bar: var(--color-modal-top-bar);
 $color-text: var(--color-text);
 $color-text-light: var(--color-text-light);
 $color-hover: var(--color-hover);

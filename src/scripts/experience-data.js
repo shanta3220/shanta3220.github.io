@@ -18,10 +18,11 @@ export const experienceData = [
       {
         type: "image",
         src: "src/assets/projects/nimoyd/chest_inventory_ui.webp",
-        title: "Nudge Nudge Game Interface",
-        shortDescription: "Iterated on game UI/UX designs.",
+        title: "Chest Inventory Screen",
+        shortDescription:
+          "Chest inventory featuring player inventory in the middle and chest inventory on the left.",
         longDescription:
-          "Collaborated on the development of Nimoyd, a survival simulation game, focusing on UI/UX and gameplay mechanics.",
+          "Implemented the Chest Inventory UI:\n• Added drag-and-drop functionality for items.\n• Enabled item swapping and dynamic updates to inventory.\n• Ensured responsiveness across mobile and desktop.",
         year: "2022",
         github: null,
         website: "https://www.nimoyd.com",
@@ -30,10 +31,10 @@ export const experienceData = [
       {
         type: "image",
         src: "src/assets/projects/nimoyd/main_ui.png",
-        title: "Nudge Nudge Game Interface",
-        shortDescription: "Iterated on game UI/UX designs.",
+        title: "Main Screen",
+        shortDescription: "Default main screen during gameplay.",
         longDescription:
-          "Collaborated on the development of Nimoyd, a survival simulation game, focusing on UI/UX and gameplay mechanics.",
+          "Implemented core UI elements for gameplay:\n• Added quick item slots at the bottom with keyboard shortcuts.\n• Developed bottom-left mouseover voxel item name, dynamically updating based on mouse position.\n• Created health bar and notification cells on the left.\n• Interactive behavior for the right minimap and clock.\n• Ensured responsive design for multiple devices.",
         year: "2022",
         github: null,
         website: "https://www.nimoyd.com",
@@ -41,12 +42,13 @@ export const experienceData = [
       },
       {
         type: "image",
-        title: "Nudge Nudge Game Interface",
         src: "src/assets/projects/nimoyd/world_map_ui.jpg",
-        shortDescription: "Iterated on game UI/UX designs.",
+        title: "World Map Screen",
+        shortDescription:
+          "Clickable building icons with details on interaction.",
         longDescription:
-          "Collaborated on the development of Nimoyd, a survival simulation game, focusing on UI/UX and gameplay mechanics.",
-        year: "2022",
+          "Implemented interactivity for the world map:\n• Updated building icons and ensured dynamic interactions.\n• Integrated functionality to display detailed information on click.\n• Ensured responsiveness across devices.",
+        year: "2023",
         github: null,
         website: "https://www.nimoyd.com",
         technologies: ["Unity3D", "C#"],
@@ -54,10 +56,10 @@ export const experienceData = [
       {
         type: "image",
         src: "src/assets/projects/nimoyd/npc_conversation_ui.png",
-        title: "Nudge Nudge Game Interface",
-        shortDescription: "Iterated on game UI/UX designs.",
+        title: "NPC Quest Screen",
+        shortDescription: "Interact with NPCs and view their details.",
         longDescription:
-          "Collaborated on the development of Nimoyd, a survival simulation game, focusing on UI/UX and gameplay mechanics.",
+          "Implemented NPC Quest UI features:\n• Built the UI from scratch with responsive design.\n• Added animations for interactive elements.\n• Ensured camera alignment with NPCs during interactions.",
         year: "2022",
         github: null,
         website: "https://www.nimoyd.com",
@@ -66,11 +68,11 @@ export const experienceData = [
       {
         type: "image",
         src: "src/assets/projects/nimoyd/worker_selection_ui.png",
-        title: "Nudge Nudge Game Interface",
-        shortDescription: "Iterated on game UI/UX designs.",
+        title: "Worker Selection Screen",
+        shortDescription: "Displays Worker NPCs in a circular grid.",
         longDescription:
-          "Collaborated on the development of Nimoyd, a survival simulation game, focusing on UI/UX and gameplay mechanics.",
-        year: "2022",
+          "Implemented dynamic worker selection features:\n• Created UI to update the worker list based on active category.\n• Added building detail information on the right.\n• Ensured responsive design across devices.",
+        year: "2023",
         github: null,
         website: "https://www.nimoyd.com",
         technologies: ["Unity3D", "C#"],
@@ -78,23 +80,11 @@ export const experienceData = [
       {
         type: "image",
         src: "src/assets/projects/nimoyd/world_creation_ui.jpg",
-        title: "Nudge Nudge Game Interface",
-        shortDescription: "Iterated on game UI/UX designs.",
+        title: "World Creation Screen",
+        shortDescription: "UI for creating a new game world.",
         longDescription:
-          "Collaborated on the development of Nimoyd, a survival simulation game, focusing on UI/UX and gameplay mechanics.",
-        year: "2022",
-        github: null,
-        website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
-      },
-      {
-        type: "image",
-        src: "src/assets/projects/nimoyd/character_selection_ui.webp",
-        title: "Nudge Nudge Game Interface",
-        shortDescription: "Iterated on game UI/UX designs.",
-        longDescription:
-          "Collaborated on the development of Nimoyd, a survival simulation game, focusing on UI/UX and gameplay mechanics.",
-        year: "2022",
+          "Implemented features for world creation:\n• Added dynamic updates for info based on categories such as General and Weather.\n• Ensured functionality of all buttons.\n• Modified backend logic to support seamless UI interactions.",
+        year: "2023",
         github: null,
         website: "https://www.nimoyd.com",
         technologies: ["Unity3D", "C#"],
@@ -102,22 +92,23 @@ export const experienceData = [
       {
         type: "image",
         src: "src/assets/projects/nimoyd/character_ui.jpg",
-        title: "Nudge Nudge Game Interface",
-        shortDescription: "Iterated on game UI/UX designs.",
+        title: "Character Screen",
+        shortDescription: "Track character progress and stats.",
         longDescription:
-          "Collaborated on the development of Nimoyd, a survival simulation game, focusing on UI/UX and gameplay mechanics.",
-        year: "2022",
+          "Implemented character UI:\n• Included user's current progress and stats upgrade features.\n• Added ui animations for interactivity.\n• Ensured the UI was fully responsive across devices.",
+        year: "2021",
         github: null,
         website: "https://www.nimoyd.com",
         technologies: ["Unity3D", "C#"],
       },
       {
         type: "image",
-        src: "src/assets/projects/nimoyd/building_mode_ui.png",
-        title: "Nudge Nudge Game Interface",
-        shortDescription: "Iterated on game UI/UX designs.",
+        src: "src/assets/projects/nimoyd/character_selection_ui.webp",
+        title: "Character Creation Screen",
+        shortDescription:
+          "Select a character to play in the game, set traits and gender.",
         longDescription:
-          "Collaborated on the development of Nimoyd, a survival simulation game, focusing on UI/UX and gameplay mechanics.",
+          "Implemented character customization features:\n• Built a dynamic UI for character creation.\n• Enabled dynamic updates for traits and gender selection.\n• Ensured data saved to the game database and responsive design.",
         year: "2022",
         github: null,
         website: "https://www.nimoyd.com",
@@ -126,22 +117,10 @@ export const experienceData = [
       {
         type: "image",
         src: "src/assets/projects/nimoyd/social_journal_ui.jpg",
-        title: "Nudge Nudge Game Interface",
-        shortDescription: "Iterated on game UI/UX designs.",
+        title: "Social Journal Screen",
+        shortDescription: "Track Quest NPCs based on factions.",
         longDescription:
-          "Collaborated on the development of Nimoyd, a survival simulation game, focusing on UI/UX and gameplay mechanics.",
-        year: "2022",
-        github: null,
-        website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
-      },
-      {
-        type: "image",
-        src: "src/assets/projects/nimoyd/building_crafting_ui.png",
-        title: "Nudge Nudge Game Interface",
-        shortDescription: "Iterated on game UI/UX designs.",
-        longDescription:
-          "Collaborated on the development of Nimoyd, a survival simulation game, focusing on UI/UX and gameplay mechanics.",
+          "Implemented faction-based journal features:\n• Built a grid-based UI to dynamically display NPC profiles by faction.\n• Ensured consistent layout and responsive design.",
         year: "2022",
         github: null,
         website: "https://www.nimoyd.com",
@@ -150,10 +129,35 @@ export const experienceData = [
       {
         type: "image",
         src: "src/assets/projects/nimoyd/excavation_site_ui.jpg",
-        title: "Nudge Nudge Game Interface",
-        shortDescription: "Iterated on game UI/UX designs.",
+        title: "Excavation Site Screen",
+        shortDescription: "Excavate different excavation site buildings.",
         longDescription:
-          "Collaborated on the development of Nimoyd, a survival simulation game, focusing on UI/UX and gameplay mechanics.",
+          "Implemented excavation UI with stage-based interactions:\n• Developed a UI stage system for excavated, available, and locked states.\n• Ensured the design dynamically adapts based on active stage.\n• Made the UI fully responsive.",
+        year: "2021",
+        github: null,
+        website: "https://www.nimoyd.com",
+        technologies: ["Unity3D", "C#"],
+      },
+      {
+        type: "image",
+        src: "src/assets/projects/nimoyd/building_mode_ui.png",
+        title: "Building Grid Screen",
+        shortDescription:
+          "Create templates or place buildings in the game world.",
+        longDescription:
+          "Implemented the building grid UI:\n• Developed the UI to display buildings based on categories and subcategories.\n• Updated item details dynamically based on user selections and interactions.\n• Ensured full responsiveness across devices.",
+        year: "2022",
+        github: null,
+        website: "https://www.nimoyd.com",
+        technologies: ["Unity3D", "C#"],
+      },
+      {
+        type: "image",
+        src: "src/assets/projects/nimoyd/building_crafting_ui.png",
+        title: "Building Details Screen",
+        shortDescription: "Craft items and generate energy in buildings.",
+        longDescription:
+          "Implemented the building details UI:\n• Added features to update recipes and player inventory based on the building's category.\n• Developed the UI to display crafting progress and item details dynamically.\n• Ensured smooth interactions for crafting actions and item generation.\n• Made the UI fully responsive across devices.",
         year: "2022",
         github: null,
         website: "https://www.nimoyd.com",
@@ -162,11 +166,11 @@ export const experienceData = [
       {
         type: "image",
         src: "src/assets/projects/nimoyd/journal_ui.jpg",
-        title: "Nudge Nudge Game Interface",
-        shortDescription: "Iterated on game UI/UX designs.",
+        title: "Journal Screen",
+        shortDescription: "Check conversation logs and quest progress.",
         longDescription:
-          "Collaborated on the development of Nimoyd, a survival simulation game, focusing on UI/UX and gameplay mechanics.",
-        year: "2022",
+          "Implemented journal tracking system:\n• Built a responsive journal UI where quests and notes update dynamically based on user actions.\n• Ensured consistent layout and synchronized data with user progress.",
+        year: "2021",
         github: null,
         website: "https://www.nimoyd.com",
         technologies: ["Unity3D", "C#"],

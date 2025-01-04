@@ -47,6 +47,7 @@
         position: absolute;
         right: 0;
         border-bottom: 1px solid $color-text;
+        background-color: $color-modal-top-bar;
       }
     }
 
@@ -101,26 +102,25 @@
       flex-direction: column;
       gap: $spacing-unit;
       @include desktop {
-        padding-top: 6.875rem;
+        margin-top: 90px;
         width: 40%;
       }
     }
 
     &__title {
       color: $color-text-light;
-      margin-bottom: -$padding-small;
       @include subHeader;
     }
 
     &__short-desc {
       color: $color-text;
-      margin-bottom: $padding-small;
+      margin-top: -$padding-small;
       @include bodyCopySmall;
     }
 
     &__long-desc {
       color: $color-text;
-      @include bodyCopy;
+      @include bodyCopySmall;
     }
 
     &__header {
