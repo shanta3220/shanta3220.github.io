@@ -12,20 +12,20 @@
     font-weight: 600;
   }
 
+  &__link {
+    color: $color-link;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color $transition-default;
+
+    &:hover {
+      color: $color-text-light !important;
+    }
+  }
+
   &__links {
     display: flex;
     justify-content: center;
     gap: calc(1 * $spacing-unit);
-
-    &__link {
-      color: $color-text-light;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color $transition-default;
-
-      &:hover {
-        color: $color-primary;
-      }
-    }
   }
 }

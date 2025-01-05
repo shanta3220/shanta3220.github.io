@@ -1,56 +1,93 @@
-import "./About.scss";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import profileImage from "../../assets/images/Nusrat_Jahan_Shanta.jpg";
 import profileImage2 from "../../assets/images/pic01.jpg";
-import CustomCursor from "../../components/CustomCursor/CustomCursor";
+import MediaModal from "../../components/MediaModal/MediaModal";
 import { getTransition } from "../../scripts/utils";
-function About() {
-  const experienceTimeline = [
-    {
-      title: "Software Engineer",
-      date: "2021 - Present",
-      description:
-        "Worked on interactive, scalable web applications and games, collaborating across teams to deliver engaging projects.",
-    },
-    {
-      title: "Game Developer",
-      date: "2018 - 2021",
-      description:
-        "Designed and developed immersive gaming experiences using Unity and C#, focusing on user engagement and optimization.",
-    },
-    {
-      title: "B.Sc. in Computer Science",
-      date: "2014 - 2018",
-      description:
-        "Graduated with honors, specializing in software engineering and game development.",
-    },
-  ];
+import { skillCategories } from "../../scripts/data/skills-data";
+import { educationData } from "../../scripts/data/education-data";
+import { experienceData } from "../../scripts/data/experience-data";
+import { awardsData } from "../../scripts/data/awards-certificates-data";
+import Skills from "../../components/Skills/Skills";
+import "./About.scss";
+import SocialIcon from "../../components/SocialIcon/SocialIcon";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import TimelineSection from "../../components/TimelineSection/TimelineSection";
 
-  const skills = [
-    "JavaScript",
-    "React",
-    "Node.js",
-    "Python",
-    "Unity",
-    "C#",
-    "SQL",
-    "HTML/CSS",
-    "Git/GitHub",
-  ];
+function About() {
+  const [modalContent, setModalContent] = useState(null);
+  const [currentMediaIndex, setCurrentMediaIndex] = useState(null);
+  const [currentMediaSource, setCurrentMediaSource] = useState([]);
+
+  const handleCardClick = (content, mediaArray, index) => {
+    setModalContent(content);
+    setCurrentMediaSource(mediaArray);
+    setCurrentMediaIndex(index);
+  };
+
+  const handleCloseModal = () => {
+    setModalContent(null);
+    setCurrentMediaIndex(null);
+    setCurrentMediaSource([]);
+  };
+
+  const handleNext = () => {
+    if (!currentMediaSource || currentMediaSource.length === 0) {
+      console.warn("No media source available for navigation.");
+      return;
+    }
+    const nextIndex = (currentMediaIndex + 1) % currentMediaSource.length;
+    setCurrentMediaIndex(nextIndex);
+    setModalContent(currentMediaSource[nextIndex]);
+  };
+
+  const handlePrevious = () => {
+    if (!currentMediaSource || currentMediaSource.length === 0) {
+      console.warn("No media source available for navigation.");
+      return;
+    }
+    const prevIndex =
+      (currentMediaIndex - 1 + currentMediaSource.length) %
+      currentMediaSource.length;
+    setCurrentMediaIndex(prevIndex);
+    setModalContent(currentMediaSource[prevIndex]);
+  };
 
   return (
     <motion.section className="about" {...getTransition(0, 1)}>
       <h1 className="about__title">About Me</h1>
-      <div className="about__intro">
+      <section className="about__intro">
         <div className="about__intro-content">
           <div className="about__intro-photo-and-texts">
-            <div>
+            <div className="about__intro-photo-and-social">
               <img
                 className="about__intro-content__photo"
                 src={profileImage}
                 alt="Profile placeholder"
               />
+              <div className="social-links delayed-visible">
+                <SocialIcon
+                  link="https://github.com/shanta3220"
+                  icon={<FaGithub />}
+                  label="GitHub"
+                />
+                <SocialIcon
+                  link="https://linkedin.com/in/njshanta"
+                  icon={<FaLinkedin />}
+                  label="LinkedIn"
+                />
+                <SocialIcon
+                  link="mailto:njshanta.ca@gmail.com"
+                  icon={<FaEnvelope />}
+                  label="Email"
+                />
+              </div>
+              <Link to="/projects" className="about__intro-view-projects">
+                View projects
+              </Link>
             </div>
+
             <p className="about__intro-content__text">
               Hello, this is Nusrat Jahan Shanta, and I believe in the potential
               of technology to create solutions that inspire and connect people.
@@ -63,8 +100,7 @@ function About() {
               applications. Now, as I transition into full-stack web
               development, I’m applying my experiences to craft dynamic web
               solutions. My approach combines backend and frontend expertise
-              with a focus on problem-solving and collaboration.
-              <br />
+              with a focus on problem-solving and collaboration. <br />
               <br />
               Throughout my academic and professional journey, I’ve participated
               in project showcasing competitions, presenting innovative ideas
@@ -73,72 +109,38 @@ function About() {
               Today, I strive to create applications that not only meet user
               needs but also reflect my passion for quality and impactful
               design.
-            </p>{" "}
-          </div>
-          <div className="about-gallery">
-            <h2 className="section-header">Photo Gallery</h2>
-            <div className="about-gallery__photos">
-              <img
-                className="about-gallery__photo"
-                src={profileImage2}
-                alt="Band members interacting with fans after the show, sharing smiles and laughter."
-              />
-              <img
-                className="about-gallery__photo"
-                src={profileImage2}
-                alt="A fan enjoying the show, capturing the moment with a bright smile."
-              />
-              <img
-                className="about-gallery__photo"
-                src={profileImage2}
-                alt="Audience members waving their hands in excitement during a live concert."
-              />
-              <img
-                className="about-gallery__photo"
-                src={profileImage2}
-                alt="A fan waving enthusiastically while enjoying the concert atmosphere."
-              />
-              <img
-                className="about-gallery__photo"
-                src={profileImage2}
-                alt="The band performing on stage at an outdoor festival at night, surrounded by colorful fireworks lighting up the sky."
-              />
-              <img
-                className="about-gallery__photo"
-                src={profileImage2}
-                alt="Band members performing an acoustic set in an intimate venue, engaging with the audience."
-              />
-            </div>
+            </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Experience Section */}
-      <div className="about__timeline">
-        <h2 className="about__title">Experience</h2>
-        {experienceTimeline.map((item, index) => (
-          <div key={index} className="about__timeline-item">
-            <div className="about__timeline-marker" />
-            <div className="about__timeline-content">
-              <h3 className="about__timeline-title">{item.title}</h3>
-              <span className="about__timeline-date">{item.date}</span>
-              <p className="about__timeline-description">{item.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+      <Skills skillCategories={skillCategories} />
 
-      {/* Skills Section */}
-      <div className="about__skills">
-        <h3 className="about__skills-title">Skills</h3>
-        <ul className="about__skills-list">
-          {skills.map((skill, index) => (
-            <li key={index} className="about__skills-item">
-              {skill}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <TimelineSection
+        title="Experience"
+        data={experienceData}
+        handleCardClick={handleCardClick}
+      />
+
+      <TimelineSection
+        title="Education"
+        data={educationData}
+        handleCardClick={handleCardClick}
+      />
+      <TimelineSection
+        title="Awards"
+        data={awardsData}
+        handleCardClick={handleCardClick}
+      />
+
+      <MediaModal
+        isOpen={!!modalContent}
+        content={modalContent}
+        onClose={handleCloseModal}
+        onNext={handleNext}
+        onPrevious={handlePrevious}
+        showNextPreviousButton={currentMediaSource?.length > 1}
+      />
     </motion.section>
   );
 }

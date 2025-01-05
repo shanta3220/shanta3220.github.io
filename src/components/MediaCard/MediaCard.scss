@@ -1,0 +1,26 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.media-card {
+  cursor: pointer;
+  border-radius: $border-radius;
+  overflow: hidden;
+  transition: transform $transition-default;
+  border: 1px solid $color-text;
+  display: flex;
+  background-color: $color-background-dark;
+  justify-content: center;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &__media {
+    display: flex;
+    justify-content: center;
+    img,
+    video {
+      height: 100%;
+    }
+  }
+}

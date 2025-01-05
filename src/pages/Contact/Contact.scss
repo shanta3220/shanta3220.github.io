@@ -14,7 +14,7 @@
   &__text {
     margin-top: calc(1.5 * $spacing-unit);
     font-size: 1rem;
-    color: $color-secondary;
+    color: $color-text;
   }
 
   &__button {
@@ -24,7 +24,7 @@
     font-size: 1rem;
     font-weight: 600;
     color: $color-text-light;
-    background-color: $color-primary;
+    background-color: $color-link;
     border-radius: $border-radius;
     text-decoration: none;
     transition: background-color $transition-default;

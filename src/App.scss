@@ -1,50 +1,30 @@
 @use "./styles/partials/variables" as *;
+@use "./styles/partials/mixins" as *;
 @use "./styles/partials/global";
 
 body {
-  font-family: var(--font-primary);
+  font-family: $font-primary;
   margin: 0;
   padding: 0;
-  background-color: var(--color-background-light);
-  color: var(--color-text);
+  background-color: color-background-light;
+  color: color-text;
+  height: 100vh;
 }
 
 a {
-  color: var(--color-primary);
+  color: $color-link;
   text-decoration: none;
   transition: color 0.3s;
+  text-decoration: none;
 
   &:hover {
-    color: var(--color-hover);
+    color: $color-hover;
+    text-decoration: underline;
   }
 }
 
 button {
-  font-family: var(--font-primary);
-  cursor: pointer;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-
-  &.active {
-    background-color: var(--color-primary);
-    color: var(--color-text-light);
-  }
-
-  &:not(.active) {
-    background-color: var(--color-secondary);
-    color: var(--color-text-light);
-  }
-
-  &:hover {
-    background-color: var(--color-hover);
-  }
-
-  &:focus {
-    outline: 2px solid var(--color-primary);
-    outline-offset: 2px;
-  }
+  @include button;
 }
 
 li {
@@ -55,6 +35,13 @@ li {
   position: relative;
   z-index: 1;
   background-color: transparent;
+}
+
+.social-links {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-top: 16px;
 }
 
 @media (max-width: 768px) {
