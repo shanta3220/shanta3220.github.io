@@ -2,16 +2,28 @@
 @use "../../styles/partials/mixins" as *;
 
 .skills {
-  text-align: center;
-  margin: $padding-xlarge $padding-small 0 0;
-  background-color: $color-background-light;
-  padding: $padding-large;
-  padding-bottom: $padding-xlarge;
-  border-radius: $border-radius;
-  box-shadow: $shadow-light;
-  display: flex;
-  gap: calc($spacing-unit * 1.6);
-  flex-direction: column;
+  width: 100%;
+
+  &__sub-title {
+    @include subHeader;
+    & {
+      text-align: left;
+      margin-bottom: $padding-medium;
+      color: $color-text;
+    }
+  }
+  &__list {
+    text-align: center;
+    margin: $padding-xlarge $padding-small 0 0;
+    background-color: $color-background-light;
+    padding: $padding-large;
+    padding-bottom: $padding-xlarge;
+    border-radius: $border-radius;
+    box-shadow: $shadow-light;
+    display: flex;
+    gap: calc($spacing-unit * 1.6);
+    flex-direction: column;
+  }
 
   &__category {
     &-title {
@@ -24,7 +36,7 @@
     }
   }
 
-  &__list {
+  &__categorized-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

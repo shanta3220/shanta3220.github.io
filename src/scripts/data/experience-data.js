@@ -1,7 +1,7 @@
 export const experienceData = [
   {
     title: "Freelance Game Programmer",
-    company: "Nudge Nudge Games GmbH",
+    subTitle: "Nudge Nudge Games GmbH",
     location: "Berlin, DE",
     year: "Feb 2020 - Jun 2024",
     description: [
@@ -184,7 +184,7 @@ export const experienceData = [
   },
   {
     title: "Part-Time Software Engineer",
-    company: "Arcade Studios",
+    subTitle: "Arcade Studios",
     location: "Dhaka, BD",
     year: "Jan 2020 - Sep 2020",
     description: [

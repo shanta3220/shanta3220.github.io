@@ -1,5 +1,4 @@
-import React from "react";
-import { FaGlobe, FaGithub } from "react-icons/fa";
+import { FaGlobe, FaGithub, FaProjectDiagram } from "react-icons/fa";
 import SkillItem from "../SkillItem/SkillItem";
 import "./MediaModal.scss";
 
@@ -20,9 +19,10 @@ function MediaModal({
     shortDescription,
     longDescription,
     year,
-    skills = [],
+    skills,
     website,
     github,
+    project,
   } = content;
 
   return (
@@ -91,6 +91,16 @@ function MediaModal({
                     className="media-modal__button github-button"
                   >
                     <FaGithub className="icon" /> View GitHub
+                  </a>
+                )}
+                {project && (
+                  <a
+                    href={project}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="media-modal__button"
+                  >
+                    <FaProjectDiagram className="icon" /> View Project
                   </a>
                 )}
               </div>

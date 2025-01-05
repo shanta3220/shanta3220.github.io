@@ -16,6 +16,8 @@
   }
 
   &__media {
+    display: flex;
+    justify-content: center;
     img,
     video {
       height: 100%;

@@ -8,6 +8,7 @@ import { getTransition } from "../../scripts/utils";
 import { skillCategories } from "../../scripts/data/skills-data";
 import { educationData } from "../../scripts/data/education-data";
 import { experienceData } from "../../scripts/data/experience-data";
+import { awardsData } from "../../scripts/data/awards-certificates-data";
 import Skills from "../../components/Skills/Skills";
 import "./About.scss";
 import SocialIcon from "../../components/SocialIcon/SocialIcon";
@@ -56,7 +57,7 @@ function About() {
   return (
     <motion.section className="about" {...getTransition(0, 1)}>
       <h1 className="about__title">About Me</h1>
-      <div className="about__intro">
+      <section className="about__intro">
         <div className="about__intro-content">
           <div className="about__intro-photo-and-texts">
             <div className="about__intro-photo-and-social">
@@ -110,33 +111,10 @@ function About() {
               design.
             </p>
           </div>
-          <div className="about-gallery">
-            <h2 className="about__sub-title">Photo Gallery</h2>
-            <div className="about-gallery__photos">
-              <img
-                className="about-gallery__photo"
-                src={profileImage2}
-                alt="Photo 1"
-              />
-              <img
-                className="about-gallery__photo"
-                src={profileImage2}
-                alt="Photo 2"
-              />
-              <img
-                className="about-gallery__photo"
-                src={profileImage2}
-                alt="Photo 3"
-              />
-            </div>
-          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="about__section">
-        <h2 className="about__sub-title">Skills</h2>
-        <Skills skillCategories={skillCategories} />
-      </div>
+      <Skills skillCategories={skillCategories} />
 
       <TimelineSection
         title="Experience"
@@ -147,6 +125,11 @@ function About() {
       <TimelineSection
         title="Education"
         data={educationData}
+        handleCardClick={handleCardClick}
+      />
+      <TimelineSection
+        title="Awards"
+        data={awardsData}
         handleCardClick={handleCardClick}
       />
 

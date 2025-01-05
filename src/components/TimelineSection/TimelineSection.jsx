@@ -1,10 +1,11 @@
 import React from "react";
 import MediaCard from "../MediaCard/MediaCard";
 import "./TimelineSection.scss";
+import { Link } from "react-router-dom";
 
 function TimelineSection({ title, data, handleCardClick }) {
   return (
-    <div className="timeline">
+    <section className="timeline">
       <h2 className="timeline__title">{title}</h2>
       <div className="timeline__list">
         {data.map((item, index) => (
@@ -12,14 +13,16 @@ function TimelineSection({ title, data, handleCardClick }) {
             <div className="timeline__marker" />
             <div className="timeline__content">
               <p className="timeline__content-title">{item.title}</p>
-              <a
-                href={item.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="timeline__company"
-              >
-                {`${item.company}, ${item.location}`}
-              </a>
+              {item.subTitle && (
+                <a
+                  href={item.website ? item.website : "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="timeline__company"
+                >
+                  {item.subTitle}
+                </a>
+              )}
               <ul className="timeline__description">
                 {item.description.map((desc, i) => (
                   <li key={i}>
@@ -27,7 +30,6 @@ function TimelineSection({ title, data, handleCardClick }) {
                   </li>
                 ))}
               </ul>
-
               <div className="timeline__media">
                 {item.media?.length > 0 &&
                   item.media.map((mediaItem, mediaIndex) => (
@@ -42,20 +44,52 @@ function TimelineSection({ title, data, handleCardClick }) {
               </div>
             </div>
             <div className="timeline__side">
-              <span className="timeline__date">{item.year}</span>
-              <a
-                href={item.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="timeline__website"
-              >
-                View Website
-              </a>
+              {item.year && <span className="timeline__date">{item.year}</span>}
+              {item.website && (
+                <a
+                  href={item.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="timeline__website"
+                >
+                  View Website
+                </a>
+              )}
+              {item.github && (
+                <a
+                  href={item.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="timeline__website"
+                >
+                  View Github
+                </a>
+              )}
+              {item.projects && (
+                <a
+                  to={item.projects}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="timeline__website"
+                >
+                  View Projects
+                </a>
+              )}
+              {item.project && (
+                <a
+                  to={item.project}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="timeline__website"
+                >
+                  View Project
+                </a>
+              )}
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

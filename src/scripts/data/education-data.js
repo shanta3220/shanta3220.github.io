@@ -1,8 +1,7 @@
 export const educationData = [
   {
     title: "Diploma, Software Engineering",
-    company: "BrainStation",
-    location: "Toronto, ON",
+    subTitle: "BrainStation, Toronto, ON",
     year: "Sep 2024 - Dec 2024",
     description: ["Grade: 95%"],
     website: "https://brainstation.io/online/software-engineering-bootcamp",
@@ -11,7 +10,7 @@ export const educationData = [
         type: "image",
         src: "src/assets/images/degrees/certificate_diploma.jpg",
         title: "Diploma, Software Engineering",
-        shortDescription: "BrainStation, Sylhet, Toronto, ON",
+        shortDescription: "BrainStation, Toronto, ON",
         longDescription:
           "Achieved the followings:\n• Grade: 95%.\n• Attended 3 hackathons.\n• Nominated to be Teaching Assistant by the Education team.",
         year: "Sep 2024 - Dec 2024",
@@ -35,7 +34,7 @@ export const educationData = [
         type: "image",
         src: "src/assets/images/degrees/transcript_diploma.jpg",
         title: "Transcript, Software Engineering",
-        shortDescription: "BrainStation, Sylhet, Toronto, ON",
+        shortDescription: "BrainStation, Toronto, ON",
         longDescription:
           "Achieved the followings:\n• Grade: 95%.\n• Attended 3 hackathons.\n• Nominated to be Teaching Assistant by the Education team.",
         year: "Sep 2024 - Dec 2024",
@@ -59,8 +58,7 @@ export const educationData = [
   },
   {
     title: "MSc in Management Information Systems",
-    company: "Metropolitan University",
-    location: "Sylhet, BD",
+    subTitle: "Metropolitan University, Sylhet, BD",
     year: "May 2019 - Jan 2021",
     description: ["CGPA: 3.92/4.0"],
     website: "https://metrouni.edu.bd/sites/masters-programmes/msc-in-mis",
@@ -80,8 +78,7 @@ export const educationData = [
   },
   {
     title: "BSc in Computer Science & Engineering",
-    company: "Metropolitan University",
-    location: "Sylhet, BD",
+    subTitle: "Metropolitan University, Sylhet, BD",
     year: "Sep 2014 - Jan 2019",
     skills: ["C++", "Java"],
     description: ["CGPA: 3.85/4.0"],

@@ -27,6 +27,18 @@ export const skillIcons = [
   { name: "Sass", icon: Icons.FaSass, bgColor: "rgba(204, 102, 153, 1)" },
   { name: "OOP", icon: Icons.FaCode, bgColor: "rgba(63, 81, 181, 1)" },
   {
+    name: "Android Studio",
+    icon: Icons.FaAndroid,
+    bgColor: "rgba(76, 175, 80, 1)",
+  },
+  {
+    name: "Firebase",
+    icon: SiIcons.SiFirebase,
+    bgColor: "rgba(255, 204, 0, 1)",
+  },
+  { name: "Arduino", icon: SiIcons.SiArduino, bgColor: "rgba(0, 150, 136, 1)" },
+  { name: "IoT", icon: Icons.FaWifi, bgColor: "rgba(33, 150, 243, 1)" },
+  {
     name: "TensorFlow",
     icon: SiIcons.SiTensorflow,
     bgColor: "rgba(255, 112, 67, 1)",
