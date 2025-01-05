@@ -10,4 +10,5 @@ export default defineConfig({
       },
     },
   },
+  base: "/shanta3220.github.io/",
 });
