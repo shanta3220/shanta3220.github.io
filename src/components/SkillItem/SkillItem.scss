@@ -1,0 +1,27 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 1rem;
+  border-radius: $border-radius;
+  box-shadow: $shadow-light;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-medium;
+  }
+
+  &__icon {
+    margin-top: 0.25rem;
+  }
+
+  &__name {
+    @include bodyCopySmall;
+    & {
+      margin-left: 0.5rem;
+    }
+  }
+}

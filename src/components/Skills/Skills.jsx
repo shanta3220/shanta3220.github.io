@@ -1,27 +1,23 @@
+import React from "react";
+import SkillItem from "../SkillItem/SkillItem";
 import "./Skills.scss";
 
-const skills = [
-  "JavaScript",
-  "React",
-  "Node.js",
-  "Express.js",
-  "REST APIs",
-  "Knex.js",
-  "MySQL",
-  "Sass",
-];
-
-function Skills() {
+function Skills({ skillCategories }) {
   return (
-    <section className="skills" id="skills">
-      <h2 className="skills__title">Skills</h2>
-      <ul className="skills__list">
-        {skills.map((skill, index) => (
-          <li key={index} className="skills__item">
-            {skill}
-          </li>
+    <section className="skills">
+      <h2 className="skills__sub-title">Skills</h2>
+      <div className="skills__list">
+        {skillCategories.map((category, index) => (
+          <div key={index} className="skills__category">
+            <h3 className="skills__category-title">{category.category}</h3>
+            <div className="skills__categorized-list">
+              {category.skills.map((skillName, i) => (
+                <SkillItem key={i} name={skillName} />
+              ))}
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </section>
   );
 }

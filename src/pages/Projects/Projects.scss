@@ -19,7 +19,7 @@
   }
 
   &__item {
-    background-color: $color-primary;
+    background-color: $color-link;
     color: $color-text-light;
     padding: $spacing-unit;
     border-radius: $border-radius;
@@ -33,7 +33,7 @@
     p {
       margin-top: calc(0.5 * $spacing-unit);
       font-size: 1rem;
-      color: $color-secondary;
+      color: $color-text;
     }
   }
 }
