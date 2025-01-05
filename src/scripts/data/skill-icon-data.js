@@ -140,4 +140,9 @@ export const skillIcons = [
     icon: Icons.FaClipboardList,
     bgColor: "rgba(0, 82, 204, 1)",
   },
+  {
+    name: "OpenAI",
+    icon: SiIcons.SiOpenai,
+    bgColor: "rgba(32, 128, 228, 1)",
+  },
 ];
