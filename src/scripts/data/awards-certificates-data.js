@@ -11,7 +11,7 @@ export const awardsData = [
     media: [
       {
         type: "video",
-        src: "src/assets/medias/vr_webb_2019/video1.mp4",
+        src: "/medias/vr_webb_2019/video1.mp4",
         title: "VR Webb",
         shortDescription:
           "A VR educational app explaining the Webb Space Telescope.",
@@ -23,7 +23,7 @@ export const awardsData = [
       },
       {
         type: "video",
-        src: "src/assets/medias/vr_webb_2019/video2.mp4",
+        src: "/medias/vr_webb_2019/video2.mp4",
         title: "VR Webb Demo for Selection Round",
         shortDescription:
           "A VR quiz app demo for the Bangladesh selection round.",
@@ -47,7 +47,7 @@ export const awardsData = [
     media: [
       {
         type: "image",
-        src: "src/assets/medias/intra_mu/image_1.jpg",
+        src: "/medias/intra_mu/image_1.jpg",
         title: "AR Bornoporichoy",
         shortDescription: "An educational AR app to teach Bengali alphabets.",
         longDescription:
@@ -69,7 +69,7 @@ export const awardsData = [
     media: [
       {
         type: "image",
-        src: "src/assets/medias/intra_mu/image_1.jpg",
+        src: "/medias/intra_mu/image_1.jpg",
         title: "Unnoto Krishi",
         shortDescription:
           "An agriculture app providing animal data and farm monitoring.",
@@ -99,8 +99,8 @@ export const awardsData = [
     media: [
       {
         type: "video",
-        src: "src/assets/medias/intra_mu/video_1.mp4",
-        thumbnail: "src/assets/medias/intra_mu/thumbnail_2.png",
+        src: "/medias/intra_mu/video_1.mp4",
+        thumbnail: "/medias/intra_mu/thumbnail_2.png",
         title: "AR Bornoporichoy",
         shortDescription: "An educational AR app to teach Bengali alphabets.",
         longDescription:
@@ -121,7 +121,7 @@ export const awardsData = [
     media: [
       {
         type: "image",
-        src: "src/assets/medias/lanas_adventure/image_1.jpg",
+        src: "/medias/lanas_adventure/image_1.jpg",
         title: "Lana's Adventure",
         shortDescription:
           "A 2D platformer game developed as the sole game developer.",

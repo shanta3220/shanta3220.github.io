@@ -8,7 +8,7 @@ export const educationData = [
     media: [
       {
         type: "image",
-        src: "src/assets/images/degrees/certificate_diploma.jpg",
+        src: "/images/degrees/certificate_diploma.jpg",
         title: "Diploma, Software Engineering",
         shortDescription: "BrainStation, Toronto, ON",
         longDescription:
@@ -32,7 +32,7 @@ export const educationData = [
       },
       {
         type: "image",
-        src: "src/assets/images/degrees/transcript_diploma.jpg",
+        src: "/images/degrees/transcript_diploma.jpg",
         title: "Transcript, Software Engineering",
         shortDescription: "BrainStation, Toronto, ON",
         longDescription:
@@ -65,7 +65,7 @@ export const educationData = [
     media: [
       {
         type: "image",
-        src: "src/assets/images/degrees/certificate_msc.jpg",
+        src: "/images/degrees/certificate_msc.jpg",
         title: "MSc in Management Information Systems",
         shortDescription: "Metropolitan University, Sylhet, BD",
         longDescription: "Achieved the followings:\n• CGPA 3.92/4",
@@ -87,7 +87,7 @@ export const educationData = [
     media: [
       {
         type: "image",
-        src: "src/assets/images/degrees/certificate_bsc.jpg",
+        src: "/images/degrees/certificate_bsc.jpg",
         title: "BSc in Computer Science & Engineering",
         shortDescription: "Metropolitan University, Sylhet, BD",
         longDescription:

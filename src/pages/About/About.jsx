@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import profileImage from "../../assets/images/Nusrat_Jahan_Shanta.jpg";
-import profileImage2 from "../../assets/images/pic01.jpg";
+import profileImage from "/images/Nusrat_Jahan_Shanta.jpg";
 import MediaModal from "../../components/MediaModal/MediaModal";
 import { getTransition } from "../../scripts/utils";
 import { skillCategories } from "../../scripts/data/skills-data";
