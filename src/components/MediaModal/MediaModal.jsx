@@ -3,7 +3,6 @@ import { FaGlobe, FaGithub } from "react-icons/fa";
 import SkillItem from "../SkillItem/SkillItem";
 import "./MediaModal.scss";
 
-/* MediaModal */
 function MediaModal({
   isOpen,
   onClose,
@@ -13,7 +12,7 @@ function MediaModal({
   showNextPreviousButton,
 }) {
   if (!isOpen || !content) return null;
-  console.log(content);
+
   const {
     type,
     src,
@@ -21,7 +20,7 @@ function MediaModal({
     shortDescription,
     longDescription,
     year,
-    technologies = [],
+    skills = [],
     website,
     github,
   } = content;
@@ -51,23 +50,27 @@ function MediaModal({
             <div className="media-modal__info">
               <h3 className="media-modal__title">{title}</h3>
               <p className="media-modal__short-desc">{shortDescription}</p>
-              <p className="media-modal__long-desc">
-                {longDescription.split("\n").map((line, index) => (
-                  <p key={index}>{line}</p>
-                ))}
-              </p>
-              <div className="media-modal__section">
-                <h4 className="media-modal__header">Year</h4>
-                <div className="media-modal__long-desc">{year}</div>
-              </div>
-              <div className="media-modal__section">
-                <h4 className="media-modal__header">Technologies</h4>
-                <div className="media-modal__skills">
-                  {technologies.map((tech, index) => (
-                    <SkillItem key={index} name={tech} />
-                  ))}
+              {longDescription.split("\n").map((line, index) => (
+                <p key={index} className="media-modal__long-desc">
+                  {line}
+                </p>
+              ))}
+              {year && (
+                <div className="media-modal__section">
+                  <h4 className="media-modal__header">Year</h4>
+                  <div className="media-modal__long-desc">{year}</div>
                 </div>
-              </div>
+              )}
+              {skills && (
+                <div className="media-modal__section">
+                  <h4 className="media-modal__header">Skills</h4>
+                  <div className="media-modal__skills">
+                    {skills.map((skill, index) => (
+                      <SkillItem key={index} name={skill} />
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className="media-modal__links">
                 {website && (

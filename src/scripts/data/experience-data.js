@@ -1,5 +1,3 @@
-import profileImage2 from "../assets/images/pic01.jpg";
-
 export const experienceData = [
   {
     title: "Freelance Game Programmer",
@@ -17,7 +15,7 @@ export const experienceData = [
     media: [
       {
         type: "image",
-        src: "src/assets/projects/nimoyd/chest_inventory_ui.webp",
+        src: "src/assets/images/nimoyd/chest_inventory_ui.webp",
         title: "Chest Inventory Screen",
         shortDescription:
           "Chest inventory featuring player inventory in the middle and chest inventory on the left.",
@@ -26,11 +24,11 @@ export const experienceData = [
         year: "2022",
         github: null,
         website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
+        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
-        src: "src/assets/projects/nimoyd/main_ui.png",
+        src: "src/assets/images/nimoyd/main_ui.png",
         title: "Main Screen",
         shortDescription: "Default main screen during gameplay.",
         longDescription:
@@ -38,11 +36,11 @@ export const experienceData = [
         year: "2022",
         github: null,
         website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
+        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
-        src: "src/assets/projects/nimoyd/world_map_ui.jpg",
+        src: "src/assets/images/nimoyd/world_map_ui.jpg",
         title: "World Map Screen",
         shortDescription:
           "Clickable building icons with details on interaction.",
@@ -51,11 +49,11 @@ export const experienceData = [
         year: "2023",
         github: null,
         website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
+        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
-        src: "src/assets/projects/nimoyd/npc_conversation_ui.png",
+        src: "src/assets/images/nimoyd/npc_conversation_ui.png",
         title: "NPC Quest Screen",
         shortDescription: "Interact with NPCs and view their details.",
         longDescription:
@@ -63,11 +61,11 @@ export const experienceData = [
         year: "2022",
         github: null,
         website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
+        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
-        src: "src/assets/projects/nimoyd/worker_selection_ui.png",
+        src: "src/assets/images/nimoyd/worker_selection_ui.png",
         title: "Worker Selection Screen",
         shortDescription: "Displays Worker NPCs in a circular grid.",
         longDescription:
@@ -75,11 +73,11 @@ export const experienceData = [
         year: "2023",
         github: null,
         website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
+        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
-        src: "src/assets/projects/nimoyd/world_creation_ui.jpg",
+        src: "src/assets/images/nimoyd/world_creation_ui.jpg",
         title: "World Creation Screen",
         shortDescription: "UI for creating a new game world.",
         longDescription:
@@ -87,11 +85,11 @@ export const experienceData = [
         year: "2023",
         github: null,
         website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
+        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
-        src: "src/assets/projects/nimoyd/character_ui.jpg",
+        src: "src/assets/images/nimoyd/character_ui.jpg",
         title: "Character Screen",
         shortDescription: "Track character progress and stats.",
         longDescription:
@@ -99,11 +97,11 @@ export const experienceData = [
         year: "2021",
         github: null,
         website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
+        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
-        src: "src/assets/projects/nimoyd/character_selection_ui.webp",
+        src: "src/assets/images/nimoyd/character_selection_ui.webp",
         title: "Character Creation Screen",
         shortDescription:
           "Select a character to play in the game, set traits and gender.",
@@ -112,11 +110,11 @@ export const experienceData = [
         year: "2022",
         github: null,
         website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
+        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
-        src: "src/assets/projects/nimoyd/social_journal_ui.jpg",
+        src: "src/assets/images/nimoyd/social_journal_ui.jpg",
         title: "Social Journal Screen",
         shortDescription: "Track Quest NPCs based on factions.",
         longDescription:
@@ -124,11 +122,11 @@ export const experienceData = [
         year: "2022",
         github: null,
         website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
+        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
-        src: "src/assets/projects/nimoyd/excavation_site_ui.jpg",
+        src: "src/assets/images/nimoyd/excavation_site_ui.jpg",
         title: "Excavation Site Screen",
         shortDescription: "Excavate different excavation site buildings.",
         longDescription:
@@ -136,11 +134,11 @@ export const experienceData = [
         year: "2021",
         github: null,
         website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
+        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
-        src: "src/assets/projects/nimoyd/building_mode_ui.png",
+        src: "src/assets/images/nimoyd/building_mode_ui.png",
         title: "Building Grid Screen",
         shortDescription:
           "Create templates or place buildings in the game world.",
@@ -149,11 +147,11 @@ export const experienceData = [
         year: "2022",
         github: null,
         website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
+        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
-        src: "src/assets/projects/nimoyd/building_crafting_ui.png",
+        src: "src/assets/images/nimoyd/building_crafting_ui.png",
         title: "Building Details Screen",
         shortDescription: "Craft items and generate energy in buildings.",
         longDescription:
@@ -161,11 +159,11 @@ export const experienceData = [
         year: "2022",
         github: null,
         website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
+        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
-        src: "src/assets/projects/nimoyd/journal_ui.jpg",
+        src: "src/assets/images/nimoyd/journal_ui.jpg",
         title: "Journal Screen",
         shortDescription: "Check conversation logs and quest progress.",
         longDescription:
@@ -173,7 +171,14 @@ export const experienceData = [
         year: "2021",
         github: null,
         website: "https://www.nimoyd.com",
-        technologies: ["Unity3D", "C#"],
+        skills: [
+          "Unity3D",
+          "C#",
+          "Visual Studio C++,",
+          "Git",
+          "SourceTree",
+          "Trello",
+        ],
       },
     ],
   },
@@ -183,10 +188,49 @@ export const experienceData = [
     location: "Dhaka, BD",
     year: "Jan 2020 - Sep 2020",
     description: [
-      "Started with a small role in core feature development and quickly progressed to leading a personal project within a month.",
+      "Started with a small role in core feature development and quickly progressed to leading a personal mobile application within a month.",
+      "Worked closely with the project manager during the planning phase to develop a pet simulation demo, including a mockup UI and gameplay features, effectively showcasing the core functionality.",
       "Collaborated with 10 engineers on GitHub, reviewing, testing, and ensuring seamless integration.",
       "Improved code quality and reduced integration issues by 25%.",
     ],
     website: "https://www.facebook.com/arcadestudiosbd",
+    media: [
+      {
+        type: "image",
+        src: "src/assets/images/cute_puppy_love/puppy_selection.jpeg",
+        title: "Puppy Selection Screen",
+        shortDescription: "Select the puppy's breed.",
+        longDescription:
+          "Implemented the Puppy Selection UI:\n• Created the initial mockup UI, which served as the foundation for the designer's final implementation.\n• Replaced the mockup with final UI assets.\n• Added animated puppy models.\n• Ensured responsiveness across mobile devices.",
+        year: "2020",
+        github: null,
+        website: "https://www.facebook.com/arcadestudiosbd",
+        skills: ["Unity3D", "C#"],
+      },
+      {
+        type: "image",
+        src: "src/assets/images/cute_puppy_love/puppy_play.jpeg",
+        title: "Puppy Play Screen",
+        shortDescription: "Play with the puppy.",
+        longDescription:
+          "Implemented the gameplay and UI:\n• Created ball-throwing mechanics using drag and release gestures.\n• Integrated and maintained the animation controller.\n• Developed the gameplay UI.\n• Ensured responsiveness across mobile devices.",
+        year: "2020",
+        github: null,
+        website: "https://www.facebook.com/arcadestudiosbd",
+        skills: ["Unity3D", "C#"],
+      },
+      {
+        type: "image",
+        src: "src/assets/images/cute_puppy_love/puppy_feed.jpeg",
+        title: "Puppy Feed Screen",
+        shortDescription: "Feed the puppy.",
+        longDescription:
+          "Implemented the gameplay and UI:\n• Developed the gameplay UI.\n• Added various food items with unique energy levels.\n• Implemented energy restoration mechanics when the puppy eats.\n• Ensured responsiveness across mobile devices.",
+        year: "2020",
+        github: null,
+        website: "https://www.facebook.com/arcadestudiosbd",
+        skills: ["Unity3D", "C#"],
+      },
+    ],
   },
 ];

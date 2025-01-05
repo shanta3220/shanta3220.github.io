@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import profileImage from "../../assets/images/Nusrat_Jahan_Shanta.jpg";
 import profileImage2 from "../../assets/images/pic01.jpg";
 import MediaModal from "../../components/MediaModal/MediaModal";
-import MediaCard from "../../components/MediaCard/MediaCard";
 import { getTransition } from "../../scripts/utils";
-import { skillCategories, educationData } from "../../scripts/Data";
-import { experienceData } from "../../scripts/experience-data";
+import { skillCategories } from "../../scripts/data/skills-data";
+import { educationData } from "../../scripts/data/education-data";
+import { experienceData } from "../../scripts/data/experience-data";
 import Skills from "../../components/Skills/Skills";
 import "./About.scss";
 import SocialIcon from "../../components/SocialIcon/SocialIcon";
@@ -138,14 +138,12 @@ function About() {
         <Skills skillCategories={skillCategories} />
       </div>
 
-      {/* Experience Section */}
       <TimelineSection
         title="Experience"
         data={experienceData}
         handleCardClick={handleCardClick}
       />
 
-      {/* Education Section */}
       <TimelineSection
         title="Education"
         data={educationData}
@@ -158,7 +156,7 @@ function About() {
         onClose={handleCloseModal}
         onNext={handleNext}
         onPrevious={handlePrevious}
-        showNextPreviousButton={currentMediaSource?.length > 0}
+        showNextPreviousButton={currentMediaSource?.length > 1}
       />
     </motion.section>
   );
