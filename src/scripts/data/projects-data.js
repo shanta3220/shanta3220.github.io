@@ -101,6 +101,6 @@ export const projectsData = [
   Demonstrates proficiency in DOM manipulation and API integration.
   Features sections for band information and user engagement.`,
     skills: ["JavaScript", "Axios", "HTML", "Sass"],
-    media: [{ type: "image", src: "/medias/bandsite/bandsite.png" }],
+    media: [{ type: "image", src: "/medias/bandsite/bandsite.gif" }],
   },
 ];
