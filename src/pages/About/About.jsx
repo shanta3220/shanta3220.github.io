@@ -54,9 +54,9 @@ function About() {
   };
 
   return (
-    <motion.section className="about" {...getTransition(0, 1)}>
+    <motion.section className="about" {...getTransition(0, 1.3)}>
       <h1 className="about__title">About Me</h1>
-      <motion.section {...getTransition(0.1, 0.7)} className="about__intro">
+      <motion.section {...getTransition(0.1, 0.9)} className="about__intro">
         <div className="about__intro-content">
           <div className="about__intro-photo-and-texts">
             <div className="about__intro-photo-and-social">
@@ -112,7 +112,7 @@ function About() {
           </div>
         </div>
       </motion.section>
-      <motion.div {...getTransition(0.3, 0.9)}>
+      <motion.div {...getTransition(0.4, 1.1)}>
         <Skills skillCategories={skillCategories} />
         <TimelineSection
           title="Experience"

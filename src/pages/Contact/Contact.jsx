@@ -64,7 +64,7 @@ const Contact = () => {
   };
 
   return (
-    <motion.div className="contact" {...getTransition(0, 1)}>
+    <motion.div className="contact" {...getTransition(0, 0.8)}>
       <h1 className="contact__title">Get in Touch</h1>
       <p className="contact__subtitle">
         Have a project in mind? Feel free to reach out, and let's create
@@ -72,7 +72,7 @@ const Contact = () => {
       </p>
 
       <motion.form
-        {...getTransition(0.2, 0.8)}
+        {...getTransition(0.2, 0.7)}
         ref={formRef}
         className="contact__form"
         onSubmit={handleSubmit}
