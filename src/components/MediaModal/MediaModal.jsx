@@ -1,7 +1,8 @@
-import { FaGlobe, FaGithub, FaProjectDiagram } from "react-icons/fa";
+import { FaGlobe, FaGithub, FaProjectDiagram, FaTimes } from "react-icons/fa";
 import SkillItem from "../SkillItem/SkillItem";
 import "./MediaModal.scss";
-
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { HiOutlineX } from "react-icons/hi";
 function MediaModal({
   isOpen,
   onClose,
@@ -31,13 +32,17 @@ function MediaModal({
       <div className="media-modal__container">
         {showNextPreviousButton && (
           <button className="media-modal__prev" onClick={onPrevious}>
-            ←
+            <span className="icon">
+              <FaArrowLeftLong />
+            </span>
           </button>
         )}
         <div className="media-modal__content">
           <div className="media-modal__close-container">
             <button className="media-modal__close" onClick={onClose}>
-              ✕
+              <span className="icon">
+                <HiOutlineX />
+              </span>
             </button>
           </div>
 
@@ -110,7 +115,9 @@ function MediaModal({
 
         {showNextPreviousButton && (
           <button className="media-modal__next" onClick={onNext}>
-            →
+            <span className="icon">
+              <FaArrowRightLong />
+            </span>
           </button>
         )}
       </div>

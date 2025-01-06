@@ -70,6 +70,10 @@
       max-height: auto;
       align-items: center;
 
+      .social-links {
+        flex-wrap: nowrap;
+      }
+
       @include tablet {
         margin: 0;
       }

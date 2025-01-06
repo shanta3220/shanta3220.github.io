@@ -12,11 +12,9 @@ function Header() {
     setTheme(newTheme);
   };
 
-  const { pathname } = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [location]);
 
   const pages = [
     { name: "Home", path: "/" },
