@@ -66,12 +66,12 @@ const Projects = () => {
                   }
                 />
               ))}
-            {/* <div className="projects__card-overlay">
+            <div className="projects__card-overlay">
               <h3 className="projects__card-title">{project.title}</h3>
               <p className="projects__card-description">
                 {project.shortDescription}
               </p>
-            </div> */}
+            </div>
           </div>
         ))}
       </div>

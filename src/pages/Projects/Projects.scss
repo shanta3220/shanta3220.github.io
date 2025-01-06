@@ -1,42 +1,36 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-@use "../../styles/partials/variables" as *;
-@use "../../styles/partials/mixins" as *;
-
 .projects {
   width: 70%;
-  max-width: 56.25rem; // Matches the overall section width
+  max-width: 56.25rem;
   margin: auto;
   padding: $padding-large;
 
   &__title {
-    font-family: $font-primary;
-    font-size: 2rem;
-    font-weight: bold;
     text-align: center;
-    margin-bottom: calc(4 * $spacing-unit);
-    color: $color-text-light;
+    margin-bottom: $padding-xlarge;
+    color: $color-text;
+    @include mainHeader;
   }
 
   &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
-    gap: calc(2 * $spacing-unit);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: $spacing-unit;
   }
 
   &__card {
     position: relative;
-    background-color: $color-link;
-
-    width: 100%;
-    height: 18.75rem;
+    background-color: $color-background-light;
     border-radius: $border-radius;
     overflow: hidden;
     transition: transform $transition-default, box-shadow $transition-default;
+    width: calc(50% - $spacing-unit);
+    height: 18.75rem;
 
     &:hover {
-      transform: scale(1.05);
       box-shadow: $shadow-medium;
 
       .projects__card-overlay {
@@ -62,19 +56,17 @@
       visibility: hidden;
       transition: opacity $transition-default, visibility $transition-default;
       padding: $padding-medium;
+      pointer-events: none;
     }
 
     &-title {
-      font-family: $font-primary;
-      font-size: 1.25rem;
-      font-weight: bold;
       margin-bottom: $padding-small;
+      @include subHeader;
     }
 
     &-description {
-      font-family: $font-primary;
-      font-size: 1rem;
       margin-bottom: 0;
+      @include bodyCopy;
     }
   }
 
@@ -85,10 +77,12 @@
     &__media {
       display: flex;
       justify-content: center;
+      align-items: center;
       height: 100%;
       img,
       video {
         height: 100%;
+        object-fit: cover;
       }
     }
   }
