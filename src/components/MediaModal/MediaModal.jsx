@@ -11,7 +11,7 @@ function MediaModal({
   showNextPreviousButton,
 }) {
   if (!isOpen || !content) return null;
-
+  console.log(content);
   const {
     type,
     src,

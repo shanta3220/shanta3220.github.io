@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import "./Header.scss";
@@ -11,6 +11,12 @@ function Header() {
     document.documentElement.setAttribute("data-theme", newTheme);
     setTheme(newTheme);
   };
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const pages = [
     { name: "Home", path: "/" },

@@ -54,9 +54,9 @@ function About() {
   };
 
   return (
-    <motion.section className="about" {...getTransition(0, 1)}>
+    <motion.section className="about" {...getTransition(0, 1.3)}>
       <h1 className="about__title">About Me</h1>
-      <section className="about__intro">
+      <motion.section {...getTransition(0.1, 0.9)} className="about__intro">
         <div className="about__intro-content">
           <div className="about__intro-photo-and-texts">
             <div className="about__intro-photo-and-social">
@@ -111,35 +111,33 @@ function About() {
             </p>
           </div>
         </div>
-      </section>
-
-      <Skills skillCategories={skillCategories} />
-
-      <TimelineSection
-        title="Experience"
-        data={experienceData}
-        handleCardClick={handleCardClick}
-      />
-
-      <TimelineSection
-        title="Education"
-        data={educationData}
-        handleCardClick={handleCardClick}
-      />
-      <TimelineSection
-        title="Awards"
-        data={awardsData}
-        handleCardClick={handleCardClick}
-      />
-
-      <MediaModal
-        isOpen={!!modalContent}
-        content={modalContent}
-        onClose={handleCloseModal}
-        onNext={handleNext}
-        onPrevious={handlePrevious}
-        showNextPreviousButton={currentMediaSource?.length > 1}
-      />
+      </motion.section>
+      <motion.div {...getTransition(0.4, 1.1)}>
+        <Skills skillCategories={skillCategories} />
+        <TimelineSection
+          title="Experience"
+          data={experienceData}
+          handleCardClick={handleCardClick}
+        />
+        <TimelineSection
+          title="Education"
+          data={educationData}
+          handleCardClick={handleCardClick}
+        />
+        <TimelineSection
+          title="Awards"
+          data={awardsData}
+          handleCardClick={handleCardClick}
+        />
+        <MediaModal
+          isOpen={!!modalContent}
+          content={modalContent}
+          onClose={handleCloseModal}
+          onNext={handleNext}
+          onPrevious={handlePrevious}
+          showNextPreviousButton={currentMediaSource?.length > 1}
+        />
+      </motion.div>
     </motion.section>
   );
 }
