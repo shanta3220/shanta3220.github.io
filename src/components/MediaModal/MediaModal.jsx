@@ -1,7 +1,9 @@
-import { FaGlobe, FaGithub, FaProjectDiagram } from "react-icons/fa";
+import { FaGlobe, FaGithub, FaProjectDiagram, FaTimes } from "react-icons/fa";
+import React, { useEffect } from "react";
 import SkillItem from "../SkillItem/SkillItem";
 import "./MediaModal.scss";
-
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { HiOutlineX } from "react-icons/hi";
 function MediaModal({
   isOpen,
   onClose,
@@ -10,8 +12,20 @@ function MediaModal({
   onNext,
   showNextPreviousButton,
 }) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("body-modal-open");
+    } else {
+      document.body.classList.remove("body-modal-open");
+    }
+
+    // Clean up when the component unmounts
+    return () => {
+      document.body.classList.remove("body-modal-open");
+    };
+  }, [isOpen]);
+
   if (!isOpen || !content) return null;
-  console.log(content);
   const {
     type,
     src,
@@ -31,13 +45,17 @@ function MediaModal({
       <div className="media-modal__container">
         {showNextPreviousButton && (
           <button className="media-modal__prev" onClick={onPrevious}>
-            ←
+            <span className="icon">
+              <FaArrowLeftLong />
+            </span>
           </button>
         )}
         <div className="media-modal__content">
           <div className="media-modal__close-container">
             <button className="media-modal__close" onClick={onClose}>
-              ✕
+              <span className="icon">
+                <HiOutlineX />
+              </span>
             </button>
           </div>
 
@@ -110,7 +128,9 @@ function MediaModal({
 
         {showNextPreviousButton && (
           <button className="media-modal__next" onClick={onNext}>
-            →
+            <span className="icon">
+              <FaArrowRightLong />
+            </span>
           </button>
         )}
       </div>

@@ -1,33 +1,77 @@
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import SocialIcon from "../SocialIcon/SocialIcon";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+  FaEnvelope,
+} from "react-icons/fa";
 import "./Footer.scss";
 
 function Footer() {
+  const location = useLocation();
+  const [showFooter, setShowFooter] = useState(false);
+
+  const isHome = location.pathname === "/";
+
+  useEffect(() => {
+    if (!isHome) {
+      setShowFooter(false);
+      setTimeout(() => setShowFooter(true), 100);
+    }
+  }, [location, isHome]);
+
+  const footerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
-    <footer className="footer">
-      <p className="footer__text">
-        © {new Date().getFullYear()} Nusrat Jahan Shanta
-      </p>
-      <div className="footer__links">
-        <a
-          href="https://www.linkedin.com/in/njshanta"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footer__link"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="https://github.com/shanta3220"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footer__link"
-        >
-          GitHub
-        </a>
-        <a href="mailto:njshanta.ca@gmail.com" className="footer__link">
-          Email
-        </a>
-      </div>
-    </footer>
+    !isHome &&
+    showFooter && (
+      <motion.footer
+        className="footer"
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        variants={footerVariants}
+      >
+        <div className="social-links">
+          <SocialIcon
+            link="https://github.com/shanta3220"
+            icon={<FaGithub />}
+            ariaLabel="GitHub profile"
+          />
+          <SocialIcon
+            link="https://linkedin.com/in/njshanta"
+            ariaLabel="LinkedIn profile"
+            icon={<FaLinkedin />}
+          />
+          <SocialIcon
+            link="mailto:njshanta.ca@gmail.com"
+            ariaLabel="Email"
+            icon={<FaEnvelope />}
+          />
+          <SocialIcon
+            link="https://instagram.com/njshanta"
+            ariaLabel="Instagram"
+            icon={<FaInstagram />}
+          />
+          <SocialIcon
+            link="https://twitter.com/msnjshanta"
+            ariaLabel="Twitter"
+            icon={<FaTwitter />}
+          />
+        </div>
+      </motion.footer>
+    )
   );
 }
 

@@ -4,7 +4,7 @@ import AnimatedBackground from "./components/AnimatedBackground/AnimatedBackgrou
 import MatrixCanvasBackground from "./components/MatrixCanvasBackground/MatrixCanvasBackground";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Hero from "./components/Hero/Hero";
+import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
@@ -22,7 +22,7 @@ function App() {
           <Header />
           <main>
             <Routes>
-              <Route path="/" element={<Hero />} />
+              <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />

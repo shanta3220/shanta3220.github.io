@@ -1,38 +1,50 @@
 @use "../../styles/partials/variables" as *;
-
+@use "../../styles/partials/mixins" as *;
 .header {
   background-color: $color-background-light;
   padding: $spacing-unit;
   box-shadow: $shadow-light;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   z-index: 100;
   color: $color-link;
 
   &__nav {
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
   }
 
   &__list {
+    width: 100%;
     list-style: none;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: calc(2 * $spacing-unit);
 
-    &__item a {
+    @include tablet {
+      justify-content: center;
+    }
+  }
+
+  &__item a {
+    @include bodyCopy;
+
+    & {
       text-decoration: none;
-      font-weight: 500;
-
       transition: color $transition-default;
+      font-weight: 500;
+    }
 
-      &:hover {
-        color: $color-text;
-      }
+    &:hover {
+      color: $color-text;
     }
   }
 }
+
 .header-gap {
-  height: 80px;
+  min-height: 5rem;
 }

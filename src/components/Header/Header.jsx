@@ -12,11 +12,9 @@ function Header() {
     setTheme(newTheme);
   };
 
-  const { pathname } = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, [location]);
 
   const pages = [
     { name: "Home", path: "/" },
@@ -36,7 +34,9 @@ function Header() {
           <ul className="header__list">
             {navLinks.map((link) => (
               <li key={link.path} className="header__item">
-                <Link to={link.path}>{link.name}</Link>
+                <Link className="header__link" to={link.path}>
+                  {link.name}
+                </Link>
               </li>
             ))}
             <li className="header__item">

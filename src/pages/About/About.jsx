@@ -55,8 +55,10 @@ function About() {
 
   return (
     <motion.section className="about" {...getTransition(0, 1.3)}>
-      <h1 className="about__title">About Me</h1>
-      <motion.section {...getTransition(0.1, 0.9)} className="about__intro">
+      <motion.h1 className="about__title" {...getTransition(0.3, 0.9)}>
+        About Me
+      </motion.h1>
+      <motion.section {...getTransition(0.4, 0.9)} className="about__intro">
         <div className="about__intro-content">
           <div className="about__intro-photo-and-texts">
             <div className="about__intro-photo-and-social">

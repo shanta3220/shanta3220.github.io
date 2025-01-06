@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom"; // Import React Router hook
+import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./CustomCursor.scss";
 
 function CustomCursor() {
@@ -8,11 +8,34 @@ function CustomCursor() {
   const mousePosition = useRef({ x: 0, y: 0 });
   const dotPosition = useRef({ x: 0, y: 0 });
   const circlePosition = useRef({ x: 0, y: 0 });
+  const initialized = useRef(false);
   const location = useLocation();
+  const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
+    const updateIsDesktop = () => {
+      setIsDesktop(
+        window.matchMedia("(hover: hover) and (pointer: fine)").matches
+      );
+    };
+
+    updateIsDesktop();
+    window.addEventListener("resize", updateIsDesktop);
+
+    return () => window.removeEventListener("resize", updateIsDesktop);
+  }, []);
+
+  useEffect(() => {
+    if (!isDesktop) return;
+
     const handleMouseMove = (e) => {
       mousePosition.current = { x: e.clientX, y: e.clientY };
+
+      if (!initialized.current) {
+        if (dotRef.current) dotRef.current.style.opacity = "1";
+        if (circleRef.current) circleRef.current.style.opacity = "1";
+        initialized.current = true;
+      }
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -30,23 +53,26 @@ function CustomCursor() {
         circleSize = parseInt(computedStyle.width, 10) / 2;
       }
 
+      const easingFactor = 0.3;
       dotPosition.current.x +=
-        (mousePosition.current.x - dotPosition.current.x - dotSize) * 0.2;
+        (mousePosition.current.x - dotPosition.current.x - dotSize) *
+        easingFactor;
       dotPosition.current.y +=
-        (mousePosition.current.y - dotPosition.current.y - dotSize) * 0.2;
+        (mousePosition.current.y - dotPosition.current.y - dotSize) *
+        easingFactor;
 
       circlePosition.current.x +=
         (dotPosition.current.x -
           circlePosition.current.x -
           circleSize +
           dotSize) *
-        0.2;
+        easingFactor;
       circlePosition.current.y +=
         (dotPosition.current.y -
           circlePosition.current.y -
           circleSize +
           dotSize) *
-        0.2;
+        easingFactor;
 
       if (dotRef.current) {
         dotRef.current.style.transform = `translate(${dotPosition.current.x}px, ${dotPosition.current.y}px)`;
@@ -63,9 +89,11 @@ function CustomCursor() {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, []);
+  }, [isDesktop]);
 
   useEffect(() => {
+    if (!isDesktop) return;
+
     const handleMouseEnter = () => {
       if (circleRef.current) circleRef.current.classList.add("hovering");
       if (dotRef.current) dotRef.current.classList.add("hovering");
@@ -77,7 +105,9 @@ function CustomCursor() {
     };
 
     const addEventListeners = () => {
-      const interactiveElements = document.querySelectorAll("a, button");
+      const interactiveElements = document.querySelectorAll(
+        "a, button, .media-card"
+      );
       interactiveElements.forEach((el) => {
         el.addEventListener("mouseenter", handleMouseEnter);
         el.addEventListener("mouseleave", handleMouseLeave);
@@ -85,22 +115,63 @@ function CustomCursor() {
     };
 
     const removeEventListeners = () => {
-      const interactiveElements = document.querySelectorAll("a, button");
+      const interactiveElements = document.querySelectorAll(
+        "a, button, .media-card"
+      );
       interactiveElements.forEach((el) => {
         el.removeEventListener("mouseenter", handleMouseEnter);
         el.removeEventListener("mouseleave", handleMouseLeave);
       });
     };
 
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === 1) addEventListeners(node);
+          });
+        }
+      });
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
+
     addEventListeners();
-    return () => removeEventListeners();
+
+    return () => {
+      removeEventListeners();
+      observer.disconnect();
+    };
+  }, [location, isDesktop]);
+
+  useEffect(() => {
+    if (!initialized.current) return;
+
+    if (circleRef.current) {
+      circleRef.current.classList.remove("hovering");
+      circleRef.current.style.transform = `translate(${mousePosition.current.x}px, ${mousePosition.current.y}px)`;
+    }
+    if (dotRef.current) {
+      dotRef.current.classList.remove("hovering");
+      dotRef.current.style.transform = `translate(${mousePosition.current.x}px, ${mousePosition.current.y}px)`;
+    }
   }, [location]);
 
   return (
-    <>
-      <div className="custom-cursor-dot" ref={dotRef}></div>
-      <div className="custom-cursor-circle" ref={circleRef}></div>
-    </>
+    isDesktop && (
+      <>
+        <div
+          className="custom-cursor-dot"
+          ref={dotRef}
+          style={{ opacity: 0 }}
+        ></div>
+        <div
+          className="custom-cursor-circle"
+          ref={circleRef}
+          style={{ opacity: 0 }}
+        ></div>
+      </>
+    )
   );
 }
 

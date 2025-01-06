@@ -62,9 +62,11 @@ const Projects = () => {
 
   return (
     <motion.div className="projects" {...getTransition(0, 1)}>
-      <h1 className="projects__title">My Projects</h1>
+      <motion.h1 className="projects__title" {...getTransition(0.2, 0.8)}>
+        My Projects
+      </motion.h1>
 
-      <div className="projects__categories">
+      <motion.div className="projects__categories" {...getTransition(0.2, 0.8)}>
         {categories.map((category) => (
           <button
             key={category}
@@ -76,9 +78,9 @@ const Projects = () => {
             {category}
           </button>
         ))}
-      </div>
+      </motion.div>
 
-      <motion.div className="projects__grid" {...getTransition(0.2, 0.8)}>
+      <motion.div className="projects__grid" {...getTransition(0.3, 0.8)}>
         {filteredProjects.map((project, index) => (
           <motion.div
             className="projects__card"

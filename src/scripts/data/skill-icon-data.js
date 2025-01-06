@@ -21,6 +21,11 @@ export const skillIcons = [
     bgColor: "rgba(156, 39, 176, 1)",
   },
   {
+    name: "Problem Solving",
+    icon: Icons.FaLightbulb, // Represents ideas and solutions
+    bgColor: "rgba(255, 193, 7, 1)", // Bright yellow for creativity and clarity
+  },
+  {
     name: "Axios",
     icon: Icons.FaCloudDownloadAlt,
     bgColor: "rgba(33, 150, 243, 1)",
