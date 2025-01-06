@@ -5,12 +5,21 @@
   @include sectionPadding;
 
   & {
-    width: 70%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include desktop {
+      width: 75%;
+      max-width: 87.5rem;
+    }
   }
 
   &__title {
@@ -42,17 +51,34 @@
 
     &-photo-and-texts {
       display: flex;
+      justify-content: center;
+      flex-direction: column;
       gap: $padding-xlarge;
+
+      @include tablet {
+        flex-direction: row;
+      }
     }
 
     &-photo-and-social {
       display: flex;
+      margin: auto;
       flex-direction: column;
       width: 50%;
       height: 50%;
       max-width: 18.75rem;
       max-height: auto;
       align-items: center;
+
+      @include tablet {
+        margin: 0;
+      }
+      @include desktop {
+        flex-direction: column;
+        width: 50%;
+        height: 50%;
+        max-width: 18.75rem;
+      }
 
       .about__intro-view-projects {
         @include button;

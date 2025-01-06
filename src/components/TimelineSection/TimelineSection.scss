@@ -36,7 +36,8 @@
   &__item {
     width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
     position: relative;
     margin-bottom: calc(3 * $spacing-unit);
     gap: 1rem;
@@ -44,12 +45,23 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    @include tablet {
+      align-items: flex-start;
+      flex-direction: row;
+    }
+
+    @include desktop {
+      align-items: flex-start;
+      flex-direction: row;
+    }
   }
 
   &__marker {
     position: absolute;
     left: 0;
     margin-top: calc(1.5 * $spacing-unit);
+
     transform: translateX(-50%);
     width: 14px;
     height: 14px;
@@ -59,12 +71,21 @@
   }
 
   &__content {
-    width: 100%;
+    width: 97%;
     padding: $padding-medium;
     border-radius: $border-radius;
     background-color: $color-background-light;
     box-shadow: $shadow-light;
-    margin-left: calc(3 * $spacing-unit);
+    margin-left: $spacing-unit;
+
+    @include tablet {
+      width: 100%;
+      margin-left: calc(1.5 * $spacing-unit);
+    }
+
+    @include desktop {
+      margin-left: calc(3 * $spacing-unit);
+    }
 
     &-title {
       font-weight: 900;

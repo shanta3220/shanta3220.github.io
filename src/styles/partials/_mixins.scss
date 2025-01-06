@@ -129,13 +129,13 @@
 }
 
 @mixin sectionPadding {
-  padding: $padding-large $padding-medium;
+  padding: $padding-large;
 
   @include tablet {
-    padding: $padding-large;
+    padding: $padding-large calc($padding-xlarge * 1.5);
   }
 
   @include desktop {
-    padding: $padding-xlarge;
+    padding: $padding-xlarge calc($padding-xlarge * 3);
   }
 }
