@@ -1,15 +1,9 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  z-index: 999;
-  pointer-events: none;
+body.body-modal-open {
+  overflow: hidden;
+  touch-action: none; /* Prevent touch scrolling */
 }
 
 .media-modal {
@@ -27,6 +21,8 @@
 
   z-index: 1000;
 
+  @include sectionPadding;
+
   &__overlay {
     position: absolute;
     top: 0;
@@ -35,7 +31,9 @@
     height: 100%;
     background-color: rgba(5, 5, 5, 0.9);
     z-index: 999;
+    pointer-events: auto;
   }
+
   &__close-container {
     display: flex;
     justify-content: end;
@@ -60,7 +58,7 @@
     z-index: 1001;
 
     .icon {
-      width: 5rem;
+      width: 3rem;
       height: 5rem;
       display: flex;
       align-items: center;

@@ -1,4 +1,5 @@
 import { FaGlobe, FaGithub, FaProjectDiagram, FaTimes } from "react-icons/fa";
+import React, { useEffect } from "react";
 import SkillItem from "../SkillItem/SkillItem";
 import "./MediaModal.scss";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
@@ -11,8 +12,20 @@ function MediaModal({
   onNext,
   showNextPreviousButton,
 }) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("body-modal-open");
+    } else {
+      document.body.classList.remove("body-modal-open");
+    }
+
+    // Clean up when the component unmounts
+    return () => {
+      document.body.classList.remove("body-modal-open");
+    };
+  }, [isOpen]);
+
   if (!isOpen || !content) return null;
-  console.log(content);
   const {
     type,
     src,
