@@ -1,13 +1,16 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import "./Projects.scss";
 import MediaModal from "../../components/MediaModal/MediaModal";
 import { projectsData } from "../../scripts/data/projects-data";
 import MediaCard from "../../components/MediaCard/MediaCard";
+import { getTransition } from "../../scripts/utils";
 
 const Projects = () => {
   const [modalContent, setModalContent] = useState(null);
   const [currentMediaSource, setCurrentMediaSource] = useState([]);
   const [currentMediaIndex, setCurrentMediaIndex] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
   const updateModalContent = (mediaItem, project) => ({
     ...mediaItem,
@@ -19,9 +22,10 @@ const Projects = () => {
     website: mediaItem.website || project.website,
     year: mediaItem.year || project.year,
   });
+
   const handleCardClick = (project, mediaArray, index) => {
     const mediaItem = mediaArray[index];
-    setModalContent(updateModalContent(mediaItem, project)); // Reusing the function
+    setModalContent(updateModalContent(mediaItem, project));
     setCurrentMediaSource(mediaArray);
     setCurrentMediaIndex(index);
   };
@@ -50,12 +54,41 @@ const Projects = () => {
     setModalContent((prev) => updateModalContent(prevMediaItem, prev));
   };
 
+  const categories = ["All", "Web", "Games"];
+  const filteredProjects =
+    selectedCategory === "All"
+      ? projectsData
+      : projectsData.filter((project) => project.category === selectedCategory);
+
   return (
-    <div className="projects">
+    <motion.div
+      className="projects"
+      {...getTransition(0, 1)} // Add motion transition
+    >
       <h1 className="projects__title">My Projects</h1>
-      <div className="projects__grid">
-        {projectsData.map((project, index) => (
-          <div className="projects__card" key={index}>
+
+      <div className="projects__categories">
+        {categories.map((category) => (
+          <button
+            key={category}
+            className={`projects__category ${
+              selectedCategory === category ? "active" : ""
+            }`}
+            onClick={() => setSelectedCategory(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+
+      <motion.div className="projects__grid" {...getTransition(0.2, 0.8)}>
+        {filteredProjects.map((project, index) => (
+          <motion.div
+            className="projects__card"
+            key={index}
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.95 }}
+          >
             {project.media?.length > 0 &&
               project.media.map((mediaItem, mediaIndex) => (
                 <MediaCard
@@ -72,9 +105,10 @@ const Projects = () => {
                 {project.shortDescription}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
+
       <MediaModal
         isOpen={!!modalContent}
         content={modalContent}
@@ -83,7 +117,7 @@ const Projects = () => {
         onPrevious={handlePrevious}
         showNextPreviousButton={currentMediaSource?.length > 1}
       />
-    </div>
+    </motion.div>
   );
 };
 
