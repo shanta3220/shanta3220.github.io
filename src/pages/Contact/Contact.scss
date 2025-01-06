@@ -1,36 +1,106 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .contact {
-  padding: calc(4 * $spacing-unit) calc(2 * $spacing-unit);
-  background-color: $color-background-light;
-  text-align: center;
+  max-width: 50rem;
+  margin: auto;
+  @include sectionPadding;
 
   &__title {
-    font-size: 2rem;
-    font-weight: 600;
+    text-align: center;
     color: $color-text;
+    margin-bottom: $padding-medium;
+    @include mainHeader;
   }
 
-  &__text {
-    margin-top: calc(1.5 * $spacing-unit);
-    font-size: 1rem;
+  &__subtitle {
+    text-align: center;
     color: $color-text;
+    margin-bottom: $padding-large;
+    @include bodyCopy;
   }
 
-  &__button {
-    display: inline-block;
-    margin-top: calc(2 * $spacing-unit);
-    padding: calc(0.75 * $spacing-unit) calc(1.5 * $spacing-unit);
-    font-size: 1rem;
-    font-weight: 600;
-    color: $color-text-light;
-    background-color: $color-link;
-    border-radius: $border-radius;
-    text-decoration: none;
-    transition: background-color $transition-default;
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $padding-medium;
 
-    &:hover {
-      background-color: $color-hover;
+    &-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        color: $color-text;
+        margin-bottom: $padding-small;
+        @include subHeaderSmall;
+      }
+
+      input,
+      textarea {
+        padding: $padding-small;
+        background-color: $color-background-light;
+        border: 0.0625rem solid $color-background-dark;
+        border-radius: $border-radius;
+        color: $color-text;
+        font-family: $font-primary;
+        font-size: 1rem;
+        transition: border-color $transition-default;
+
+        &:focus {
+          outline: 0.0625rem solid $color-text;
+          border-color: transparent;
+        }
+
+        &::placeholder {
+          color: $color-text;
+        }
+      }
+
+      textarea {
+        height: 8rem;
+        resize: none;
+      }
+
+      input:-moz-autofill {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        color: $color-text !important;
+      }
+
+      input:-ms-autofill,
+      input[data-autocompleted] {
+        background-color: transparent !important;
+      }
+
+      input:-webkit-autofill,
+      input:-webkit-autofill:focus {
+        transition: background-color 600000s 0s, color 600000s 0s;
+      }
     }
+  }
+
+  &__submit {
+    align-self: center;
+    padding: $padding-small $padding-large;
+    @include button;
+
+    &:hover,
+    &:focus {
+      background-color: $color-button-hover;
+    }
+  }
+
+  &__error {
+    color: $color-hover;
+    text-align: center;
+    margin-top: $padding-small;
+    @include bodyCopySmall;
+  }
+
+  &__success {
+    color: $color-button-hover;
+    text-align: center;
+    margin-top: $padding-small;
+    @include bodyCopySmall;
   }
 }

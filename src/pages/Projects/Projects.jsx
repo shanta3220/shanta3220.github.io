@@ -61,10 +61,7 @@ const Projects = () => {
       : projectsData.filter((project) => project.category === selectedCategory);
 
   return (
-    <motion.div
-      className="projects"
-      {...getTransition(0, 1)} // Add motion transition
-    >
+    <motion.div className="projects" {...getTransition(0, 1)}>
       <h1 className="projects__title">My Projects</h1>
 
       <div className="projects__categories">
