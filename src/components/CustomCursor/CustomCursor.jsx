@@ -53,23 +53,26 @@ function CustomCursor() {
         circleSize = parseInt(computedStyle.width, 10) / 2;
       }
 
+      const easingFactor = 0.3;
       dotPosition.current.x +=
-        (mousePosition.current.x - dotPosition.current.x - dotSize) * 0.2;
+        (mousePosition.current.x - dotPosition.current.x - dotSize) *
+        easingFactor;
       dotPosition.current.y +=
-        (mousePosition.current.y - dotPosition.current.y - dotSize) * 0.2;
+        (mousePosition.current.y - dotPosition.current.y - dotSize) *
+        easingFactor;
 
       circlePosition.current.x +=
         (dotPosition.current.x -
           circlePosition.current.x -
           circleSize +
           dotSize) *
-        0.2;
+        easingFactor;
       circlePosition.current.y +=
         (dotPosition.current.y -
           circlePosition.current.y -
           circleSize +
           dotSize) *
-        0.2;
+        easingFactor;
 
       if (dotRef.current) {
         dotRef.current.style.transform = `translate(${dotPosition.current.x}px, ${dotPosition.current.y}px)`;
@@ -142,8 +145,16 @@ function CustomCursor() {
   }, [location, isDesktop]);
 
   useEffect(() => {
-    if (circleRef.current) circleRef.current.classList.remove("hovering");
-    if (dotRef.current) dotRef.current.classList.remove("hovering");
+    if (!initialized.current) return;
+
+    if (circleRef.current) {
+      circleRef.current.classList.remove("hovering");
+      circleRef.current.style.transform = `translate(${mousePosition.current.x}px, ${mousePosition.current.y}px)`;
+    }
+    if (dotRef.current) {
+      dotRef.current.classList.remove("hovering");
+      dotRef.current.style.transform = `translate(${mousePosition.current.x}px, ${mousePosition.current.y}px)`;
+    }
   }, [location]);
 
   return (
