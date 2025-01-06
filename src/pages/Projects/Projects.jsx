@@ -9,8 +9,19 @@ const Projects = () => {
   const [currentMediaSource, setCurrentMediaSource] = useState([]);
   const [currentMediaIndex, setCurrentMediaIndex] = useState(null);
 
-  const handleCardClick = (mediaItem, mediaArray, index) => {
-    setModalContent(mediaItem);
+  const updateModalContent = (mediaItem, project) => ({
+    ...mediaItem,
+    title: mediaItem.title || project.title,
+    shortDescription: mediaItem.shortDescription || project.shortDescription,
+    longDescription: mediaItem.longDescription || project.description,
+    skills: mediaItem.skills || project.skills,
+    github: mediaItem.github || project.github,
+    website: mediaItem.website || project.website,
+    year: mediaItem.year || project.year,
+  });
+  const handleCardClick = (project, mediaArray, index) => {
+    const mediaItem = mediaArray[index];
+    setModalContent(updateModalContent(mediaItem, project)); // Reusing the function
     setCurrentMediaSource(mediaArray);
     setCurrentMediaIndex(index);
   };
@@ -24,8 +35,9 @@ const Projects = () => {
   const handleNext = () => {
     if (!currentMediaSource || currentMediaSource.length === 0) return;
     const nextIndex = (currentMediaIndex + 1) % currentMediaSource.length;
+    const nextMediaItem = currentMediaSource[nextIndex];
     setCurrentMediaIndex(nextIndex);
-    setModalContent(currentMediaSource[nextIndex]);
+    setModalContent((prev) => updateModalContent(nextMediaItem, prev));
   };
 
   const handlePrevious = () => {
@@ -33,8 +45,9 @@ const Projects = () => {
     const prevIndex =
       (currentMediaIndex - 1 + currentMediaSource.length) %
       currentMediaSource.length;
+    const prevMediaItem = currentMediaSource[prevIndex];
     setCurrentMediaIndex(prevIndex);
-    setModalContent(currentMediaSource[prevIndex]);
+    setModalContent((prev) => updateModalContent(prevMediaItem, prev));
   };
 
   return (
@@ -49,16 +62,16 @@ const Projects = () => {
                   key={`${index}-${mediaIndex}`}
                   media={mediaItem}
                   onClick={() =>
-                    handleCardClick(mediaItem, project.media, mediaIndex)
+                    handleCardClick(project, project.media, mediaIndex)
                   }
                 />
               ))}
-            <div className="projects__card-overlay">
+            {/* <div className="projects__card-overlay">
               <h3 className="projects__card-title">{project.title}</h3>
               <p className="projects__card-description">
                 {project.shortDescription}
               </p>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>

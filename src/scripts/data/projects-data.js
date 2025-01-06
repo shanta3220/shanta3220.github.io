@@ -33,11 +33,11 @@ export const projectsData = [
     skills: [
       "JavaScript",
       "Vite",
-      "React",
+      "React.js",
       "Sass",
       "React Router Dom",
       "Node.js",
-      "Express",
+      "Express.js",
       "MySQL",
       "Knex.js",
     ],

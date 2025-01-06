@@ -7,6 +7,24 @@ export const skillIcons = [
   { name: "Node.js", icon: Icons.FaNode, bgColor: "rgba(51, 153, 51, 1)" },
   { name: "Express.js", icon: Icons.FaNodeJs, bgColor: "rgba(51, 153, 51, 1)" },
   { name: "Knex.js", icon: Icons.FaDatabase, bgColor: "rgba(247, 223, 30, 1)" },
+  { name: "Vite", icon: Icons.FaBolt, bgColor: "rgba(143, 188, 143, 1)" },
+  { name: "React", icon: Icons.FaReact, bgColor: "rgba(97, 218, 251, 1)" },
+  {
+    name: "React Router Dom",
+    icon: Icons.FaRoute,
+    bgColor: "rgba(220, 20, 60, 1)",
+  },
+  { name: "Express", icon: Icons.FaNodeJs, bgColor: "rgba(67, 160, 71, 1)" },
+  {
+    name: "AI Integration",
+    icon: Icons.FaBrain,
+    bgColor: "rgba(156, 39, 176, 1)",
+  },
+  {
+    name: "Axios",
+    icon: Icons.FaCloudDownloadAlt,
+    bgColor: "rgba(33, 150, 243, 1)",
+  },
   { name: "MySQL", icon: Icons.FaDatabase, bgColor: "rgba(68, 121, 161, 1)" },
   { name: "Python", icon: Icons.FaPython, bgColor: "rgba(55, 118, 171, 1)" },
   {
