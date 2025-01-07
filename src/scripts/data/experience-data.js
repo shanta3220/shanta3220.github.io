@@ -41,8 +41,10 @@ export const experienceData = [
         title: "Chest Inventory Screen",
         shortDescription:
           "Chest inventory featuring player inventory in the middle and chest inventory on the left.",
-        longDescription:
-          "Implemented the Chest Inventory UI:\n• Added drag-and-drop functionality for items.\n• Enabled item swapping and dynamic updates to inventory.\n• Ensured responsiveness across mobile and desktop.",
+        longDescription: `Implemented the Chest Inventory UI:
+          • Added drag-and-drop functionality for items.
+          • Enabled item swapping and dynamic updates to inventory.
+          • Ensured responsiveness across mobile and desktop.`,
         year: "2022",
       },
       {
@@ -50,8 +52,12 @@ export const experienceData = [
         src: "/medias/nimoyd/main_ui.png",
         title: "Main Screen",
         shortDescription: "Default main screen during gameplay.",
-        longDescription:
-          "Implemented core UI elements for gameplay:\n• Added quick item slots at the bottom with keyboard shortcuts.\n• Developed bottom-left mouseover voxel item name, dynamically updating based on mouse position.\n• Created health bar and notification cells on the left.\n• Interactive behavior for the right minimap and clock.\n• Ensured responsive design for multiple devices.",
+        longDescription: `Implemented core UI elements for gameplay:
+          • Added quick item slots at the bottom with keyboard shortcuts.
+          • Developed bottom-left mouseover voxel item name, dynamically updating based on mouse position.
+          • Created health bar and notification cells on the left.
+          • Interactive behavior for the right minimap and clock.
+          • Ensured responsive design for multiple devices.`,
         year: "2022",
       },
       {
@@ -60,8 +66,10 @@ export const experienceData = [
         title: "World Map Screen",
         shortDescription:
           "Clickable building icons with details on interaction.",
-        longDescription:
-          "Implemented interactivity for the world map:\n• Updated building icons and ensured dynamic interactions.\n• Integrated functionality to display detailed information on click.\n• Ensured responsiveness across devices.",
+        longDescription: `Implemented interactivity for the world map:
+          • Updated building icons and ensured dynamic interactions.
+          • Integrated functionality to display detailed information on click.
+          • Ensured responsiveness across devices.`,
         year: "2023",
       },
       {
@@ -69,8 +77,10 @@ export const experienceData = [
         src: "/medias/nimoyd/npc_conversation_ui.png",
         title: "NPC Quest Screen",
         shortDescription: "Interact with NPCs and view their details.",
-        longDescription:
-          "Implemented NPC Quest UI features:\n• Built the UI from scratch with responsive design.\n• Added animations for interactive elements.\n• Ensured camera alignment with NPCs during interactions.",
+        longDescription: `Implemented NPC Quest UI features:
+          • Built the UI from scratch with responsive design.
+          • Added animations for interactive elements.
+          • Ensured camera alignment with NPCs during interactions.`,
         year: "2022",
       },
       {
@@ -78,8 +88,10 @@ export const experienceData = [
         src: "/medias/nimoyd/worker_selection_ui.png",
         title: "Worker Selection Screen",
         shortDescription: "Displays Worker NPCs in a circular grid.",
-        longDescription:
-          "Implemented dynamic worker selection features:\n• Created UI to update the worker list based on active category.\n• Added building detail information on the right.\n• Ensured responsive design across devices.",
+        longDescription: `Implemented dynamic worker selection features:
+          • Created UI to update the worker list based on active category.
+          • Added building detail information on the right.
+          • Ensured responsive design across devices.`,
         year: "2023",
       },
       {
@@ -87,8 +99,10 @@ export const experienceData = [
         src: "/medias/nimoyd/world_creation_ui.jpg",
         title: "World Creation Screen",
         shortDescription: "UI for creating a new game world.",
-        longDescription:
-          "Implemented features for world creation:\n• Added dynamic updates for info based on categories such as General and Weather.\n• Ensured functionality of all buttons.\n• Modified backend logic to support seamless UI interactions.",
+        longDescription: `Implemented features for world creation:
+          • Added dynamic updates for info based on categories such as General and Weather.
+          • Ensured functionality of all buttons.
+          • Modified backend logic to support seamless UI interactions.`,
         year: "2023",
       },
       {
@@ -96,8 +110,10 @@ export const experienceData = [
         src: "/medias/nimoyd/character_ui.jpg",
         title: "Character Screen",
         shortDescription: "Track character progress and stats.",
-        longDescription:
-          "Implemented character UI:\n• Included user's current progress and stats upgrade features.\n• Added ui animations for interactivity.\n• Ensured the UI was fully responsive across devices.",
+        longDescription: `Implemented character UI:
+          • Included user's current progress and stats upgrade features.
+          • Added UI animations for interactivity.
+          • Ensured the UI was fully responsive across devices.`,
         year: "2021",
       },
       {
@@ -106,8 +122,10 @@ export const experienceData = [
         title: "Character Creation Screen",
         shortDescription:
           "Select a character to play in the game, set traits and gender.",
-        longDescription:
-          "Implemented character customization features:\n• Built a dynamic UI for character creation.\n• Enabled dynamic updates for traits and gender selection.\n• Ensured data saved to the game database and responsive design.",
+        longDescription: `Implemented character customization features:
+          • Built a dynamic UI for character creation.
+          • Enabled dynamic updates for traits and gender selection.
+          • Ensured data saved to the game database and responsive design.`,
         year: "2022",
       },
       {
@@ -115,8 +133,9 @@ export const experienceData = [
         src: "/medias/nimoyd/social_journal_ui.jpg",
         title: "Social Journal Screen",
         shortDescription: "Track Quest NPCs based on factions.",
-        longDescription:
-          "Implemented faction-based journal features:\n• Built a grid-based UI to dynamically display NPC profiles by faction.\n• Ensured consistent layout and responsive design.",
+        longDescription: `Implemented faction-based journal features:
+          • Built a grid-based UI to dynamically display NPC profiles by faction.
+          • Ensured consistent layout and responsive design.`,
         year: "2022",
       },
       {
@@ -124,8 +143,10 @@ export const experienceData = [
         src: "/medias/nimoyd/excavation_site_ui.jpg",
         title: "Excavation Site Screen",
         shortDescription: "Excavate different excavation site buildings.",
-        longDescription:
-          "Implemented excavation UI with stage-based interactions:\n• Developed a UI stage system for excavated, available, and locked states.\n• Ensured the design dynamically adapts based on active stage.\n• Made the UI fully responsive.",
+        longDescription: `Implemented excavation UI with stage-based interactions:
+          • Developed a UI stage system for excavated, available, and locked states.
+          • Ensured the design dynamically adapts based on active stage.
+          • Made the UI fully responsive.`,
         year: "2021",
       },
       {
@@ -134,8 +155,10 @@ export const experienceData = [
         title: "Building Grid Screen",
         shortDescription:
           "Create templates or place buildings in the game world.",
-        longDescription:
-          "Implemented the building grid UI:\n• Developed the UI to display buildings based on categories and subcategories.\n• Updated item details dynamically based on user selections and interactions.\n• Ensured full responsiveness across devices.",
+        longDescription: `Implemented the building grid UI:
+          • Developed the UI to display buildings based on categories and subcategories.
+          • Updated item details dynamically based on user selections and interactions.
+          • Ensured full responsiveness across devices.`,
         year: "2022",
       },
       {
@@ -143,8 +166,11 @@ export const experienceData = [
         src: "/medias/nimoyd/building_crafting_ui.png",
         title: "Building Details Screen",
         shortDescription: "Craft items and generate energy in buildings.",
-        longDescription:
-          "Implemented the building details UI:\n• Added features to update recipes and player inventory based on the building's category.\n• Developed the UI to display crafting progress and item details dynamically.\n• Ensured smooth interactions for crafting actions and item generation.\n• Made the UI fully responsive across devices.",
+        longDescription: `Implemented the building details UI:
+          • Added features to update recipes and player inventory based on the building's category.
+          • Developed the UI to display crafting progress and item details dynamically.
+          • Ensured smooth interactions for crafting actions and item generation.
+          • Made the UI fully responsive across devices.`,
         year: "2022",
       },
       {
@@ -152,8 +178,9 @@ export const experienceData = [
         src: "/medias/nimoyd/journal_ui.jpg",
         title: "Journal Screen",
         shortDescription: "Check conversation logs and quest progress.",
-        longDescription:
-          "Implemented journal tracking system:\n• Built a responsive journal UI where quests and notes update dynamically based on user actions.\n• Ensured consistent layout and synchronized data with user progress.",
+        longDescription: `Implemented journal tracking system:
+          • Built a responsive journal UI where quests and notes update dynamically based on user actions.
+          • Ensured consistent layout and synchronized data with user progress.`,
         year: "2021",
       },
     ],
@@ -184,8 +211,11 @@ export const experienceData = [
         src: "/medias/cute_puppy_love/puppy_selection.jpeg",
         title: "Puppy Selection Screen",
         shortDescription: "Select the puppy's breed.",
-        longDescription:
-          "Implemented the Puppy Selection UI:\n• Created the initial mockup UI, which served as the foundation for the designer's final implementation.\n• Replaced the mockup with final UI assets.\n• Added animated puppy models.\n• Ensured responsiveness across mobile devices.",
+        longDescription: `Implemented the Puppy Selection UI:
+          • Created the initial mockup UI, which served as the foundation for the designer's final implementation.
+          • Replaced the mockup with final UI assets.
+          • Added animated puppy models.
+          • Ensured responsiveness across mobile devices.`,
         year: "2020",
       },
       {
@@ -193,8 +223,11 @@ export const experienceData = [
         src: "/medias/cute_puppy_love/puppy_play.jpeg",
         title: "Puppy Play Screen",
         shortDescription: "Play with the puppy.",
-        longDescription:
-          "Implemented the gameplay and UI:\n• Created ball-throwing mechanics using drag and release gestures.\n• Integrated and maintained the animation controller.\n• Developed the gameplay UI.\n• Ensured responsiveness across mobile devices.",
+        longDescription: `Implemented the gameplay and UI:
+          • Created ball-throwing mechanics using drag and release gestures.
+          • Integrated and maintained the animation controller.
+          • Developed the gameplay UI.
+          • Ensured responsiveness across mobile devices.`,
         year: "2020",
       },
       {
@@ -202,8 +235,11 @@ export const experienceData = [
         src: "/medias/cute_puppy_love/puppy_feed.jpeg",
         title: "Puppy Feed Screen",
         shortDescription: "Feed the puppy.",
-        longDescription:
-          "Implemented the gameplay and UI:\n• Developed the gameplay UI.\n• Added various food items with unique energy levels.\n• Implemented energy restoration mechanics when the puppy eats.\n• Ensured responsiveness across mobile devices.",
+        longDescription: `Implemented the gameplay and UI:
+          • Developed the gameplay UI.
+          • Added various food items with unique energy levels.
+          • Implemented energy restoration mechanics when the puppy eats.
+          • Ensured responsiveness across mobile devices.`,
         year: "2020",
       },
     ],

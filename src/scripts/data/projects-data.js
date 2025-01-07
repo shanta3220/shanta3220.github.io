@@ -4,15 +4,15 @@ export const projectsData = [
     year: "Dec 2024",
     shortDescription:
       "Instant access to browser-based games with social features like leaderboards and profiles.",
-    description: `Created a Full-Stack web application as a solo developer from scratch for my BrainStation's capstone project.
-   • Designed and create all page templates on Canva
-   • Implement Login, Signup, Home, Game, Game List Leaderboard, Leaderboard List and Game List pages on Vite-React Application.
-   • Connected the frontend with backend using Axios for the all pages such as User Profile, sign up and game pages
-   • Integrate Personal Unity3D WebGL games in the react application
-   • Create Backend endpoints with Node.js, Express.js
-   • Create a MySQL database for all the games, leaderbord-scores, users and comments tables and used Knex.js to fetch the data from the database`,
+    description: `Developed a Full-Stack web application as a solo project for my BrainStation capstone:
+      • Designed all page templates in Canva to follow as guidelines.
+      • Built a Vite-React frontend with pages like Login, Home, Game, Leaderboard pages.
+      • Integrated my own Unity3D WebGL games into the React application.
+      • Built a Node.js and Express.js backend with MySQL to manage users, games, leaderboards, and comments.
+      • Ensured smooth communication between frontend and backend using Axios.`,
     skills: [
       "React.js",
+      "Vite",
       "JavaScript",
       "Sass",
       "Node.js",
@@ -20,26 +20,26 @@ export const projectsData = [
       "Knex.js",
       "MySQL",
       "Unity3D",
+      "Axios",
       "C#",
       "Git",
       "Github",
+      "Task Prioritization",
     ],
     media: [{ type: "image", src: "/medias/jiffygames/jiffygames.png" }],
     category: "Web",
+    website: "https://jiffygames.netlify.app",
+    github: "https://github.com/shanta3220/jiffygames-frontend",
   },
   {
     title: "InStock",
     year: "Nov 2024",
     shortDescription:
-      "A web-based platform for real-time warehouse and inventory tracking and management",
-    description: `Collaborated with BrainStation classmates in creating the Full-Stack Application. My contributions include as Full-Stack Developer:
-    • Implemented the Warehouse Details, Add New Warehouse responsive pages from scratch. 
-    • Helped peers in fixing issues with Inventory and Inventory page.
-    • Setup and create routes and database controllers for warehouse and inventory.
-    • Create Mysql database and seed data with Knex.js
-    • Created backend GET, POST, PUT endpoints with Node.js and Knex.js, for seamless data connectivity
-    • Tested rigorously frontend UI issues to ensure a smooth user experience.`,
-
+      "A responsive Web platform for real-time warehouse and inventory tracking.",
+    description: `Collaborated on a Full-Stack app as a developer:
+      • Built responsive Warehouse Details and Add Warehouse pages.
+      • Created MySQL database and backend endpoints for warehouse management.
+      • Tested the frontend UI for seamless user experience.`,
     skills: [
       "JavaScript",
       "Vite",
@@ -51,6 +51,7 @@ export const projectsData = [
       "Express.js",
       "MySQL",
       "Knex.js",
+      "Axios",
       "Git",
       "Postman",
       "Team Collaboration",
@@ -58,17 +59,19 @@ export const projectsData = [
     ],
     media: [{ type: "image", src: "/medias/instock/instock.png" }],
     category: "Web",
+    website: "https://njshanta-instock.netlify.app",
+    github: "https://github.com/shanta3220/inStock",
   },
   {
     title: "Just for Laughs",
     year: "Nov 2024",
     shortDescription:
-      "Full-stack app generating personalized images based on user inputs with OpenAI integration.",
-    description: `Developed during a 24-hour hackathon judged by Meta panelists. My contributions include:
-  • Collaborated in building a full-stack app using React and Express, where the backend handled personalized jokes stored in a MySQL database.
-  • Utilized OpenAI for generating AI-powered images based on user inputs like hobbies, age, mood, and humor type.
-  • Created Jokes, and all categories like hobbbies, age, mood, humor type tables seed data in a MySql database
-  • Created backend GET endpoints, for seamless data connectivity and debugged frontend UI issues to ensure a smooth user experience.`,
+      "App generating personalized images based on user inputs using OpenAI.",
+    description: `Built during a 24-hour hackathon judged by Meta panelists as part of a team:
+      • Collaborated on a React and Node.js app to create personalized AI-powered images based on user hobbies, age, mood, and humor type.
+      • Designed a MySQL database to store jokes and categories.
+      • Created backend endpoints for seamless data integration and debugged frontend UI issues to enhance usability.
+      • Ensured smooth communication between frontend and backend using Axios.`,
     skills: [
       "React.js",
       "JavaScript",
@@ -77,6 +80,7 @@ export const projectsData = [
       "Express.js",
       "MySQL",
       "OpenAI",
+      "Axios",
       "AI Integration",
       "Git",
       "Team Collaboration",
@@ -86,62 +90,68 @@ export const projectsData = [
       { type: "image", src: "/medias/just_for_laughs/just_for_laughs.jpg" },
     ],
     category: "Web",
+    github: "https://github.com/shanta3220/ip-meta-client",
   },
   {
     title: "BrainFlix",
     year: "Oct 2023",
     shortDescription:
       "Responsive platform with video playback, comments, and dynamic rendering.",
-    description: `Features responsive design for seamless viewing across devices.
-  Includes video playback, a comment section, and dynamic content rendering.
-  Provides users with an engaging and interactive video experience.`,
+    description: `Built key features for a video streaming app:
+      • Developed Home and Upload pages with video playback and form validation.
+      • Created backend routes for GET and POST requests.
+      • Ensured dynamic content rendering and smooth user experience.`,
     skills: [
       "JavaScript",
       "Sass",
       "Vite",
+      "Axios",
       "React.js",
       "Node.js",
       "Express.js",
       "Github",
+      "OOP",
     ],
     media: [{ type: "image", src: "/medias/brainflix/brainflix.png" }],
     category: "Web",
+    website: "https://njshanta-brainflix.netlify.app",
+    github: "https://github.com/shanta3220/nusrat-jahan-shanta-brainflix",
   },
   {
     title: "CoffeeShop",
     year: "Sep 2023",
     shortDescription:
       "Static, browser-based website providing users with information about premium coffee products.",
-    description: `Static, browser-based website providing users with information about premium coffee products.
-  Features sections like 'Our Products' and 'We're Different' to highlight offerings.
-  Serves as a straightforward platform for users to learn about Nitro Coffee's products and promotions.`,
+    description: `Created a 2-page static website:
+      • Designed layouts using HTML5 and CSS, following BEM conventions.
+      • Ensured proper hover states and CSS animations for interactivity.`,
     skills: ["HTML", "CSS"],
     media: [{ type: "image", src: "/medias/coffeeshop/coffeeshop.png" }],
     category: "Web",
+    website: "https://njshanta-coffeeshop.netlify.app",
+    github: "https://github.com/shanta3220/nusrat-jahan-shanta-coffeeshop",
   },
   {
     title: "BandSite",
     year: "Oct 2023",
     shortDescription:
-      "Responsive application for band profiles, with DOM manipulation and API integration.",
-    description: `Responsive web application developed using front-end technologies.
-  Demonstrates proficiency in DOM manipulation and API integration.
-  Features sections for band information and user engagement.`,
+      "Responsive website with DOM manipulation and API integration.",
+    description: `Developed a dynamic website:
+      • Built Home and Shows pages using JavaScript, HTML, and Sass.
+      • Integrated API for dynamic content with GET, POST, and DELETE requests.
+      • Ensured interactivity and responsive design.`,
     skills: ["JavaScript", "Axios", "HTML", "Sass"],
     media: [{ type: "image", src: "/medias/bandsite/bandsite.gif" }],
     category: "Web",
+    website: "https://njshanta-bandsite.netlify.app",
+    github: "https://github.com/shanta3220/nusrat-jahan-shanta-bandsite",
   },
 
   {
     title: "Nimoyd",
     year: "Feb 2020 - June 2024",
     shortDescription:
-      "Responsive application for band profiles, with DOM manipulation and API integration.",
-    description: `Implemented UI into the game, iterating multiple times to enhance usability and visual consistency.",
-      • Completed 949 tasks in Trello—the highest in the team due to long tenure.",
-      • Mentored a junior developer to contribute significantly to key game features.",
-      • Worked with a team of over 30 contributors, including current and former members, to ensure design consistency and cohesive execution.",
-      • Resolved 30% of reported bugs, improving game stability, and conducted code reviews to ensure high-quality code.`,
+      "Implemented UIs for an adventure top-down sandbox game made with Unity3D",
     skills: [
       "Unity3D",
       "C#",
@@ -150,29 +160,35 @@ export const projectsData = [
       "SourceTree",
       "Team Collaboration",
     ],
+    category: "Games",
     media: [
       {
-        type: "image",
-        src: "/medias/nimoyd/chest_inventory_ui.webp",
-        title: "Chest Inventory Screen",
+        type: "video",
+        src: "/medias/nimoyd/trailer.webm",
+        thumbnail: "/medias/nimoyd/main_ui.png",
+        title: "Trailer of the game - Nimoyd",
         shortDescription:
-          "Chest inventory featuring player inventory in the middle and chest inventory on the left.",
-        longDescription:
-          "Implemented the Chest Inventory UI:\n• Added drag-and-drop functionality for items.\n• Enabled item swapping and dynamic updates to inventory.\n• Ensured responsiveness across mobile and desktop.",
-        year: "2022",
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
+          "An adventure top-down sandbox game made with Unity3D",
+        longDescription: `My contributions include:
+           • Implemented UI into the game, iterating multiple times to enhance usability and visual consistency.
+           • Completed 949 tasks in Trello—the highest in the team due to long tenure.
+           • Mentored a junior developer to contribute significantly to key game features.
+           • Worked with a team of over 30 contributors, including current and former members, to ensure design consistency and cohesive execution.
+           • Resolved 30% of reported bugs, improving game stability, and conducted code reviews to ensure high-quality code.`,
+        year: "Feb 2020 - Jun 2024",
       },
       {
         type: "image",
         src: "/medias/nimoyd/main_ui.png",
         title: "Main Screen",
         shortDescription: "Default main screen during gameplay.",
-        longDescription:
-          "Implemented core UI elements for gameplay:\n• Added quick item slots at the bottom with keyboard shortcuts.\n• Developed bottom-left mouseover voxel item name, dynamically updating based on mouse position.\n• Created health bar and notification cells on the left.\n• Interactive behavior for the right minimap and clock.\n• Ensured responsive design for multiple devices.",
+        longDescription: `Implemented core UI elements for gameplay:
+          • Added quick item slots at the bottom with keyboard shortcuts.
+          • Developed bottom-left mouseover voxel item name, dynamically updating based on mouse position.
+          • Created health bar and notification cells on the left.
+          • Interactive behavior for the right minimap and clock.
+          • Ensured responsive design for multiple devices.`,
         year: "2022",
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -180,55 +196,55 @@ export const projectsData = [
         title: "World Map Screen",
         shortDescription:
           "Clickable building icons with details on interaction.",
-        longDescription:
-          "Implemented interactivity for the world map:\n• Updated building icons and ensured dynamic interactions.\n• Integrated functionality to display detailed information on click.\n• Ensured responsiveness across devices.",
+        longDescription: `Implemented interactivity for the world map:
+          • Updated building icons and ensured dynamic interactions.
+          • Integrated functionality to display detailed information on click.
+          • Ensured responsiveness across devices.`,
         year: "2023",
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
         src: "/medias/nimoyd/npc_conversation_ui.png",
         title: "NPC Quest Screen",
         shortDescription: "Interact with NPCs and view their details.",
-        longDescription:
-          "Implemented NPC Quest UI features:\n• Built the UI from scratch with responsive design.\n• Added animations for interactive elements.\n• Ensured camera alignment with NPCs during interactions.",
+        longDescription: `Implemented NPC Quest UI features:
+          • Built the UI from scratch with responsive design.
+          • Added animations for interactive elements.
+          • Ensured camera alignment with NPCs during interactions.`,
         year: "2022",
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
         src: "/medias/nimoyd/worker_selection_ui.png",
         title: "Worker Selection Screen",
         shortDescription: "Displays Worker NPCs in a circular grid.",
-        longDescription:
-          "Implemented dynamic worker selection features:\n• Created UI to update the worker list based on active category.\n• Added building detail information on the right.\n• Ensured responsive design across devices.",
+        longDescription: `Implemented dynamic worker selection features:
+          • Created UI to update the worker list based on active category.
+          • Added building detail information on the right.
+          • Ensured responsive design across devices.`,
         year: "2023",
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
         src: "/medias/nimoyd/world_creation_ui.jpg",
         title: "World Creation Screen",
         shortDescription: "UI for creating a new game world.",
-        longDescription:
-          "Implemented features for world creation:\n• Added dynamic updates for info based on categories such as General and Weather.\n• Ensured functionality of all buttons.\n• Modified backend logic to support seamless UI interactions.",
+        longDescription: `Implemented features for world creation:
+          • Added dynamic updates for info based on categories such as General and Weather.
+          • Ensured functionality of all buttons.
+          • Modified backend logic to support seamless UI interactions.`,
         year: "2023",
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
         src: "/medias/nimoyd/character_ui.jpg",
         title: "Character Screen",
         shortDescription: "Track character progress and stats.",
-        longDescription:
-          "Implemented character UI:\n• Included user's current progress and stats upgrade features.\n• Added ui animations for interactivity.\n• Ensured the UI was fully responsive across devices.",
+        longDescription: `Implemented character UI:
+          • Included user's current progress and stats upgrade features.
+          • Added UI animations for interactivity.
+          • Ensured the UI was fully responsive across devices.`,
         year: "2021",
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -236,33 +252,32 @@ export const projectsData = [
         title: "Character Creation Screen",
         shortDescription:
           "Select a character to play in the game, set traits and gender.",
-        longDescription:
-          "Implemented character customization features:\n• Built a dynamic UI for character creation.\n• Enabled dynamic updates for traits and gender selection.\n• Ensured data saved to the game database and responsive design.",
+        longDescription: `Implemented character customization features:
+          • Built a dynamic UI for character creation.
+          • Enabled dynamic updates for traits and gender selection.
+          • Ensured data saved to the game database and responsive design.`,
         year: "2022",
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
         src: "/medias/nimoyd/social_journal_ui.jpg",
         title: "Social Journal Screen",
         shortDescription: "Track Quest NPCs based on factions.",
-        longDescription:
-          "Implemented faction-based journal features:\n• Built a grid-based UI to dynamically display NPC profiles by faction.\n• Ensured consistent layout and responsive design.",
+        longDescription: `Implemented faction-based journal features:
+          • Built a grid-based UI to dynamically display NPC profiles by faction.
+          • Ensured consistent layout and responsive design.`,
         year: "2022",
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
         src: "/medias/nimoyd/excavation_site_ui.jpg",
         title: "Excavation Site Screen",
         shortDescription: "Excavate different excavation site buildings.",
-        longDescription:
-          "Implemented excavation UI with stage-based interactions:\n• Developed a UI stage system for excavated, available, and locked states.\n• Ensured the design dynamically adapts based on active stage.\n• Made the UI fully responsive.",
+        longDescription: `Implemented excavation UI with stage-based interactions:
+          • Developed a UI stage system for excavated, available, and locked states.
+          • Ensured the design dynamically adapts based on active stage.
+          • Made the UI fully responsive.`,
         year: "2021",
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -270,45 +285,35 @@ export const projectsData = [
         title: "Building Grid Screen",
         shortDescription:
           "Create templates or place buildings in the game world.",
-        longDescription:
-          "Implemented the building grid UI:\n• Developed the UI to display buildings based on categories and subcategories.\n• Updated item details dynamically based on user selections and interactions.\n• Ensured full responsiveness across devices.",
+        longDescription: `Implemented the building grid UI:
+          • Developed the UI to display buildings based on categories and subcategories.
+          • Updated item details dynamically based on user selections and interactions.
+          • Ensured full responsiveness across devices.`,
         year: "2022",
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
         src: "/medias/nimoyd/building_crafting_ui.png",
         title: "Building Details Screen",
         shortDescription: "Craft items and generate energy in buildings.",
-        longDescription:
-          "Implemented the building details UI:\n• Added features to update recipes and player inventory based on the building's category.\n• Developed the UI to display crafting progress and item details dynamically.\n• Ensured smooth interactions for crafting actions and item generation.\n• Made the UI fully responsive across devices.",
+        longDescription: `Implemented the building details UI:
+          • Added features to update recipes and player inventory based on the building's category.
+          • Developed the UI to display crafting progress and item details dynamically.
+          • Ensured smooth interactions for crafting actions and item generation.
+          • Made the UI fully responsive across devices.`,
         year: "2022",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
         src: "/medias/nimoyd/journal_ui.jpg",
         title: "Journal Screen",
         shortDescription: "Check conversation logs and quest progress.",
-        longDescription:
-          "Implemented journal tracking system:\n• Built a responsive journal UI where quests and notes update dynamically based on user actions.\n• Ensured consistent layout and synchronized data with user progress.",
+        longDescription: `Implemented journal tracking system:
+          • Built a responsive journal UI where quests and notes update dynamically based on user actions.
+          • Ensured consistent layout and synchronized data with user progress.`,
         year: "2021",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: [
-          "Unity3D",
-          "C#",
-          "Visual Studio C++,",
-          "Git",
-          "SourceTree",
-          "Trello",
-        ],
       },
     ],
-    category: "Games",
   },
 ];
 
