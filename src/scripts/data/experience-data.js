@@ -1,5 +1,19 @@
 export const experienceData = [
   {
+    title: "Teaching Assistant - Software Engineering Diploma Program",
+    subTitle: "BrainStation",
+    location: "Toronto, ON",
+    year: "Jan 2025 - March 2025",
+    description: [
+      "Assist full-time students with assignments and projects covering JavaScript (ES6), Node.js, React.js, Express.js, MySQL, Heroku deployment, and Agile practices.",
+      "Grade assignments, conduct code reviews for ~26 students, and provide constructive feedback.",
+      "Participate in weekly retrospectives and stand-ups with the Education Team.",
+      "Facilitate daily challenge meetings (puzzles or coding problems), weekly quiz sessions on Kahoot, and learning studios to support students with technical challenges.",
+      "Mentor students 1-on-1 and promote cross-cohort collaboration.",
+    ],
+    website: "https://brainstation.io",
+  },
+  {
     title: "Freelance Game Programmer",
     subTitle: "Nudge Nudge Games GmbH",
     location: "Berlin, DE",
