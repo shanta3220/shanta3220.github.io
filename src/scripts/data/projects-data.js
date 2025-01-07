@@ -117,6 +117,14 @@ const categories = [
 ];
 
 export const getProjectsByCategory = (category) => {
+  if (!categories) {
+    categories.warn("no categories, add categories to projects");
+    return [];
+  }
+  if (!category) {
+    categories.console.error("category is undefined");
+    return [];
+  }
   if (category === "All") {
     return projectsData;
   }

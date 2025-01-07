@@ -29,7 +29,7 @@ export const experienceData = [
     media: [
       {
         type: "image",
-        src: "/images/nimoyd/chest_inventory_ui.webp",
+        src: "/medias/nimoyd/chest_inventory_ui.webp",
         title: "Chest Inventory Screen",
         shortDescription:
           "Chest inventory featuring player inventory in the middle and chest inventory on the left.",
@@ -42,7 +42,7 @@ export const experienceData = [
       },
       {
         type: "image",
-        src: "/images/nimoyd/main_ui.png",
+        src: "/medias/nimoyd/main_ui.png",
         title: "Main Screen",
         shortDescription: "Default main screen during gameplay.",
         longDescription:
@@ -54,7 +54,7 @@ export const experienceData = [
       },
       {
         type: "image",
-        src: "/images/nimoyd/world_map_ui.jpg",
+        src: "/medias/nimoyd/world_map_ui.jpg",
         title: "World Map Screen",
         shortDescription:
           "Clickable building icons with details on interaction.",
@@ -67,7 +67,7 @@ export const experienceData = [
       },
       {
         type: "image",
-        src: "/images/nimoyd/npc_conversation_ui.png",
+        src: "/medias/nimoyd/npc_conversation_ui.png",
         title: "NPC Quest Screen",
         shortDescription: "Interact with NPCs and view their details.",
         longDescription:
@@ -79,7 +79,7 @@ export const experienceData = [
       },
       {
         type: "image",
-        src: "/images/nimoyd/worker_selection_ui.png",
+        src: "/medias/nimoyd/worker_selection_ui.png",
         title: "Worker Selection Screen",
         shortDescription: "Displays Worker NPCs in a circular grid.",
         longDescription:
@@ -91,7 +91,7 @@ export const experienceData = [
       },
       {
         type: "image",
-        src: "/images/nimoyd/world_creation_ui.jpg",
+        src: "/medias/nimoyd/world_creation_ui.jpg",
         title: "World Creation Screen",
         shortDescription: "UI for creating a new game world.",
         longDescription:
@@ -103,7 +103,7 @@ export const experienceData = [
       },
       {
         type: "image",
-        src: "/images/nimoyd/character_ui.jpg",
+        src: "/medias/nimoyd/character_ui.jpg",
         title: "Character Screen",
         shortDescription: "Track character progress and stats.",
         longDescription:
@@ -115,7 +115,7 @@ export const experienceData = [
       },
       {
         type: "image",
-        src: "/images/nimoyd/character_selection_ui.webp",
+        src: "/medias/nimoyd/character_selection_ui.webp",
         title: "Character Creation Screen",
         shortDescription:
           "Select a character to play in the game, set traits and gender.",
@@ -128,7 +128,7 @@ export const experienceData = [
       },
       {
         type: "image",
-        src: "/images/nimoyd/social_journal_ui.jpg",
+        src: "/medias/nimoyd/social_journal_ui.jpg",
         title: "Social Journal Screen",
         shortDescription: "Track Quest NPCs based on factions.",
         longDescription:
@@ -140,7 +140,7 @@ export const experienceData = [
       },
       {
         type: "image",
-        src: "/images/nimoyd/excavation_site_ui.jpg",
+        src: "/medias/nimoyd/excavation_site_ui.jpg",
         title: "Excavation Site Screen",
         shortDescription: "Excavate different excavation site buildings.",
         longDescription:
@@ -152,7 +152,7 @@ export const experienceData = [
       },
       {
         type: "image",
-        src: "/images/nimoyd/building_mode_ui.png",
+        src: "/medias/nimoyd/building_mode_ui.png",
         title: "Building Grid Screen",
         shortDescription:
           "Create templates or place buildings in the game world.",
@@ -165,7 +165,7 @@ export const experienceData = [
       },
       {
         type: "image",
-        src: "/images/nimoyd/building_crafting_ui.png",
+        src: "/medias/nimoyd/building_crafting_ui.png",
         title: "Building Details Screen",
         shortDescription: "Craft items and generate energy in buildings.",
         longDescription:
@@ -177,7 +177,7 @@ export const experienceData = [
       },
       {
         type: "image",
-        src: "/images/nimoyd/journal_ui.jpg",
+        src: "/medias/nimoyd/journal_ui.jpg",
         title: "Journal Screen",
         shortDescription: "Check conversation logs and quest progress.",
         longDescription:
@@ -211,7 +211,7 @@ export const experienceData = [
     media: [
       {
         type: "image",
-        src: "/images/cute_puppy_love/puppy_selection.jpeg",
+        src: "/medias/cute_puppy_love/puppy_selection.jpeg",
         title: "Puppy Selection Screen",
         shortDescription: "Select the puppy's breed.",
         longDescription:
@@ -223,7 +223,7 @@ export const experienceData = [
       },
       {
         type: "image",
-        src: "/images/cute_puppy_love/puppy_play.jpeg",
+        src: "/medias/cute_puppy_love/puppy_play.jpeg",
         title: "Puppy Play Screen",
         shortDescription: "Play with the puppy.",
         longDescription:
@@ -235,7 +235,7 @@ export const experienceData = [
       },
       {
         type: "image",
-        src: "/images/cute_puppy_love/puppy_feed.jpeg",
+        src: "/medias/cute_puppy_love/puppy_feed.jpeg",
         title: "Puppy Feed Screen",
         shortDescription: "Feed the puppy.",
         longDescription:

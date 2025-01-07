@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import "./Projects.scss";
 import MediaModal from "../../components/MediaModal/MediaModal";
-import { projectsData } from "../../scripts/data/projects-data";
+import {
+  getAllCategories,
+  getProjectsByCategory,
+} from "../../scripts/data/projects-data";
 import MediaCard from "../../components/MediaCard/MediaCard";
 import { getTransition } from "../../scripts/utils";
 
@@ -54,11 +57,10 @@ const Projects = () => {
     setModalContent((prev) => updateModalContent(prevMediaItem, prev));
   };
 
-  const categories = ["All", "Web", "Games"];
-  const filteredProjects =
-    selectedCategory === "All"
-      ? projectsData
-      : projectsData.filter((project) => project.category === selectedCategory);
+  const categories = getAllCategories() ?? [];
+  const filteredProjects = categories
+    ? getProjectsByCategory(selectedCategory)
+    : [];
 
   return (
     <motion.div className="projects" {...getTransition(0, 1)}>
