@@ -171,8 +171,8 @@ export const projectsData = [
         src: "/medias/dishify/dishify.gif",
       },
     ],
-    website: "https://lnkd.in/gxJcmth7",
-    github: "https://lnkd.in/gwb9wM4X",
+    website: "https://dishifyweb.netlify.app",
+    github: "https://github.com/shanta3220/Dishify",
     category: "Web",
   },
 
