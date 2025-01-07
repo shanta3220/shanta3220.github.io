@@ -26,6 +26,14 @@ export const experienceData = [
       "Resolved 30% of reported bugs, improving game stability, and conducted code reviews to ensure high-quality code.",
     ],
     website: "https://www.nimoyd.com",
+    skills: [
+      "Unity3D",
+      "C#",
+      "Visual Studio C++",
+      "Git",
+      "SourceTree",
+      "Trello",
+    ],
     media: [
       {
         type: "image",
@@ -36,9 +44,6 @@ export const experienceData = [
         longDescription:
           "Implemented the Chest Inventory UI:\n• Added drag-and-drop functionality for items.\n• Enabled item swapping and dynamic updates to inventory.\n• Ensured responsiveness across mobile and desktop.",
         year: "2022",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -48,9 +53,6 @@ export const experienceData = [
         longDescription:
           "Implemented core UI elements for gameplay:\n• Added quick item slots at the bottom with keyboard shortcuts.\n• Developed bottom-left mouseover voxel item name, dynamically updating based on mouse position.\n• Created health bar and notification cells on the left.\n• Interactive behavior for the right minimap and clock.\n• Ensured responsive design for multiple devices.",
         year: "2022",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -61,9 +63,6 @@ export const experienceData = [
         longDescription:
           "Implemented interactivity for the world map:\n• Updated building icons and ensured dynamic interactions.\n• Integrated functionality to display detailed information on click.\n• Ensured responsiveness across devices.",
         year: "2023",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -73,9 +72,6 @@ export const experienceData = [
         longDescription:
           "Implemented NPC Quest UI features:\n• Built the UI from scratch with responsive design.\n• Added animations for interactive elements.\n• Ensured camera alignment with NPCs during interactions.",
         year: "2022",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -85,9 +81,6 @@ export const experienceData = [
         longDescription:
           "Implemented dynamic worker selection features:\n• Created UI to update the worker list based on active category.\n• Added building detail information on the right.\n• Ensured responsive design across devices.",
         year: "2023",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -97,9 +90,6 @@ export const experienceData = [
         longDescription:
           "Implemented features for world creation:\n• Added dynamic updates for info based on categories such as General and Weather.\n• Ensured functionality of all buttons.\n• Modified backend logic to support seamless UI interactions.",
         year: "2023",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -109,9 +99,6 @@ export const experienceData = [
         longDescription:
           "Implemented character UI:\n• Included user's current progress and stats upgrade features.\n• Added ui animations for interactivity.\n• Ensured the UI was fully responsive across devices.",
         year: "2021",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -122,9 +109,6 @@ export const experienceData = [
         longDescription:
           "Implemented character customization features:\n• Built a dynamic UI for character creation.\n• Enabled dynamic updates for traits and gender selection.\n• Ensured data saved to the game database and responsive design.",
         year: "2022",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -134,9 +118,6 @@ export const experienceData = [
         longDescription:
           "Implemented faction-based journal features:\n• Built a grid-based UI to dynamically display NPC profiles by faction.\n• Ensured consistent layout and responsive design.",
         year: "2022",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -146,9 +127,6 @@ export const experienceData = [
         longDescription:
           "Implemented excavation UI with stage-based interactions:\n• Developed a UI stage system for excavated, available, and locked states.\n• Ensured the design dynamically adapts based on active stage.\n• Made the UI fully responsive.",
         year: "2021",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -159,9 +137,6 @@ export const experienceData = [
         longDescription:
           "Implemented the building grid UI:\n• Developed the UI to display buildings based on categories and subcategories.\n• Updated item details dynamically based on user selections and interactions.\n• Ensured full responsiveness across devices.",
         year: "2022",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -171,9 +146,6 @@ export const experienceData = [
         longDescription:
           "Implemented the building details UI:\n• Added features to update recipes and player inventory based on the building's category.\n• Developed the UI to display crafting progress and item details dynamically.\n• Ensured smooth interactions for crafting actions and item generation.\n• Made the UI fully responsive across devices.",
         year: "2022",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -183,16 +155,6 @@ export const experienceData = [
         longDescription:
           "Implemented journal tracking system:\n• Built a responsive journal UI where quests and notes update dynamically based on user actions.\n• Ensured consistent layout and synchronized data with user progress.",
         year: "2021",
-        github: null,
-        website: "https://www.nimoyd.com",
-        skills: [
-          "Unity3D",
-          "C#",
-          "Visual Studio C++,",
-          "Git",
-          "SourceTree",
-          "Trello",
-        ],
       },
     ],
   },
@@ -208,6 +170,14 @@ export const experienceData = [
       "Improved code quality and reduced integration issues by 25%.",
     ],
     website: "https://www.facebook.com/arcadestudiosbd",
+    skills: [
+      "Unity3D",
+      "C#",
+      "Visual Studio C++",
+      "Git",
+      "SourceTree",
+      "Trello",
+    ],
     media: [
       {
         type: "image",
@@ -217,9 +187,6 @@ export const experienceData = [
         longDescription:
           "Implemented the Puppy Selection UI:\n• Created the initial mockup UI, which served as the foundation for the designer's final implementation.\n• Replaced the mockup with final UI assets.\n• Added animated puppy models.\n• Ensured responsiveness across mobile devices.",
         year: "2020",
-        github: null,
-        website: "https://www.facebook.com/arcadestudiosbd",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -229,9 +196,6 @@ export const experienceData = [
         longDescription:
           "Implemented the gameplay and UI:\n• Created ball-throwing mechanics using drag and release gestures.\n• Integrated and maintained the animation controller.\n• Developed the gameplay UI.\n• Ensured responsiveness across mobile devices.",
         year: "2020",
-        github: null,
-        website: "https://www.facebook.com/arcadestudiosbd",
-        skills: ["Unity3D", "C#"],
       },
       {
         type: "image",
@@ -241,9 +205,6 @@ export const experienceData = [
         longDescription:
           "Implemented the gameplay and UI:\n• Developed the gameplay UI.\n• Added various food items with unique energy levels.\n• Implemented energy restoration mechanics when the puppy eats.\n• Ensured responsiveness across mobile devices.",
         year: "2020",
-        github: null,
-        website: "https://www.facebook.com/arcadestudiosbd",
-        skills: ["Unity3D", "C#"],
       },
     ],
   },

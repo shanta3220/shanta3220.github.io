@@ -37,7 +37,7 @@ function TimelineSection({ title, data, handleCardClick }) {
                       key={`${index}-${mediaIndex}`}
                       media={mediaItem}
                       onClick={() =>
-                        handleCardClick(mediaItem, item.media, mediaIndex)
+                        handleCardClick(item, item.media, mediaIndex)
                       }
                     />
                   ))}

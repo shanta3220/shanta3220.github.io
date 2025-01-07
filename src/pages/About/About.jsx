@@ -19,8 +19,21 @@ function About() {
   const [currentMediaIndex, setCurrentMediaIndex] = useState(null);
   const [currentMediaSource, setCurrentMediaSource] = useState([]);
 
-  const handleCardClick = (content, mediaArray, index) => {
-    setModalContent(content);
+  const updateModalContent = (mediaItem, sourceItem) => ({
+    ...mediaItem,
+    title: mediaItem.title || sourceItem.title,
+    shortDescription: mediaItem.shortDescription || sourceItem.shortDescription,
+    longDescription: mediaItem.longDescription || sourceItem.description,
+    skills: mediaItem.skills || sourceItem.skills,
+    github: mediaItem.github || sourceItem.github,
+    website: mediaItem.website || sourceItem.website,
+    year: mediaItem.year || sourceItem.year,
+  });
+
+  const handleCardClick = (sourceItem, mediaArray, index) => {
+    const mediaItem = mediaArray[index];
+    console.log(mediaItem);
+    setModalContent(updateModalContent(mediaItem, sourceItem));
     setCurrentMediaSource(mediaArray);
     setCurrentMediaIndex(index);
   };
@@ -37,8 +50,9 @@ function About() {
       return;
     }
     const nextIndex = (currentMediaIndex + 1) % currentMediaSource.length;
+    const nextMediaItem = currentMediaSource[nextIndex];
     setCurrentMediaIndex(nextIndex);
-    setModalContent(currentMediaSource[nextIndex]);
+    setModalContent((prev) => updateModalContent(nextMediaItem, prev));
   };
 
   const handlePrevious = () => {
@@ -49,8 +63,9 @@ function About() {
     const prevIndex =
       (currentMediaIndex - 1 + currentMediaSource.length) %
       currentMediaSource.length;
+    const prevMediaItem = currentMediaSource[prevIndex];
     setCurrentMediaIndex(prevIndex);
-    setModalContent(currentMediaSource[prevIndex]);
+    setModalContent((prev) => updateModalContent(prevMediaItem, prev));
   };
 
   return (
