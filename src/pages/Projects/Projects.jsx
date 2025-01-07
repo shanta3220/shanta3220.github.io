@@ -93,7 +93,7 @@ const Projects = () => {
             {project.media?.length > 0 &&
               project.media.map((mediaItem, mediaIndex) => (
                 <MediaCard
-                  key={`${index}-${mediaIndex}`}
+                  key={`${index}-${project.title}`}
                   media={mediaItem}
                   onClick={() =>
                     handleCardClick(project, project.media, mediaIndex)

@@ -146,6 +146,35 @@ export const projectsData = [
     website: "https://njshanta-bandsite.netlify.app",
     github: "https://github.com/shanta3220/nusrat-jahan-shanta-bandsite",
   },
+  {
+    title: "Dishify",
+    year: "Oct 2024",
+    shortDescription:
+      "A web app to fetch recipes based on selected ingredients using the Spoonacular API.",
+    description: `Developed during a 5.5-hour Web API Hackathon at BrainStation:
+      • Built a web application using the Spoonacular API to fetch recipes based on selected ingredients.
+      • Designed and implemented backend logic for managing API requests and ingredient combinations.
+      • Collaborated with teammates to ensure smooth data flow and integration with the frontend.`,
+    skills: [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Spoonacular API",
+      "API Integration",
+      "Git",
+      "Problem-Solving",
+      "Team Collaboration",
+    ],
+    media: [
+      {
+        type: "image",
+        src: "/medias/dishify/dishify.gif",
+      },
+    ],
+    website: "https://lnkd.in/gxJcmth7",
+    github: "https://lnkd.in/gwb9wM4X",
+    category: "Web",
+  },
 
   {
     title: "Nimoyd",
@@ -165,7 +194,6 @@ export const projectsData = [
       {
         type: "video",
         src: "/medias/nimoyd/trailer.webm",
-        thumbnail: "/medias/nimoyd/main_ui.png",
         title: "Trailer of the game - Nimoyd",
         shortDescription:
           "An adventure top-down sandbox game made with Unity3D",
@@ -314,6 +342,66 @@ export const projectsData = [
         year: "2021",
       },
     ],
+  },
+
+  {
+    title: "Lana's Adventure",
+    year: "Nov 2017",
+    shortDescription:
+      "A 2D platformer game developed as the sole game developer for MU Tech Fest 2017.",
+    description: `Developed as the runner-up entry for the MU Tech Fest:
+      • Created the game from scratch in Unity3D alongside a graphic designer.
+      • Wrote scripts for player movement, enemies, platforms, and camera behavior.
+      • Designed and implemented levels, integrating interactive UI elements.`,
+    skills: ["Unity3D", "C#", "Team Collaboration"],
+    media: [
+      {
+        type: "video",
+        thumbnail: "/medias/lanas_adventure/lanas_adventure.gif",
+        src: "/medias/lanas_adventure/lanas_adventure.mp4",
+      },
+    ],
+    category: "Games",
+  },
+  {
+    title: "AR Bornoporichoy",
+    year: "July 2018",
+    shortDescription:
+      "An educational AR app to teach Bengali alphabets, built for the Intra MU Tech Emulation V1 competition.",
+    description: `Showcased as the champion project at the Intra MU Tech Emulation:
+      • Set up the Vuforia AR package in Unity3D.
+      • Developed a reusable audio controller for 3D models of Bengali alphabets.
+      • Populated 3D objects and conducted rigorous testing to ensure a smooth user experience.`,
+    skills: ["Unity3D", "C#", "Team Collaboration"],
+    media: [
+      {
+        type: "video",
+        thumbnail: "/medias/intra_mu/bornoporichoygif.gif",
+        src: "/medias/intra_mu/video_1.mp4",
+      },
+    ],
+    category: "General",
+  },
+  {
+    title: "VR Webb",
+    year: "Oct 2019",
+    shortDescription:
+      "A VR educational app showcasing the James Webb Space Telescope, created for NASA Space Apps Challenge 2019.",
+    description: `Developed as the Global Nominee for NASA Space Apps Challenge:
+      • Lead Unity3D programmer, setting up Google Cardboard VR SDK and CurvedUI.
+      • Created interactive UI elements to showcase the telescope’s instruments and features.
+      • Synchronized animations with a timeline UI to narrate the telescope's journey.`,
+    skills: ["Unity3D", "C#", "Team Collaboration"],
+    media: [
+      {
+        type: "video",
+        src: "/medias/vr_webb_2019/video1.mp4",
+        thumbnail: "/medias/vr_webb_2019/thumbnail.png",
+      },
+    ],
+    category: "General",
+    website:
+      "https://2019.spaceappschallenge.org/challenges/stars/and-away/teams/vr_webb/project",
   },
 ];
 
