@@ -345,6 +345,45 @@ export const projectsData = [
   },
 
   {
+    title: "Riko: The Adventurer",
+    year: "Jan 2019",
+    shortDescription:
+      "A 2D top-down RPG shooting game developed as a final year project for my Bachelor of Science degree.",
+    description: `Final year project for my Bachelor of Science degree:
+      • Developed a 2D RPG shooting game in Unity3D with character progression and multiple enemies.
+      • Integrated music, sound effects, animations, and advanced gameplay mechanics.
+      • Documented daily progress in Google Docs for supervisor review.`,
+    skills: ["Unity3D", "C#", "Git", "Google Docs"],
+    media: [
+      {
+        type: "video",
+        thumbnail: "/medias/riko_the_adventurer/riko_the_adventurer.gif",
+        src: "/medias/riko_the_adventurer/riko_the_adventurer.mp4",
+      },
+    ],
+    category: "Games",
+    github: "https://github.com/shanta3220/Riko-The-Adventurer",
+  },
+  {
+    title: "LSD: Last Survival Days",
+    year: "Nov 2018",
+    shortDescription:
+      "A top-down shooting game developed for a band's debut album.",
+    description: `Developed a top-down shooting game in Unity3D for fan engagement:
+        • Designed gameplay, levels, and interactive UI elements.
+        • Wrote scripts for player movement, enemies, and camera behavior.
+        • Integrated Google Leaderboard for enhanced player competition.`,
+    skills: ["Unity3D", "C#", "Team Collaboration"],
+    media: [
+      {
+        type: "video",
+        thumbnail: "/medias/lsd_last_survival_days/lsd_last_survival_days.gif",
+        src: "/medias/lsd_last_survival_days/lsd_last_survival_days.mp4",
+      },
+    ],
+    category: "Games",
+  },
+  {
     title: "Lana's Adventure",
     year: "Nov 2017",
     shortDescription:
@@ -359,6 +398,24 @@ export const projectsData = [
         type: "video",
         thumbnail: "/medias/lanas_adventure/lanas_adventure.gif",
         src: "/medias/lanas_adventure/lanas_adventure.mp4",
+      },
+    ],
+    category: "Games",
+  },
+  {
+    title: "Quiz Race",
+    year: "Jan 2018",
+    shortDescription:
+      "A puzzle-based autorun game where players guide a car into the correct lane matching the answer.",
+    description: `Developed a puzzle-based autorun game in Unity3D:
+        • Designed gameplay mechanics where players guide a car into the correct lane corresponding to the answer.
+        • Collaborated with a Game Artist to create engaging visuals and animations.
+        • Implemented smooth lane-switching mechanics and dynamic question generation for replayability.`,
+    skills: ["Unity3D", "C#", "Game Mechanics", "Collaboration"],
+    media: [
+      {
+        type: "image",
+        thumbnail: "/medias/quiz_race/quiz_race.gif",
       },
     ],
     category: "Games",
