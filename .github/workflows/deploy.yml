@@ -8,6 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: env
 
     steps:
       - name: Checkout Code
@@ -16,15 +17,19 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Debug Environment Variables
+        env:
+          VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
+          VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
+          VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
+        run: printenv | grep VITE_
+
       - name: Build with Environment Variables
         env:
           VITE_EMAILJS_SERVICE_ID: ${{ secrets.VITE_EMAILJS_SERVICE_ID }}
           VITE_EMAILJS_TEMPLATE_ID: ${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}
           VITE_EMAILJS_PUBLIC_KEY: ${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}
         run: npm run build
-
-      - name: Debug Environment Variables
-        run: printenv | grep VITE_
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
