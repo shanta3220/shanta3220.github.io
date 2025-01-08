@@ -82,6 +82,7 @@ function About() {
                 src={profileImage}
                 alt="Profile placeholder"
               />
+              <p className="about__intro-content__text">Toronto, ON </p>
               <div className="social-links delayed-visible">
                 <SocialIcon
                   link="https://github.com/shanta3220"

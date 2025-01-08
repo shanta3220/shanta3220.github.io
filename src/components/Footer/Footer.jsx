@@ -8,6 +8,7 @@ import {
   FaTwitter,
   FaInstagram,
   FaEnvelope,
+  FaPhoneSquare,
 } from "react-icons/fa";
 import "./Footer.scss";
 
@@ -47,17 +48,10 @@ function Footer() {
           <SocialIcon
             link="https://github.com/shanta3220"
             icon={<FaGithub />}
-            ariaLabel="GitHub profile"
           />
           <SocialIcon
             link="https://linkedin.com/in/njshanta"
-            ariaLabel="LinkedIn profile"
             icon={<FaLinkedin />}
-          />
-          <SocialIcon
-            link="mailto:njshanta.ca@gmail.com"
-            ariaLabel="Email"
-            icon={<FaEnvelope />}
           />
           <SocialIcon
             link="https://instagram.com/njshanta"
@@ -70,6 +64,18 @@ function Footer() {
             icon={<FaTwitter />}
           />
         </div>
+        <SocialIcon
+          link="mailto:njshanta.ca@gmail.com"
+          ariaLabel="Email"
+          label="njshanta.ca@gmail.com"
+          icon={<FaEnvelope />}
+        />
+        <SocialIcon
+          link="https://twitter.com/msnjshanta"
+          ariaLabel="Phone"
+          icon={<FaPhoneSquare />}
+          label="+1 (437) 429 2826"
+        />
       </motion.footer>
     )
   );

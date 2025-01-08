@@ -73,7 +73,10 @@
       .social-links {
         flex-wrap: nowrap;
       }
-
+      .about__intro-content__text {
+        margin-top: $padding-small;
+        margin-bottom: -$padding-small;
+      }
       @include tablet {
         margin: 0;
       }

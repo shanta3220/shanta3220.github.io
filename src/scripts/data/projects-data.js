@@ -403,6 +403,56 @@ export const projectsData = [
     category: "Games",
   },
   {
+    title: "Cute Puppy Love",
+    year: "2020",
+    shortDescription:
+      "An interactive mobile game where players care for, play with, and feed virtual puppies.",
+    description: `Developed an engaging mobile game in Unity3D where players interact with virtual puppies:
+        • Designed and implemented core gameplay mechanics, including playing, feeding, and selecting puppies.
+        • Integrated responsive UI elements for seamless gameplay on mobile devices.
+        • Collaborated with a designer to finalize UI assets and animations.
+        • Ensured a smooth and enjoyable player experience through meticulous testing and iteration.`,
+    skills: ["Unity3D", "C#", "Team Collaboration"],
+    media: [
+      {
+        type: "image",
+        src: "/medias/cute_puppy_love/puppy_selection.jpeg",
+        title: "Puppy Selection Screen",
+        shortDescription: "Select the puppy's breed.",
+        longDescription: `Implemented the Puppy Selection UI:
+            • Created the initial mockup UI, which served as the foundation for the designer's final implementation.
+            • Replaced the mockup with final UI assets.
+            • Added animated puppy models.
+            • Ensured responsiveness across mobile devices.`,
+        year: "2020",
+      },
+      {
+        type: "image",
+        src: "/medias/cute_puppy_love/puppy_play.jpeg",
+        title: "Puppy Play Screen",
+        shortDescription: "Play with the puppy.",
+        longDescription: `Implemented the gameplay and UI:
+            • Created ball-throwing mechanics using drag and release gestures.
+            • Integrated and maintained the animation controller.
+            • Ensured responsiveness across mobile devices.`,
+        year: "2020",
+      },
+      {
+        type: "image",
+        src: "/medias/cute_puppy_love/puppy_feed.jpeg",
+        title: "Puppy Feed Screen",
+        shortDescription: "Feed the puppy.",
+        longDescription: `Implemented the gameplay and UI:
+            • Added various food items with unique energy levels.
+            • Implemented energy restoration mechanics when the puppy eats.
+            • Ensured responsiveness across mobile devices.`,
+        year: "2020",
+      },
+    ],
+    category: "Games",
+  },
+
+  {
     title: "Quiz Race",
     year: "Jan 2018",
     shortDescription:
@@ -415,7 +465,7 @@ export const projectsData = [
     media: [
       {
         type: "image",
-        thumbnail: "/medias/quiz_race/quiz_race.gif",
+        src: "/medias/quiz_race/quiz_race.gif",
       },
     ],
     category: "Games",
