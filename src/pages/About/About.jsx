@@ -7,7 +7,7 @@ import { aboutIntros, generalInfo } from "../../scripts/data/about-data";
 import { skillCategories } from "../../scripts/data/skills-data";
 import { educationData } from "../../scripts/data/education-data";
 import { experienceData } from "../../scripts/data/experience-data";
-import { awardsData } from "../../scripts/data/awards-certificates-data";
+import { awardsData } from "../../scripts/data/awards-data";
 import Skills from "../../components/Skills/Skills";
 import "./About.scss";
 import SocialIcon from "../../components/SocialIcon/SocialIcon";

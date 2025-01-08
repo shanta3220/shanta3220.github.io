@@ -4,13 +4,11 @@ export const experienceData = [
     subTitle: "BrainStation",
     location: "Toronto, ON",
     year: "Jan 2025 - March 2025",
-    description: [
-      "Assist full-time students with assignments and projects covering JavaScript (ES6), Node.js, React.js, Express.js, MySQL, Heroku deployment, and Agile practices.",
-      "Grade assignments, conduct code reviews for ~26 students, and provide constructive feedback.",
-      "Participate in weekly retrospectives and stand-ups with the Education Team.",
-      "Facilitate daily challenge meetings (puzzles or coding problems), weekly quiz sessions on Kahoot, and learning studios to support students with technical challenges.",
-      "Mentor students 1-on-1 and promote cross-cohort collaboration.",
-    ],
+    description: `• Assist full-time students with assignments and projects covering JavaScript (ES6), Node.js, React.js, Express.js, MySQL, Heroku deployment, and Agile practices.
+    • Grade assignments, conduct code reviews for ~26 students, and provide constructive feedback.
+    • Participate in weekly retrospectives and stand-ups with the Education Team.
+    • Facilitate daily challenge meetings (puzzles or coding problems), weekly quiz sessions on Kahoot, and learning studios to support students with technical challenges.
+    • Mentor students 1-on-1 and promote cross-cohort collaboration.`,
     website: "https://brainstation.io",
   },
   {
@@ -18,13 +16,11 @@ export const experienceData = [
     subTitle: "Nudge Nudge Games GmbH",
     location: "Berlin, DE",
     year: "Feb 2020 - Jun 2024",
-    description: [
-      "Implemented UI into the game, iterating multiple times to enhance usability and visual consistency.",
-      "Completed 949 tasks in Trello—the highest in the team due to long tenure.",
-      "Mentored a junior developer to contribute significantly to key game features.",
-      "Worked with a team of over 30 contributors, including current and former members, to ensure design consistency and cohesive execution.",
-      "Resolved 30% of reported bugs, improving game stability, and conducted code reviews to ensure high-quality code.",
-    ],
+    description: `• Implemented UI into the game, iterating multiple times to enhance usability and visual consistency.
+    • Completed 949 tasks in Trello—the highest in the team due to long tenure.
+    • Mentored a junior developer to contribute significantly to key game features.
+    • Worked with a team of over 30 contributors, including current and former members, to ensure design consistency and cohesive execution.
+    • Resolved 30% of reported bugs, improving game stability, and conducted code reviews to ensure high-quality code.`,
     website: "https://www.nimoyd.com",
     skills: [
       "Unity3D",
@@ -190,12 +186,10 @@ export const experienceData = [
     subTitle: "Arcade Studios",
     location: "Dhaka, BD",
     year: "Jan 2020 - Sep 2020",
-    description: [
-      "Started with a small role in core feature development and quickly progressed to leading a personal mobile application within a month.",
-      "Worked closely with the project manager during the planning phase to develop a pet simulation demo, including a mockup UI and gameplay features, effectively showcasing the core functionality.",
-      "Collaborated with 10 engineers on GitHub, reviewing, testing, and ensuring seamless integration.",
-      "Improved code quality and reduced integration issues by 25%.",
-    ],
+    description: `• Started with a small role in core feature development and quickly progressed to leading a personal mobile application within a month.
+    • Worked closely with the project manager during the planning phase to develop a pet simulation demo, including a mockup UI and gameplay features, effectively showcasing the core functionality.
+    • Collaborated with 10 engineers on GitHub, reviewing, testing, and ensuring seamless integration.
+    • Improved code quality and reduced integration issues by 25%.`,
     website: "https://www.facebook.com/arcadestudiosbd",
     skills: [
       "Unity3D",

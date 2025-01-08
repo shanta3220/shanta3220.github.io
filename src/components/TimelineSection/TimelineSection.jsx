@@ -1,7 +1,5 @@
-import React from "react";
 import MediaCard from "../MediaCard/MediaCard";
 import "./TimelineSection.scss";
-import { Link } from "react-router-dom";
 
 function TimelineSection({ title, data, handleCardClick }) {
   return (
@@ -23,13 +21,13 @@ function TimelineSection({ title, data, handleCardClick }) {
                   {item.subTitle}
                 </a>
               )}
-              <ul className="timeline__description">
-                {item.description.map((desc, i) => (
-                  <li key={i}>
-                    <span className="timeline__dot">•</span> {desc}
-                  </li>
+              <div className="timeline__description">
+                {item.description.split("\n").map((line, index) => (
+                  <p key={index} className="timeline__desc-line">
+                    {line}
+                  </p>
                 ))}
-              </ul>
+              </div>
               <div className="timeline__media">
                 {item.media?.length > 0 &&
                   item.media.map((mediaItem, mediaIndex) => (
