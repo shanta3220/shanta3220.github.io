@@ -71,12 +71,17 @@
       align-items: center;
 
       .social-links {
+        justify-content: center;
+        margin-top: calc($spacing-unit * 0.8);
         flex-wrap: nowrap;
+
+        a.social-icon {
+          &:hover {
+            transform: scale(1.07);
+          }
+        }
       }
-      .about__intro-content__text {
-        margin-top: $padding-small;
-        margin-bottom: -$padding-small;
-      }
+
       @include tablet {
         margin: 0;
       }
@@ -87,10 +92,14 @@
         max-width: 18.75rem;
       }
 
+      div.about__intro-location {
+        margin-top: 1rem;
+      }
       .about__intro-view-projects {
+        margin-top: calc($spacing-unit * 0.8);
         @include button;
+
         & {
-          margin-top: 1rem;
           height: 1.875rem;
         }
 

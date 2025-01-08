@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import profileImage from "/images/Nusrat_Jahan_Shanta.jpg";
 import MediaModal from "../../components/MediaModal/MediaModal";
 import { getTransition } from "../../scripts/utils";
+import { aboutIntros, generalInfo } from "../../scripts/data/about-data";
 import { skillCategories } from "../../scripts/data/skills-data";
 import { educationData } from "../../scripts/data/education-data";
 import { experienceData } from "../../scripts/data/experience-data";
@@ -13,6 +13,7 @@ import "./About.scss";
 import SocialIcon from "../../components/SocialIcon/SocialIcon";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import TimelineSection from "../../components/TimelineSection/TimelineSection";
+import { FaLocationDot } from "react-icons/fa6";
 
 function About() {
   const [modalContent, setModalContent] = useState(null);
@@ -79,54 +80,63 @@ function About() {
             <div className="about__intro-photo-and-social">
               <img
                 className="about__intro-content__photo"
-                src={profileImage}
+                src={generalInfo.profileImage}
                 alt="Profile placeholder"
               />
-              <p className="about__intro-content__text">Toronto, ON </p>
-              <div className="social-links delayed-visible">
-                <SocialIcon
-                  link="https://github.com/shanta3220"
-                  icon={<FaGithub />}
-                  label="GitHub"
-                />
-                <SocialIcon
-                  link="https://linkedin.com/in/njshanta"
-                  icon={<FaLinkedin />}
-                  label="LinkedIn"
-                />
-                <SocialIcon
-                  link="mailto:njshanta.ca@gmail.com"
-                  icon={<FaEnvelope />}
-                  label="Email"
-                />
-              </div>
+              {generalInfo.location && (
+                <div className={"about__intro-location"}>
+                  <SocialIcon
+                    icon={<FaLocationDot />}
+                    label={generalInfo.location}
+                  />
+                </div>
+              )}
+              {(generalInfo.github ||
+                generalInfo.linkedIn ||
+                generalInfo.email) && (
+                <div className="social-links delayed-visible">
+                  {generalInfo.github && (
+                    <SocialIcon
+                      link={generalInfo.github}
+                      icon={<FaGithub />}
+                      label="GitHub"
+                    />
+                  )}
+                  {generalInfo.linkedIn && (
+                    <SocialIcon
+                      link={generalInfo.linkedIn}
+                      icon={<FaLinkedin />}
+                      label="LinkedIn"
+                    />
+                  )}
+                  {generalInfo.email && (
+                    <SocialIcon
+                      link={`mailto:${generalInfo.email}`}
+                      icon={<FaEnvelope />}
+                      label="Email"
+                    />
+                  )}
+                </div>
+              )}
               <Link to="/projects" className="about__intro-view-projects">
                 View projects
               </Link>
             </div>
-
-            <p className="about__intro-content__text">
-              Hello, this is Nusrat Jahan Shanta, and I believe in the potential
-              of technology to create solutions that inspire and connect people.
-              My passion for building applications drives me to focus on
-              functionality, scalability, and delivering meaningful user
-              experiences. <br />
-              <br />
-              My journey began in game development, where I tackled complex
-              challenges and collaborated with teams to create engaging
-              applications. Now, as I transition into full-stack web
-              development, I’m applying my experiences to craft dynamic web
-              solutions. My approach combines backend and frontend expertise
-              with a focus on problem-solving and collaboration. <br />
-              <br />
-              Throughout my academic and professional journey, I’ve participated
-              in project showcasing competitions, presenting innovative ideas
-              and demonstrating technical solutions. These experiences have been
-              pivotal in shaping my perspective on teamwork and creativity.
-              Today, I strive to create applications that not only meet user
-              needs but also reflect my passion for quality and impactful
-              design.
-            </p>
+            <div>
+              {aboutIntros.map((text, i) => {
+                return (
+                  <p key={i} className="about__intro-content__text">
+                    {text}{" "}
+                    {i < aboutIntros.length - 1 && (
+                      <>
+                        <br />
+                        <br />
+                      </>
+                    )}
+                  </p>
+                );
+              })}
+            </div>
           </div>
         </div>
       </motion.section>
