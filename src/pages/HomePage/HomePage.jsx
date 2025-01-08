@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "./Home.scss";
+import "./HomePage.scss";
 import {
   FaGithub,
   FaLinkedin,
@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import SocialIcon from "../../components/SocialIcon/SocialIcon";
 import { generalInfo, homeIntros } from "../../scripts/data/about-data";
 
-function Hero() {
+function HomePage() {
   return (
     <section className="home">
       <div className="hero">
@@ -88,4 +88,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default HomePage;

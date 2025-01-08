@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import "./Projects.scss";
+import "./ProjectsPage.scss";
 import MediaModal from "../../components/MediaModal/MediaModal";
 import {
   getAllCategories,
@@ -9,7 +9,7 @@ import {
 import MediaCard from "../../components/MediaCard/MediaCard";
 import { getTransition } from "../../scripts/utils";
 
-const Projects = () => {
+const ProjectsPage = () => {
   const [modalContent, setModalContent] = useState(null);
   const [currentMediaSource, setCurrentMediaSource] = useState([]);
   const [currentMediaIndex, setCurrentMediaIndex] = useState(null);
@@ -122,4 +122,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsPage;

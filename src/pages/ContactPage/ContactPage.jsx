@@ -3,9 +3,9 @@ import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import { getTransition } from "../../scripts/utils";
 
-import "./Contact.scss";
+import "./ContactPage.scss";
 
-const Contact = () => {
+const ContactPage = () => {
   const formRef = useRef(); // Add formRef
   const nameRef = useRef();
   const emailRef = useRef();
@@ -121,4 +121,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactPage;

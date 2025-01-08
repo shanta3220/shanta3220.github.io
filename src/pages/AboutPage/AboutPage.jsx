@@ -9,7 +9,7 @@ import { educationData } from "../../scripts/data/education-data";
 import { experienceData } from "../../scripts/data/experience-data";
 import { awardsData } from "../../scripts/data/awards-data";
 import Skills from "../../components/Skills/Skills";
-import "./About.scss";
+import "./AboutPage.scss";
 import SocialIcon from "../../components/SocialIcon/SocialIcon";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import TimelineSection from "../../components/TimelineSection/TimelineSection";
