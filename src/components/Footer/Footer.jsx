@@ -8,8 +8,10 @@ import {
   FaTwitter,
   FaInstagram,
   FaEnvelope,
+  FaPhoneSquare,
 } from "react-icons/fa";
 import "./Footer.scss";
+import { generalInfo } from "../../scripts/data/about-data";
 
 function Footer() {
   const location = useLocation();
@@ -44,32 +46,41 @@ function Footer() {
         variants={footerVariants}
       >
         <div className="social-links">
+          {generalInfo.github && (
+            <SocialIcon link={generalInfo.github} icon={<FaGithub />} />
+          )}
+          {generalInfo.linkedIn && (
+            <SocialIcon link={generalInfo.linkedIn} icon={<FaLinkedin />} />
+          )}
+          {generalInfo.instagram && (
+            <SocialIcon
+              link={generalInfo.instagram}
+              ariaLabel="Instagram"
+              icon={<FaInstagram />}
+            />
+          )}
+          {generalInfo.twitter && (
+            <SocialIcon
+              link={generalInfo.twitter}
+              ariaLabel="Twitter"
+              icon={<FaTwitter />}
+            />
+          )}
+        </div>
+        {generalInfo.email && (
           <SocialIcon
-            link="https://github.com/shanta3220"
-            icon={<FaGithub />}
-            ariaLabel="GitHub profile"
-          />
-          <SocialIcon
-            link="https://linkedin.com/in/njshanta"
-            ariaLabel="LinkedIn profile"
-            icon={<FaLinkedin />}
-          />
-          <SocialIcon
-            link="mailto:njshanta.ca@gmail.com"
             ariaLabel="Email"
+            label={generalInfo.email}
             icon={<FaEnvelope />}
           />
+        )}
+        {generalInfo.phone && (
           <SocialIcon
-            link="https://instagram.com/njshanta"
-            ariaLabel="Instagram"
-            icon={<FaInstagram />}
+            ariaLabel="Phone"
+            icon={<FaPhoneSquare />}
+            label={generalInfo.phone}
           />
-          <SocialIcon
-            link="https://twitter.com/msnjshanta"
-            ariaLabel="Twitter"
-            icon={<FaTwitter />}
-          />
-        </div>
+        )}
       </motion.footer>
     )
   );

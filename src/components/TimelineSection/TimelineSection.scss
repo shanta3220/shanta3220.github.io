@@ -98,9 +98,12 @@
     }
 
     .timeline__description {
-      color: $color-text;
       margin-top: $padding-medium;
-      @include bodyCopySmall;
+
+      .timeline__desc-line {
+        color: $color-text;
+        @include bodyCopySmall;
+      }
     }
   }
 

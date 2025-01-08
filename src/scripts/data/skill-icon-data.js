@@ -109,6 +109,11 @@ export const skillIcons = [
     bgColor: "rgba(0, 122, 204, 1)",
   },
   {
+    name: "Visual Studio C++",
+    icon: Icons.FaCode,
+    bgColor: "rgba(0, 120, 215, 1)",
+  },
+  {
     name: "Microsoft Office",
     icon: Icons.FaFileWord,
     bgColor: "rgba(0, 115, 207, 1)",

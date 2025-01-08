@@ -1,18 +1,24 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 .social-icon {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 0.875rem;
+  gap: 0.5rem;
+
   text-decoration: none;
   color: $color-text;
   transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  @include bodyCopySmall;
 
   svg {
     font-size: 1.25rem;
   }
+}
 
+a.social-icon {
   &:hover {
-    transform: scale(1.1); /* Slight enlargement */
+    transform: scale(1.1);
     color: $color-hover;
   }
 }

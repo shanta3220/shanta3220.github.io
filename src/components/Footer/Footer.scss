@@ -9,10 +9,12 @@
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
+  gap: $spacing-unit;
 
   .social-links {
     justify-content: center;
-    gap: calc($spacing-unit * 2);
+    gap: calc($spacing-unit * 1.5);
   }
 }
 
