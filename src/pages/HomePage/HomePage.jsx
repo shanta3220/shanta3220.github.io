@@ -75,13 +75,6 @@ function HomePage() {
               label="Instagram"
             />
           )}
-          {generalInfo.twitter && (
-            <SocialIcon
-              link={generalInfo.twitter}
-              icon={<FaTwitter />}
-              label="Twitter"
-            />
-          )}
         </div>
       </div>
     </section>
