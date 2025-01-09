@@ -48,8 +48,14 @@ li {
   margin-top: 16px;
 }
 
-@media (max-width: 768px) {
-  .animated-background {
+.animated-background {
+  @include tablet {
     background-size: 400% 400%;
   }
+}
+
+.loading-text {
+  width: 100%;
+  text-align: center;
+  @include bodyCopy;
 }
