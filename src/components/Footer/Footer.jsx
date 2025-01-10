@@ -47,23 +47,27 @@ function Footer() {
       >
         <div className="social-links">
           {generalInfo.github && (
-            <SocialIcon link={generalInfo.github} icon={<FaGithub />} />
+            <SocialIcon
+              link={generalInfo.github}
+              ariaLabel="Github"
+              label="Github"
+              icon={<FaGithub />}
+            />
           )}
           {generalInfo.linkedIn && (
-            <SocialIcon link={generalInfo.linkedIn} icon={<FaLinkedin />} />
+            <SocialIcon
+              link={generalInfo.linkedIn}
+              ariaLabel="LinkedIn"
+              label="LinkedIn"
+              icon={<FaLinkedin />}
+            />
           )}
           {generalInfo.instagram && (
             <SocialIcon
               link={generalInfo.instagram}
               ariaLabel="Instagram"
+              label="Instagram"
               icon={<FaInstagram />}
-            />
-          )}
-          {generalInfo.twitter && (
-            <SocialIcon
-              link={generalInfo.twitter}
-              ariaLabel="Twitter"
-              icon={<FaTwitter />}
             />
           )}
         </div>

@@ -38,18 +38,23 @@ li {
   padding: 0;
   margin: 0;
   z-index: 1;
-  background-color: transparent;
 }
 
 .social-links {
   display: flex;
   justify-content: flex-start;
-  gap: 16px;
-  margin-top: 16px;
+  gap: calc($spacing-unit * 1.25);
+  margin-top: $padding-small;
 }
 
-@media (max-width: 768px) {
-  .animated-background {
+.animated-background {
+  @include tablet {
     background-size: 400% 400%;
   }
+}
+
+.loading-text {
+  width: 100%;
+  text-align: center;
+  @include bodyCopy;
 }
