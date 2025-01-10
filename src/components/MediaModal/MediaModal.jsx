@@ -1,5 +1,8 @@
 import { FaGlobe, FaGithub, FaProjectDiagram } from "react-icons/fa";
+import { useEffect } from "react";
 import SkillItem from "../SkillItem/SkillItem";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { HiOutlineX } from "react-icons/hi";
 import "./MediaModal.scss";
 
 function MediaModal({
@@ -10,6 +13,31 @@ function MediaModal({
   onNext,
   showNextPreviousButton,
 }) {
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("body-modal-open");
+
+      const handleKeyDown = (event) => {
+        if (event.key === "ArrowLeft" && showNextPreviousButton) {
+          onPrevious();
+        }
+        if (event.key === "ArrowRight" && showNextPreviousButton) {
+          onNext();
+        }
+        if (event.key === "Escape") {
+          onClose();
+        }
+      };
+
+      document.addEventListener("keydown", handleKeyDown);
+
+      return () => {
+        document.body.classList.remove("body-modal-open");
+        document.removeEventListener("keydown", handleKeyDown);
+      };
+    }
+  }, [isOpen, onPrevious, onNext, onClose, showNextPreviousButton]);
+
   if (!isOpen || !content) return null;
 
   const {
@@ -31,13 +59,17 @@ function MediaModal({
       <div className="media-modal__container">
         {showNextPreviousButton && (
           <button className="media-modal__prev" onClick={onPrevious}>
-            ←
+            <span className="icon">
+              <FaArrowLeftLong />
+            </span>
           </button>
         )}
         <div className="media-modal__content">
           <div className="media-modal__close-container">
             <button className="media-modal__close" onClick={onClose}>
-              ✕
+              <span className="icon">
+                <HiOutlineX />
+              </span>
             </button>
           </div>
 
@@ -50,11 +82,12 @@ function MediaModal({
             <div className="media-modal__info">
               <h3 className="media-modal__title">{title}</h3>
               <p className="media-modal__short-desc">{shortDescription}</p>
-              {longDescription.split("\n").map((line, index) => (
-                <p key={index} className="media-modal__long-desc">
-                  {line}
-                </p>
-              ))}
+              {longDescription &&
+                longDescription.split("\n").map((line, index) => (
+                  <p key={index} className="media-modal__long-desc">
+                    {line}
+                  </p>
+                ))}
               {year && (
                 <div className="media-modal__section">
                   <h4 className="media-modal__header">Year</h4>
@@ -110,7 +143,9 @@ function MediaModal({
 
         {showNextPreviousButton && (
           <button className="media-modal__next" onClick={onNext}>
-            →
+            <span className="icon">
+              <FaArrowRightLong />
+            </span>
           </button>
         )}
       </div>

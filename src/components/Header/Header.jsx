@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import "./Header.scss";
@@ -11,6 +11,10 @@ function Header() {
     document.documentElement.setAttribute("data-theme", newTheme);
     setTheme(newTheme);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   const pages = [
     { name: "Home", path: "/" },
@@ -30,7 +34,9 @@ function Header() {
           <ul className="header__list">
             {navLinks.map((link) => (
               <li key={link.path} className="header__item">
-                <Link to={link.path}>{link.name}</Link>
+                <Link className="header__link" to={link.path}>
+                  {link.name}
+                </Link>
               </li>
             ))}
             <li className="header__item">

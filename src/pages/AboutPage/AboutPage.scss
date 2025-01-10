@@ -1,0 +1,175 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.about {
+  @include sectionPadding;
+
+  & {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include desktop {
+      width: 75%;
+      max-width: 87.5rem;
+    }
+  }
+
+  &__title {
+    @include mainHeader;
+    & {
+      text-align: center;
+      margin-bottom: $padding-medium;
+      color: $color-text;
+      width: 100%;
+    }
+  }
+
+  &__sub-title {
+    @include subHeader;
+    & {
+      text-align: left;
+      margin-bottom: $padding-medium;
+      color: $color-text;
+    }
+  }
+
+  &__intro {
+    & {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: $padding-xlarge;
+    }
+
+    &-photo-and-texts {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: $padding-xlarge;
+
+      @include tablet {
+        flex-direction: row;
+      }
+    }
+
+    &-photo-and-social {
+      display: flex;
+      margin: auto;
+      flex-direction: column;
+      width: 50%;
+      height: 50%;
+      max-width: 18.75rem;
+      max-height: auto;
+      align-items: center;
+
+      .social-links {
+        justify-content: center;
+        margin-top: calc($spacing-unit * 0.8);
+        flex-wrap: nowrap;
+
+        a.social-icon {
+          &:hover {
+            transform: scale(1.07);
+          }
+        }
+      }
+
+      @include tablet {
+        margin: 0;
+      }
+      @include desktop {
+        flex-direction: column;
+        width: 50%;
+        height: 50%;
+        max-width: 18.75rem;
+      }
+
+      div.about__intro-location {
+        margin-top: 1rem;
+      }
+      .about__intro-view-projects {
+        margin-top: calc($spacing-unit * 0.8);
+        @include button;
+
+        & {
+          height: 1.875rem;
+        }
+
+        &:hover {
+          text-decoration: none;
+          background-color: $color-button-hover;
+        }
+      }
+    }
+
+    &-content {
+      & {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $color-background-light;
+        padding: $padding-medium;
+        border-radius: $border-radius;
+        box-shadow: $shadow-light;
+      }
+
+      &__photo {
+        & {
+          width: 100%;
+          height: 100%;
+
+          border-radius: 50%;
+          box-shadow: $shadow-medium;
+        }
+      }
+
+      &__text {
+        @include bodyCopy;
+        & {
+          color: $color-text;
+          text-align: left;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+}
+
+.about-gallery {
+  margin-top: $padding-xlarge;
+  color: $color-text;
+
+  .about__sub-title {
+    @include subHeaderSmall;
+  }
+  &__photo {
+    & {
+      width: calc(33% - $spacing-unit);
+      border-radius: $border-radius;
+      box-shadow: $shadow-light;
+      transition: transform $transition-default;
+      align-items: start;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__photos {
+    & {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: $spacing-unit;
+    }
+  }
+}

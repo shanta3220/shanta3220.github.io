@@ -3,12 +3,12 @@ export const educationData = [
     title: "Diploma, Software Engineering",
     subTitle: "BrainStation, Toronto, ON",
     year: "Sep 2024 - Dec 2024",
-    description: ["Grade: 95%"],
+    description: `• Grade: 95%`,
     website: "https://brainstation.io/online/software-engineering-bootcamp",
     media: [
       {
         type: "image",
-        src: "src/assets/images/degrees/certificate_diploma.jpg",
+        src: "/medias/degrees/certificate_diploma.jpg",
         title: "Diploma, Software Engineering",
         shortDescription: "BrainStation, Toronto, ON",
         longDescription:
@@ -32,7 +32,7 @@ export const educationData = [
       },
       {
         type: "image",
-        src: "src/assets/images/degrees/transcript_diploma.jpg",
+        src: "/medias/degrees/transcript_diploma.jpg",
         title: "Transcript, Software Engineering",
         shortDescription: "BrainStation, Toronto, ON",
         longDescription:
@@ -60,12 +60,12 @@ export const educationData = [
     title: "MSc in Management Information Systems",
     subTitle: "Metropolitan University, Sylhet, BD",
     year: "May 2019 - Jan 2021",
-    description: ["CGPA: 3.92/4.0"],
+    description: `• CGPA: 3.92/4.0`,
     website: "https://metrouni.edu.bd/sites/masters-programmes/msc-in-mis",
     media: [
       {
         type: "image",
-        src: "src/assets/images/degrees/certificate_msc.jpg",
+        src: "/medias/degrees/certificate_msc.jpg",
         title: "MSc in Management Information Systems",
         shortDescription: "Metropolitan University, Sylhet, BD",
         longDescription: "Achieved the followings:\n• CGPA 3.92/4",
@@ -81,13 +81,13 @@ export const educationData = [
     subTitle: "Metropolitan University, Sylhet, BD",
     year: "Sep 2014 - Jan 2019",
     skills: ["C++", "Java"],
-    description: ["CGPA: 3.85/4.0"],
+    description: `• CGPA: 3.85/4.0`,
     website:
       "https://metrouni.edu.bd/sites/honours-programmes/bsc-in-computer-science-engineering",
     media: [
       {
         type: "image",
-        src: "src/assets/images/degrees/certificate_bsc.jpg",
+        src: "/medias/degrees/certificate_bsc.jpg",
         title: "BSc in Computer Science & Engineering",
         shortDescription: "Metropolitan University, Sylhet, BD",
         longDescription:

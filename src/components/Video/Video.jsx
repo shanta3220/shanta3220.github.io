@@ -65,7 +65,7 @@ function Video({ videoSrc, thumbnailImage, thumbnailTime }) {
       ) : (
         <p>Loading thumbnail...</p>
       )}
-      <video ref={videoRef} src={videoSrc} style={{ display: "none" }} muted />
+      <video ref={videoRef} src={videoSrc} style={{ display: "none" }} />
       <canvas ref={canvasRef} style={{ display: "none" }} />
     </div>
   );

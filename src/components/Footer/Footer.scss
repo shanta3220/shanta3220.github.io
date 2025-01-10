@@ -1,31 +1,29 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .footer {
-  background-color: $color-background-dark;
+  position: relative;
+  bottom: 0;
   color: $color-text-light;
   padding: calc(2 * $spacing-unit);
   text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: $spacing-unit;
 
-  &__text {
-    margin-bottom: calc(1 * $spacing-unit);
-    font-size: 1rem;
-    font-weight: 600;
-  }
-
-  &__link {
-    color: $color-link;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color $transition-default;
-
-    &:hover {
-      color: $color-text-light !important;
+  .social-links {
+    justify-content: center;
+    gap: $spacing-unit;
+    a {
+      @include bodyCopySmall;
     }
   }
+}
 
-  &__links {
-    display: flex;
-    justify-content: center;
-    gap: calc(1 * $spacing-unit);
-  }
+.social-links {
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
 }

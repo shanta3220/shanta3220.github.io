@@ -7,6 +7,29 @@ export const skillIcons = [
   { name: "Node.js", icon: Icons.FaNode, bgColor: "rgba(51, 153, 51, 1)" },
   { name: "Express.js", icon: Icons.FaNodeJs, bgColor: "rgba(51, 153, 51, 1)" },
   { name: "Knex.js", icon: Icons.FaDatabase, bgColor: "rgba(247, 223, 30, 1)" },
+  { name: "Vite", icon: Icons.FaBolt, bgColor: "rgba(143, 188, 143, 1)" },
+  { name: "React", icon: Icons.FaReact, bgColor: "rgba(97, 218, 251, 1)" },
+  {
+    name: "React Router Dom",
+    icon: Icons.FaRoute,
+    bgColor: "rgba(220, 20, 60, 1)",
+  },
+  { name: "Express", icon: Icons.FaNodeJs, bgColor: "rgba(67, 160, 71, 1)" },
+  {
+    name: "AI Integration",
+    icon: Icons.FaBrain,
+    bgColor: "rgba(156, 39, 176, 1)",
+  },
+  {
+    name: "Problem Solving",
+    icon: Icons.FaLightbulb, // Represents ideas and solutions
+    bgColor: "rgba(255, 193, 7, 1)", // Bright yellow for creativity and clarity
+  },
+  {
+    name: "Axios",
+    icon: Icons.FaCloudDownloadAlt,
+    bgColor: "rgba(33, 150, 243, 1)",
+  },
   { name: "MySQL", icon: Icons.FaDatabase, bgColor: "rgba(68, 121, 161, 1)" },
   { name: "Python", icon: Icons.FaPython, bgColor: "rgba(55, 118, 171, 1)" },
   {
@@ -86,6 +109,11 @@ export const skillIcons = [
     bgColor: "rgba(0, 122, 204, 1)",
   },
   {
+    name: "Visual Studio C++",
+    icon: Icons.FaCode,
+    bgColor: "rgba(0, 120, 215, 1)",
+  },
+  {
     name: "Microsoft Office",
     icon: Icons.FaFileWord,
     bgColor: "rgba(0, 115, 207, 1)",
@@ -139,5 +167,10 @@ export const skillIcons = [
     name: "Project Management",
     icon: Icons.FaClipboardList,
     bgColor: "rgba(0, 82, 204, 1)",
+  },
+  {
+    name: "OpenAI",
+    icon: SiIcons.SiOpenai,
+    bgColor: "rgba(32, 128, 228, 1)",
   },
 ];

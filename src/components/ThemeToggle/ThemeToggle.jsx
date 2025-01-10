@@ -15,18 +15,13 @@ function ThemeToggle({ currentTheme, onChangeTheme }) {
     if (onChangeTheme) onChangeTheme(nextTheme.name);
   };
 
-  const currentThemeColor = themes.find(
-    (theme) => theme.name === currentTheme
-  )?.color;
-
   return (
     <button
       className="theme-toggle"
       onClick={handleClick}
-      style={{ backgroundColor: currentThemeColor || "#ccc" }}
       title="Switch to next theme"
     >
-      {currentTheme?.toUpperCase() || "THEME"}
+      {currentTheme || "Theme"}
     </button>
   );
 }
