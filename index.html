@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shanta's Portfolio</title>
     <link rel="icon" type="image" href="/logo.png" />
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js").catch((err) => {
+          console.error("Service Worker registration failed:", err);
+        });
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -1,0 +1,21 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/global" as *;
+
+.not-found-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 36px;
+  flex-direction: column;
+  gap: $spacing-unit;
+
+  img {
+    width: 90%;
+    max-width: 25rem;
+  }
+
+  h1 {
+    @include mainHeader;
+  }
+}
