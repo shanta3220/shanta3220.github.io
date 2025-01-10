@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { useLocation, Link } from "react-router-dom";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import "./Header.scss";
@@ -16,16 +16,27 @@ function Header() {
     window.scrollTo(0, 0);
   }, [location]);
 
-  const pages = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Projects", path: "/projects" },
-    { name: "Contact", path: "/contact" },
-  ];
+  const pages = useMemo(
+    () => [
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+      { name: "Projects", path: "/projects" },
+      { name: "Contact", path: "/contact" },
+    ],
+    []
+  );
 
-  const currentPage = location.pathname;
+  const currentPage = useMemo(() => {
+    const currentPath = location.pathname;
+    return pages.map(({ path }) => path).includes(currentPath)
+      ? currentPath
+      : pages[pages.length - 1].path;
+  }, [location, pages]);
 
-  const navLinks = pages.filter((page) => page.path !== currentPage);
+  const navLinks = useMemo(
+    () => pages.filter((page) => page.path !== currentPage),
+    [pages, currentPage]
+  );
 
   return (
     <>
