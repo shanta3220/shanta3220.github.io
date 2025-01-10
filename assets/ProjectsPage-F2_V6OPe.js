@@ -1,4 +1,4 @@
-import{r as l,j as i,m as r}from"./index-m0Dy0PvG.js";import{M as k,a as j}from"./MediaCard-BDrAwTI8.js";import{g as c}from"./utils-CBfLEOQl.js";const u=[{title:"JiffyGames",year:"Dec 2024",shortDescription:"Instant access to browser-based games with social features like leaderboards and profiles.",description:`Developed a Full-Stack web application as a solo project for my BrainStation capstone:
+import{r as l,j as i,m as r}from"./index-BhpvtmDy.js";import{M as k,a as j}from"./MediaCard-DXOF-RaD.js";import{g as c}from"./utils-DO6f8zla.js";const u=[{title:"JiffyGames",year:"Dec 2024",shortDescription:"Instant access to browser-based games with social features like leaderboards and profiles.",description:`Developed a Full-Stack web application as a solo project for my BrainStation capstone:
       • Designed all page templates in Canva to follow as guidelines.
       • Built a Vite-React frontend with pages like Login, Home, Game, Leaderboard pages.
       • Integrated my own Unity3D WebGL games into the React application.
