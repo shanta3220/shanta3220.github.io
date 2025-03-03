@@ -1,6 +1,6 @@
 export const experienceData = [
   {
-    title: "Teaching Assistant - Software Engineering Diploma Program",
+    title: "Teaching Assistant, Software Engineering",
     subTitle: "BrainStation",
     location: "Toronto, ON",
     year: "Jan 2025 - March 2025",
@@ -12,7 +12,7 @@ export const experienceData = [
     website: "https://brainstation.io",
   },
   {
-    title: "Freelance Game Programmer",
+    title: "Software Developer",
     subTitle: "Nudge Nudge Games GmbH",
     location: "Berlin, DE",
     year: "Feb 2020 - Jun 2024",
@@ -182,7 +182,7 @@ export const experienceData = [
     ],
   },
   {
-    title: "Part-Time Software Engineer",
+    title: "Software Engineer",
     subTitle: "Arcade Studios",
     location: "Dhaka, BD",
     year: "Jan 2020 - Sep 2020",
