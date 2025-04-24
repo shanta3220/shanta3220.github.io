@@ -63,8 +63,7 @@ export const awardsData = [
     subTitle: "Intra MU Tech Emulation V1 Summer 2018",
     year: "July 2018",
     description: `• Champion in the Metropolitan University tech competition for showcasing AR educational apps.`,
-    website:
-      "https://www.facebook.com/events/united-international-university-permanent-campus/techkriti18-bangladesh-zonal-round/146509992689216",
+    website: "https://www.facebook.com/events/198308784187582",
     skills: ["Unity3D", "C#", "Team Collaboration"],
     media: [
       {
