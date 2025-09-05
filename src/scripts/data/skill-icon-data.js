@@ -22,8 +22,8 @@ export const skillIcons = [
   },
   {
     name: "Problem Solving",
-    icon: Icons.FaLightbulb, // Represents ideas and solutions
-    bgColor: "rgba(255, 193, 7, 1)", // Bright yellow for creativity and clarity
+    icon: Icons.FaLightbulb,
+    bgColor: "rgba(255, 193, 7, 1)",
   },
   {
     name: "Axios",
@@ -54,6 +54,27 @@ export const skillIcons = [
     icon: Icons.FaAndroid,
     bgColor: "rgba(76, 175, 80, 1)",
   },
+  {
+    name: "TypeScript",
+    icon: SiIcons.SiTypescript,
+    bgColor: "rgba(0, 122, 204, 1)",
+  },
+  {
+    name: "Tailwind CSS",
+    icon: SiIcons.SiTailwindcss,
+    bgColor: "rgba(56, 189, 248, 1)",
+  },
+  {
+    name: "Google Gemini",
+    icon: Icons.FaStar,
+    bgColor: "rgba(77, 76, 76, 1)",
+  },
+  {
+    name: "OpenAI GPT-4o",
+    icon: SiIcons.SiOpenai,
+    bgColor: "rgba(77, 76, 76, 1)",
+  },
+
   {
     name: "Firebase",
     icon: SiIcons.SiFirebase,
@@ -89,6 +110,19 @@ export const skillIcons = [
     name: "Postman",
     icon: Icons.FaPaperPlane,
     bgColor: "rgba(255, 153, 51, 1)",
+  },
+  { name: "FastAPI", icon: Icons.FaBolt, bgColor: "rgba(0, 150, 136, 1)" },
+  { name: "Chainlit", icon: Icons.FaComments, bgColor: "rgba(72, 61, 139, 1)" },
+  {
+    name: "Azure AI Services",
+    icon: Icons.FaCloud,
+    bgColor: "rgba(0, 120, 215, 1)",
+  },
+  { name: "SQLite3", icon: Icons.FaDatabase, bgColor: "rgba(0, 77, 153, 1)" },
+  {
+    name: "Machine Learning",
+    icon: Icons.FaBrain,
+    bgColor: "rgba(156, 39, 176, 1)",
   },
   { name: "Trello", icon: Icons.FaTrello, bgColor: "rgba(0, 121, 191, 1)" },
   { name: "Heroku", icon: Icons.FaCloud, bgColor: "rgba(103, 58, 183, 1)" },

@@ -1,14 +1,28 @@
 export const experienceData = [
   {
+    title: "Software Developer",
+    subTitle: "Heartline.App",
+    location: "Calgary, AB, Canada",
+    year: "May 2025 - Jul 2025",
+    description: `• Took initiative to structure the TutorMatch project, breaking Figma designs into 50+ backend and frontend tasks in Microsoft Planner, cutting ramp-up time by 2+ weeks and improving workflow clarity.
+    • Led a 5-member cross-functional team, ensuring aligned delivery through daily standups and structured workflows.
+    • Built a modular backend in Go and PostgreSQL for dashboards; created utilities such as BlobStorage.go to streamline Azure Blob Storage uploads, improving reusability and reducing 2 days of dev time on Azure-integrated modules.
+    • Owned the full-stack Stripe/Visa payment system, enabling session-based bundle purchases across backend and frontend.
+    • Created responsive front-end pages in Next.js, focusing on usability and structured data-fetching.
+    • Improved team productivity by promoting continuous Git commits, enforcing PR review practices, and launching a shared Postman API workspace, reducing miscommunication and accelerating API handoff.`,
+    website: "https://heartline.app",
+  },
+  {
     title: "Teaching Assistant, Software Engineering",
     subTitle: "BrainStation",
     location: "Toronto, ON",
     year: "Jan 2025 - March 2025",
-    description: `• Assist full-time students with assignments and projects covering JavaScript (ES6), Node.js, React.js, Express.js, MySQL, Heroku deployment, and Agile practices.
-    • Grade assignments, conduct code reviews for ~26 students, and provide constructive feedback.
-    • Participate in weekly retrospectives and stand-ups with the Education Team.
-    • Facilitate daily challenge meetings (puzzles or coding problems), weekly quiz sessions on Kahoot, and learning studios to support students with technical challenges.
-    • Mentor students 1-on-1 and promote cross-cohort collaboration.`,
+    description: `• Provided technical 1-on-1 mentorship to a cohort of 26 students, assisting with debugging and optimizing full-stack applications built using JavaScript, React, Node.js, Express, MySQL, HTML, CSS, and Git.
+    • Led a week-long project as Project Manager, using Jira and 4-5 daily check-ins to fix blockers. Team earned a 95% grade.
+    • Logged daily 1-on-1 student support and outcomes in Excel to ensure transparency and track individual progress.
+    • Participated in weekly TA standups to align on expectations and reviewed demo projects using a standardized rubric.
+    • Guided 3 hackathon teams through rapid planning and task coordination to maximize output in a one-day sprint.
+    • Reviewed 10 weekly project submissions; feedback boosted code quality and raised assignment scores from 80% to 90%.`,
     website: "https://brainstation.io",
   },
   {
@@ -16,11 +30,13 @@ export const experienceData = [
     subTitle: "Nudge Nudge Games GmbH",
     location: "Berlin, DE",
     year: "Feb 2020 - Jun 2024",
-    description: `• Implemented UI into the game, iterating multiple times to enhance usability and visual consistency.
-    • Completed 949 tasks in Trello—the highest in the team due to long tenure.
-    • Mentored a junior developer to contribute significantly to key game features.
-    • Worked with a team of over 30 contributors, including current and former members, to ensure design consistency and cohesive execution.
-    • Resolved 30% of reported bugs, improving game stability, and conducted code reviews to ensure high-quality code.`,
+    description: `• Progressed from Junior to Intermediate Developer over 4 years, leading UI development and major product features.
+    • Built 30+ user interfaces from scratch in Unity3D and C#, following the MVC pattern in Visual Studio; achieved the highest task completion rate on Trello (949 tasks).
+    • Delivered complex interfaces such as an Asset Mode for creating/exporting assets to the Unity Asset Store, and a Loader Client for pre-launch mod downloads—work showcased in a YouTube video with 400K+ views.
+    • Reviewed 100+ GitHub PRs, resolving ~25% of flagged issues pre-merge, strengthening code quality and stability.
+    • Integrated third-party weapon and animation systems into the voxel engine; refactored UI components into reusable modules, reducing implementation time by 15%.
+    • Contributed to team growth from 5 to 30+ members by shipping critical product features during scale-up.
+    • Mentored a junior developer and onboarded new hires by introducing system architecture, improving ramp-up speed by ~1 week.`,
     website: "https://www.nimoyd.com",
     skills: [
       "Unity3D",

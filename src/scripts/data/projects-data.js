@@ -1,5 +1,55 @@
 export const projectsData = [
   {
+    title: "Nuroxa – Dementia Detecting AI Agent",
+    year: "Apr 2025",
+    shortDescription:
+      "AI-powered assistant for early dementia detection and therapy, integrating ML models, clinical data, and cognitive games.",
+    description:
+      "Collaborated with 4-member team and built an AI assistant for dementia risk analysis using Python, FastAPI, Chainlit, and Azure AI Services:\n  • Trained a transcript-based ML model with Whisper and scikit-learn, extracting features like pause count and sentence length.\n  • Created a SQLite3 database from clinical records for structured querying and data exploration.\n  • Developed an audio workflow with Librosa and Whisper, bypassing Chainlit's upload limits by handling segmentation externally.\n  • Integrated ML models, clinical data, and therapy games into a unified assistant.\n • Recognized with an Honorable Mention at the Microsoft AI Agents Hackathon 2025 (570 global submissions).",
+    skills: [
+      "Python",
+      "Chainlit",
+      "Azure AI Services",
+      "AI Integration",
+      "Whisper",
+      "Librosa",
+      "scikit-learn",
+      "SQLite3",
+      "Machine Learning",
+      "Natural Language Processing",
+      "Team Collaboration",
+    ],
+    media: [
+      { type: "image", src: "/medias/nuroxa/nuroxa.jpg" },
+      { type: "image", src: "/medias/nuroxa/nuroxa2.jpg" },
+    ],
+    category: "Web",
+    website: "https://www.youtube.com/watch?v=5N6_jXB1R3U",
+    github: "github.com/shanta3220/nuroxa-dementia-ai-agent",
+  },
+  {
+    title: "VAI – Video Generating AI Assistant",
+    year: "Apr 2025",
+    shortDescription:
+      "Semi-autonomous AI assistant that chats with users to generate topic-driven videos with scripts, visuals, and voiceovers.",
+    description:
+      "Built as a solo project to explore AI-powered video generation workflows:\n  • Developed a conversational interface with React, TailwindCSS, and TypeScript to detect user intent and guide users through video or chat workflows.\n  • Implemented backend logic in Node.js, Express, and Python to dynamically fetch visuals from Pexels, Pixabay, and Coverr.\n  • Automated video production by stitching scenes with MoviePy and applying voiceovers using Google Cloud Text-to-Speech.\n  • Integrated Google Gemini and OpenAI GPT-4o for script creation and content generation.\n  • Added intent-based fallbacks to ensure smooth user flow even with vague or ambiguous input.",
+    skills: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "Python",
+      "Google Gemini",
+      "OpenAI GPT-4o",
+      "Google Cloud TTS",
+    ],
+    media: [{ type: "image", src: "/medias/vai/vai.jpg" }],
+    category: "Web",
+    website: "https://www.youtube.com/watch?v=k1x9Xj4ltMo",
+  },
+  {
     title: "JiffyGames",
     year: "Dec 2024",
     shortDescription:
