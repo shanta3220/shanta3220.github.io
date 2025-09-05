@@ -113,6 +113,21 @@ export const projectsData = [
     github: "https://github.com/shanta3220/inStock",
   },
   {
+    title: "The Informed Travelers – WordPress Website",
+    year: "Aug 2025",
+    shortDescription:
+      "Built a WordPress site for a fast-growing YouTube travel channel with 1.4M views and 9K subscribers in under a month.",
+    description:
+      "Developed a website for The Informed Travelers to extend their YouTube presence:\n  • Designed and deployed the site using the Enfold theme (drag-and-drop builder), achieving a live launch in just 2 days.\n  • Customized theme elements to align with the client’s travel branding and YouTube content strategy.\n  • Optimized site structure for quick navigation, embedded video content, and subscriber growth.\n  • Demonstrated how WordPress can be an efficient choice for rapid, professional client websites.\n  • Project supported a channel that reached 1.4M views and 9K subscribers with only 8 videos.",
+    skills: ["WordPress", "Web Design", "Client Collaboration"],
+    media: [
+      { type: "image", src: "/medias/informedtravelers/informedtravelers.jpg" },
+    ],
+    category: "Web",
+    website: "https://lnkd.in/gnCdM_VH",
+    github: "",
+  },
+  {
     title: "Just for Laughs",
     year: "Nov 2024",
     shortDescription:

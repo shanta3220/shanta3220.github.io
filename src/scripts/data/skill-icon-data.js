@@ -50,6 +50,21 @@ export const skillIcons = [
   { name: "Sass", icon: Icons.FaSass, bgColor: "rgba(204, 102, 153, 1)" },
   { name: "OOP", icon: Icons.FaCode, bgColor: "rgba(63, 81, 181, 1)" },
   {
+    name: "WordPress",
+    icon: SiIcons.SiWordpress,
+    bgColor: "rgba(33, 117, 155, 1)",
+  },
+  {
+    name: "Web Design",
+    icon: Icons.FaPaintBrush,
+    bgColor: "rgba(244, 180, 0, 1)",
+  },
+  {
+    name: "Client Collaboration",
+    icon: Icons.FaUsers, // FontAwesome team/users
+    bgColor: "rgba(76, 175, 80, 1)", // green (partnership/teamwork)
+  },
+  {
     name: "Android Studio",
     icon: Icons.FaAndroid,
     bgColor: "rgba(76, 175, 80, 1)",
@@ -74,7 +89,6 @@ export const skillIcons = [
     icon: SiIcons.SiOpenai,
     bgColor: "rgba(77, 76, 76, 1)",
   },
-
   {
     name: "Firebase",
     icon: SiIcons.SiFirebase,
