@@ -535,10 +535,9 @@ export const projectsData = [
     category: "Games",
     website: "https://www.pacogames.com/action/army-combat",
   },
-
   {
     title: "Alien Infestation FPS",
-    year: "Mar 2019",
+    year: "Apr 2019",
     shortDescription:
       "An FPS game where players battle waves of alien enemies across challenging levels.",
     description: `Developed Alien Infestation FPS in Unity3D:
@@ -556,7 +555,25 @@ export const projectsData = [
     website:
       "https://html5.gamedistribution.com/803bcada4e4f43719dc5439fa06da3ac/",
   },
-
+  {
+    title: "Special Forces",
+    year: "Mar 2019",
+    shortDescription:
+      "An FPS game where players take on missions as elite special forces operatives.",
+    description: `Developed Special Forces in Unity3D:
+      • Built HUD and integrated third-party FPS assets.
+      • Replaced and optimized 3D assets for performance.
+      • Scripted enemy AI and mission progression across multiple levels.`,
+    skills: ["Unity3D", "C#", "FPS Mechanics", "UI Implementation"],
+    media: [
+      {
+        type: "image",
+        src: "/medias/special_forces/special_forces.jpeg",
+      },
+    ],
+    category: "Games",
+    website: "https://www.pacogames.com/action/special-forces",
+  },
   {
     title: "Crazy Commando",
     year: "Apr 2019",
@@ -576,26 +593,6 @@ export const projectsData = [
     category: "Games",
     website:
       "https://html5.gamedistribution.com/797607670820408aa9364a91f560cf41/",
-  },
-
-  {
-    title: "Special Forces",
-    year: "Apr 2019",
-    shortDescription:
-      "An FPS game where players take on missions as elite special forces operatives.",
-    description: `Developed Special Forces in Unity3D:
-      • Built HUD and integrated third-party FPS assets.
-      • Replaced and optimized 3D assets for performance.
-      • Scripted enemy AI and mission progression across multiple levels.`,
-    skills: ["Unity3D", "C#", "FPS Mechanics", "UI Implementation"],
-    media: [
-      {
-        type: "image",
-        src: "/medias/special_forces/special_forces.jpeg",
-      },
-    ],
-    category: "Games",
-    website: "https://www.pacogames.com/action/special-forces",
   },
   {
     title: "Quiz Race",
