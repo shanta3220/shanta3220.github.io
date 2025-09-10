@@ -516,7 +516,87 @@ export const projectsData = [
     ],
     category: "Games",
   },
+  {
+    title: "Army Combat",
+    year: "Mar 2019",
+    shortDescription:
+      "A first-person shooter featuring multiple levels of combat missions.",
+    description: `Developed Army Combat in Unity3D:
+      • Built HUD and integrated third-party FPS assets.
+      • Replaced 3D models and implemented a 100-level difficulty system.
+      • Enhanced enemy controllers for smoother gameplay.`,
+    skills: ["Unity3D", "C#", "FPS Mechanics", "UI Implementation"],
+    media: [
+      {
+        type: "image",
+        src: "/medias/army_combat/army_combat.jpeg",
+      },
+    ],
+    category: "Games",
+    website: "https://www.pacogames.com/action/army-combat",
+  },
 
+  {
+    title: "Alien Infestation FPS",
+    year: "Mar 2019",
+    shortDescription:
+      "An FPS game where players battle waves of alien enemies across challenging levels.",
+    description: `Developed Alien Infestation FPS in Unity3D:
+      • Built HUD and replaced 3D models with custom assets.
+      • Scripted progression system with increasing difficulty.
+      • Improved AI enemy controllers for engaging combat.`,
+    skills: ["Unity3D", "C#", "FPS Mechanics", "Enemy AI"],
+    media: [
+      {
+        type: "image",
+        src: "/medias/alien_infestation_fps/alien_infestation_fps.jpg",
+      },
+    ],
+    category: "Games",
+    website:
+      "https://html5.gamedistribution.com/803bcada4e4f43719dc5439fa06da3ac/",
+  },
+
+  {
+    title: "Crazy Commando",
+    year: "Apr 2019",
+    shortDescription:
+      "A fast-paced FPS game with mission-based combat scenarios.",
+    description: `Developed Crazy Commando in Unity3D:
+      • Designed HUD and adapted third-party FPS shooter assets.
+      • Implemented difficulty scaling across 100 levels.
+      • Enhanced enemy AI for varied combat encounters.`,
+    skills: ["Unity3D", "C#", "FPS Mechanics", "Game Balancing"],
+    media: [
+      {
+        type: "image",
+        src: "/medias/crazy_commando/crazy_commando.webp",
+      },
+    ],
+    category: "Games",
+    website:
+      "https://html5.gamedistribution.com/797607670820408aa9364a91f560cf41/",
+  },
+
+  {
+    title: "Special Forces",
+    year: "Apr 2019",
+    shortDescription:
+      "An FPS game where players take on missions as elite special forces operatives.",
+    description: `Developed Special Forces in Unity3D:
+      • Built HUD and integrated third-party FPS assets.
+      • Replaced and optimized 3D assets for performance.
+      • Scripted enemy AI and mission progression across multiple levels.`,
+    skills: ["Unity3D", "C#", "FPS Mechanics", "UI Implementation"],
+    media: [
+      {
+        type: "image",
+        src: "/medias/special_forces/special_forces.jpeg",
+      },
+    ],
+    category: "Games",
+    website: "https://www.pacogames.com/action/special-forces",
+  },
   {
     title: "Quiz Race",
     year: "Jan 2018",
