@@ -124,7 +124,7 @@ export const projectsData = [
       { type: "image", src: "/medias/informedtravelers/informedtravelers.jpg" },
     ],
     category: "Web",
-    website: "https://lnkd.in/gnCdM_VH",
+    website: "https://theinformedtravelers.com/",
     github: "",
   },
   {
